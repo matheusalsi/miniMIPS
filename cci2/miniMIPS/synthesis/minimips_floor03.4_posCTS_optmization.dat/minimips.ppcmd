@@ -1,0 +1,31 @@
+# PPCMD 1 
+# addStripe -block_ring_top_layer_limit M3 -max_same_layer_jog_length 6 -padcore_ring_bottom_layer_limit M1 -set_to_set_distance 25 -padcore_ring_top_layer_limit M3 -spacing 6 -merge_stripes_value 2.5 -layer M2 -block_ring_bottom_layer_limit M1 -width 0.5 -nets {gnd vdd}
+# 2 
+# 2 
+# 1 
+# 0 
+# 0 
+# 1 
+# BOX_LIST 
+# 0 0 841110 834480 0 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# vdd 500 2 0 6500 841110 25000 0 0 
+# gnd 500 2 0 0 841110 25000 0 0 
+# END_NET_INFO_LIST 
+# END_PPCMD 1 
+
+# PPCMD 2 
+# sroute -connect {blockPin corePin padPin padRing floatingStripe} -layerChangeRange {M1 METTP} -blockPinTarget nearestTarget -padPinPortConnect {allPort oneGeom} -blockPin useLef -allowJogging 1 -crossoverViaLayerRange {M1 METTP} -allowLayerChange 1 -targetViaLayerRange {M1 METTP} -nets {gnd vdd}
+# 1 
+# 16 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 2 
+

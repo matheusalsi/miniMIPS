@@ -1,0 +1,7 @@
+
+::db::check_and_set_root_attr extract_rc_engine {pre_route}
+::db::check_and_set_root_attr extract_rc_layer_independent {1}
+::db::check_and_set_root_attr opt_keep_ports [list ${::IMEX::libVar}/misc/minimips.boundary_opto.tcl]
+::db::check_and_set_root_attr opt_power_effort {low}
+::db::check_and_set_root_attr opt_size_only_file [list ${::IMEX::libVar}/misc/minimips.size_ok.tcl]
+::db::check_and_set_root_attr place_global_reorder_scan {false}

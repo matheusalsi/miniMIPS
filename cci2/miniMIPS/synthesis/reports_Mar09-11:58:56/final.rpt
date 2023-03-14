@@ -1,0 +1,46 @@
+
+
+Working Directory = /home/INF01185/matheus.almeida/cci2/miniMIPS/synthesis
+QoS Summary for minimips
+========================================================================================
+Metric                  generic    map        syn_opt    syn_opt_low_incr final     
+========================================================================================
+Slack (ps):                415.2        0.0        0.0        0.0        0.0
+  R2R (ps):                415.2        0.0        0.0        0.0        0.0
+  I2R (ps):               4227.9     4048.8     4075.6     4075.6     4075.6
+  R2O (ps):             no_value   no_value   no_value   no_value   no_value
+  I2O (ps):             no_value   no_value   no_value   no_value   no_value
+  CG  (ps):               4721.0     2811.1     1816.9     1816.9     1816.9
+TNS (ps):                      0          0          0          0          0
+  R2R (ps):                  0.0        0.0        0.0        0.0        0.0
+  I2R (ps):                  0.0        0.0        0.0        0.0        0.0
+  R2O (ps):             no_value   no_value   no_value   no_value   no_value
+  I2O (ps):             no_value   no_value   no_value   no_value   no_value
+  CG  (ps):                  0.0        0.0        0.0        0.0        0.0
+Failing Paths:                 0          0          0          0          0
+Area:                     421052     280265     275918     275918     275918
+Instances:                 18616      10743      10484      10484      10484
+Utilization (%):            0.00       0.00       0.00       0.00       0.00
+Tot. Net Length (um):   no_value   no_value   no_value   no_value   no_value
+Avg. Net Length (um):   no_value   no_value   no_value   no_value   no_value
+Total Overflow H:              0          0          0          0          0
+Total Overflow V:              0          0          0          0          0
+Route Overflow H (%):   no_value   no_value   no_value   no_value   no_value
+Route Overflow V (%):   no_value   no_value   no_value   no_value   no_value
+========================================================================================
+CPU  Runtime (m:s):        01:09      09:08      00:56      00:06      00:09
+Real Runtime (m:s):        01:16      05:46      01:07      00:12      00:17
+CPU  Elapsed (m:s):        01:18      10:26      11:22      11:28      11:37
+Real Elapsed (m:s):        01:18      07:04      08:11      08:23      08:40
+Memory (MB):              632.03     698.20     698.20     698.20     698.20
+========================================================================================
+
+========================================================================================
+Flow Settings:
+========================================================================================
+Total Runtime (m:s): 08:45
+Total Memory (MB):   698.20
+Executable Version:  15.22
+========================================================================================
+
+

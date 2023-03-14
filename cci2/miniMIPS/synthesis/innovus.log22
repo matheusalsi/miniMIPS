@@ -1,0 +1,56 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v15.20-p005_1, built Wed Nov 11 11:16:39 PST 2015
+Options:	-common_ui 
+Date:		Wed Feb 15 22:51:39 2023
+Host:		pgmicro04 (x86_64 w/Linux 3.10.0-1160.81.1.el7.x86_64) (10cores*20cpus*Intel(R) Xeon(R) CPU E5-2650L v2 @ 1.70GHz 25600KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		invs	Innovus Implementation System	15.2	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Create and set the environment variable TMPDIR to /tmp/innovus_temp_35899_pgmicro04_matheus.almeida_RoAoWy.
+
+
+**INFO:  MMMC transition support version v31-84 
+
+Loading fill procedures ...
+[DEV]innovus 1> Suppress "**WARN ..." messages.
+eval_legacy { report_message -start_cmd }
+exclude_path_collection 0
+eval_legacy { report_message -start_cmd }
+
+
+ERROR: **ERROR: (IMPIMEX-3):	There is no verilog netlist found in #CUI#init_verilog#init_netlist_files#. The variable is either not specified or specified incorrectly. Check the location of Verilog file in the global file.
+
+
+**ERROR: (IMPIMEX-3):	There is no verilog netlist found in #CUI#init_verilog#init_netlist_files#. The variable is either not specified or specified incorrectly. Check the location of Verilog file in the global file.
+
+    while executing
+"error $catchMsg"
+    (procedure "restoreDesign" line 24)
+
+'**ERROR: (IMPIMEX-3):	There is no verilog netlist found in #CUI#init_verilog#init_netlist_files#. The variable is either not specified or specified incorrectly. Check the location of Verilog file in the global file.
+'.
+
+eval_legacy { report_message -end_cmd }
+**ERROR: (IMPSYT-6300):	Failed to execute command 'read_db'. For more details, refer to error message: 
+**INFO (INTERRUPT): One more Ctrl-C to exit Innovus ...
+
+
+
+
+[DEV]innovus 1> source physical/1_init.tcl 
+**WARN: (TCLCMD-1306):	read_mmmc command should be called once before init_design.
+
+[DEV]innovus 2> source physical/1_init.tcl 
+**WARN: (TCLCMD-1306):	read_mmmc command should be called once before init_design.
+
+[DEV]innovus 3> clear
+[3;J[H[2J[DEV]innovus 4> source physical/1_init.tcl 
+**WARN: (TCLCMD-1306):	read_mmmc command should be called once before init_design.
+
+[DEV]innovus 5> **INFO (INTERRUPT): One more Ctrl-C to exit Innovus ...
+Innovus terminated by user interrupt.

@@ -1,0 +1,1 @@
+restoreDesign [file dirname [file normalize [info script]]]/minimips_floor03.4_posCTS_optmization.dat minimips

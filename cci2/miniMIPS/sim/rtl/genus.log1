@@ -1,0 +1,14 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2016 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: GENUS15.22 - 15.20-s024_1, built Thu Apr 14 2016
+Options: -files synth.tcl 
+Date:    Wed Mar 01 22:15:23 2023
+Host:    pgmicro04 (x86_64 w/Linux 3.10.0-1160.81.1.el7.x86_64) (10*Intel(R) Xeon(R) CPU E5-2650L v2 @ 1.70GHz 25600KB)
+OS:      CentOS Linux release 7.9.2009 (Core)
+
+Checking out license: Genus_Synthesis
+
+Loading tool scripts...

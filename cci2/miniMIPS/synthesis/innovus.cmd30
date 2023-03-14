@@ -1,0 +1,267 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Thu Feb 16 00:34:28 2023                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v15.20-p005_1 (64bit) 11/11/2015 11:16 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 15.20-p005_1 NR151028-1715/15_20-UB (database version 2.30, 298.6.1) {superthreading v1.26}
+#@(#)CDS: AAE 15.20-p002 (64bit) 11/11/2015 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 15.20-p001_1 () Oct 29 2015 01:50:39 ( )
+#@(#)CDS: SYNTECH 15.20-b002_1 () Oct 20 2015 02:35:29 ( )
+#@(#)CDS: CPE v15.20-p002
+#@(#)CDS: IQRC/TQRC 15.1.2-s269 (64bit) Mon Aug 24 18:22:18 PDT 2015 (Linux 2.6.18-194.el5)
+
+set_db init_power_nets {VDD vdd vdd!}
+set_db init_ground_nets {VSS GND gnd gnd!}
+set_multi_cpu_usage -local_cpu 8
+is_attribute flow_edit_wildcard_end_steps -obj_type root
+is_attribute flow_edit_wildcard_start_steps -obj_type root
+is_attribute flow_footer_tcl -obj_type root
+set_db flow_footer_tcl {}
+is_attribute flow_header_tcl -obj_type root
+set_db flow_header_tcl {}
+is_attribute flow_metadata -obj_type root
+set_db flow_metadata {}
+is_attribute flow_step_begin_tcl -obj_type root
+set_db flow_step_begin_tcl {}
+is_attribute flow_step_check_tcl -obj_type root
+set_db flow_step_check_tcl {}
+is_attribute flow_step_end_tcl -obj_type root
+set_db flow_step_end_tcl {}
+is_attribute flow_step_order -obj_type root
+set_db flow_step_order {}
+is_attribute flow_summary_tcl -obj_type root
+set_db flow_summary_tcl {}
+is_attribute flow_template_feature_definition -obj_type root
+set_db flow_template_feature_definition {}
+is_attribute flow_template_type -obj_type root
+set_db flow_template_type {}
+is_attribute flow_template_version -obj_type root
+set_db flow_template_version {}
+is_attribute flow_user_templates -obj_type root
+set_db flow_user_templates {}
+is_attribute flow_branch -obj_type root
+set_db flow_branch {}
+is_attribute flow_caller_data -obj_type root
+set_db flow_caller_data {}
+is_attribute flow_current -obj_type root
+set_db flow_current {}
+is_attribute flow_database_directory -obj_type root
+set_db flow_database_directory flow.database
+is_attribute flow_exit_when_done -obj_type root
+set_db flow_exit_when_done false
+is_attribute flow_history -obj_type root
+set_db flow_history {}
+is_attribute flow_log_directory -obj_type root
+set_db flow_log_directory flow.log
+is_attribute flow_mail_on_error -obj_type root
+set_db flow_mail_on_error false
+is_attribute flow_mail_to -obj_type root
+set_db flow_mail_to {}
+is_attribute flow_metrics_file -obj_type root
+set_db flow_metrics_file {}
+is_attribute flow_metrics_snapshot_parent_uuid -obj_type root
+set_db flow_metrics_snapshot_parent_uuid {}
+is_attribute flow_metrics_snapshot_uuid -obj_type root
+set_db flow_metrics_snapshot_uuid 3acd5248
+is_attribute flow_overwrite_database -obj_type root
+set_db flow_overwrite_database false
+is_attribute flow_report_directory -obj_type root
+set_db flow_report_directory flow.report
+is_attribute flow_run_tag -obj_type root
+set_db flow_run_tag {}
+is_attribute flow_schedule -obj_type root
+set_db flow_schedule {}
+is_attribute flow_script -obj_type root
+set_db flow_script {}
+is_attribute flow_starting_db -obj_type root
+set_db flow_starting_db {}
+is_attribute flow_status_file -obj_type root
+set_db flow_status_file {}
+is_attribute flow_step_canonical_current -obj_type root
+set_db flow_step_canonical_current {}
+is_attribute flow_step_current -obj_type root
+set_db flow_step_current {}
+is_attribute flow_step_last -obj_type root
+set_db flow_step_last {}
+is_attribute flow_step_last_msg -obj_type root
+set_db flow_step_last_msg {}
+is_attribute flow_step_last_status -obj_type root
+set_db flow_step_last_status not_run
+is_attribute flow_step_next -obj_type root
+set_db flow_step_next {}
+is_attribute flow_working_directory -obj_type root
+set_db flow_working_directory .
+read_mmmc innovus/minimips.mmmc.tcl
+read_physical -lef {/pdk/xfab/XC018_61_3.1.3/cadence/xc018/LEF/xc018_m6_FE/xc018m6_FE.lef /pdk/xfab/XC018_61_3.1.3/cadence/xc018/LEF/xc018_m6_FE/D_CELLS.lef /pdk/xfab/XC018_61_3.1.3/cadence/xc018/LEF/xc018_m6_FE/IO_CELLS_5V.lef}
+read_netlist innovus/minimips.v
+init_design
+read_metric -id current innovus/minimips.metrics.json
+set_db timing_apply_default_primary_input_assertion false
+set_db timing_clock_phase_propagation both
+set_db opt_power_effort low
+set_db timing_analysis_async_checks no_async
+set_db extract_rc_layer_independent 1
+set_db place_global_reorder_scan false
+set_db extract_rc_engine pre_route
+set_db opt_keep_ports innovus/minimips.boundary_opto.tcl
+create_floorplan -site CORE -core_density_size 1 0.8 3 3 3 3
+delete_global_net_connections
+connect_global_net vdd -type tie_hi -inst_base_name *
+connect_global_net gnd -type tie_lo -inst_base_name *
+add_rings -spacing 0.25 -width 0.5 -layer {top M1 bottom M1 left M2 right M2} -jog_distance 2.5 -offset 1.5 -nets {gnd vdd} -threshold 2.5
+route_special -connect {block_pin core_pin pad_pin pad_ring floating_stripe} -layer_change_range {M1 METTP} -block_pin_target nearest_target -pad_pin_port_connect {all_port one_geom} -block_pin use_lef -allow_jogging 1 -crossover_via_layer_range {M1 METTP} -allow_layer_change 1 -target_via_layer_range {M1 METTP} -nets {gnd vdd}
+add_well_taps -cell FEED1 -cell_interval 20 -fixed_gap -prefix WELLTAP -in_row_offset 8.0
+add_stripes -block_ring_top_layer_limit M3 -max_same_layer_jog_length 6 -pad_core_ring_bottom_layer_limit M1 -set_to_set_distance 25 -pad_core_ring_top_layer_limit M3 -spacing 6 -merge_stripes_value 2.5 -layer M2 -block_ring_bottom_layer_limit M1 -width 0.5 -nets {gnd vdd}
+place_design
+edit_pin -side Top -layer 4 -spread_type center -spacing 3 -pin {clock {ram_adr[0]} {ram_adr[1]} {ram_adr[2]} {ram_adr[3]} {ram_adr[4]} {ram_adr[5]} {ram_adr[6]} {ram_adr[7]} {ram_adr[8]} {ram_adr[9]} {ram_adr[10]} {ram_adr[11]} {ram_adr[12]} {ram_adr[13]} {ram_adr[14]} {ram_adr[15]}	{ram_adr[16]}	{ram_adr[17]}}
+edit_pin -side Left -layer 3 -spread_type center -spacing 3 -pin {{ram_adr[18]} {ram_adr[19]} {ram_adr[20]} {ram_adr[21]} {ram_adr[22]} {ram_adr[23]} {ram_adr[24]} {ram_adr[25]} {ram_adr[26]} {ram_adr[27]} {ram_adr[28]} {ram_adr[29]} {ram_adr[30]} {ram_adr[31]} ram_req ram_r_w ram_ack}
+edit_pin -side Bottom -layer 4 -spread_type center -spacing 3 -pin {{ram_data[0]} {ram_data[1]} {ram_data[2]} {ram_data[3]} {ram_data[4]} {ram_data[5]} {ram_data[6]} {ram_data[7]} {ram_data[8]} {ram_data[9]} {ram_data[10]} {ram_data[11]} {ram_data[12]} {ram_data[13]} {ram_data[14]} {ram_data[15]} {ram_data[16]} {ram_data[17]}}
+edit_pin -side Right -layer 3 -spread_type center -spacing 3 -pin {{ram_data[18]} {ram_data[19]} {ram_data[20]} {ram_data[21]} {ram_data[22]} {ram_data[23]} {ram_data[24]} {ram_data[25]} {ram_data[26]} {ram_data[27]} {ram_data[28]} {ram_data[29]} {ram_data[30]} {ram_data[31]} it_mat reset}
+ccopt_design
+report_timing
+route_design -global
+route_detail
+route_global_detail
+check_design -all
+report_timing
+check_drc
+add_fillers -base_cells FEED1 FEED2 FEED3 FEED5 FEED7 FEED10 FEED15 FEED25 -prefix FILLER
+report_summary -out_dir summaryReport
+time_design -post_route
+eval_legacy {verifyGeometry -noOverlap}
+add_fillers -base_cells FEED1 FEED2 FEED3 FEED5 FEED7 FEED10 FEED15 FEED25 -prefix FILLER
+report_summary -out_dir summaryReport
+time_design -post_route
+eval_legacy {verifyGeometry -noOverlap}
+eval_legacy { analyzeFloorplan -cong -effort medium }
+set_db place_global_timing_driven 0
+set_db place_design_floorplan_mode 1
+set_db timing_analysis_type single
+set_db timing_analysis_type single
+set_db timing_analysis_type single
+set_db extract_rc_engine pre_route
+set_db timing_analysis_clock_source_paths 0
+set_db timing_analysis_clock_propagation_mode forced_ideal
+set_db timing_analysis_clock_source_paths 0
+set_db timing_analysis_clock_propagation_mode forced_ideal
+set_db place_global_ignore_scan 1
+set_db delaycal_enable_si false
+set_db delaycal_enable_si true
+set_db timing_analysis_clock_source_paths 1
+set_db timing_analysis_clock_propagation_mode sdc_control
+set_db timing_analysis_clock_source_paths 1
+set_db timing_analysis_clock_propagation_mode sdc_control
+set_db extract_rc_engine pre_route
+set_db place_global_ignore_scan true
+reset_db place_global_ignore_scan
+set_metric -name design.name -value [get_db [current_design] .name]
+set_db timing_analysis_type best_case_worst_case
+reset_db timing_analysis_type
+set_db timing_analysis_async_checks async
+reset_db timing_analysis_async_checks
+set_db timing_analysis_clock_source_paths 1
+reset_db timing_analysis_clock_source_paths
+set_db timing_analysis_clock_propagation_mode sdc_control
+reset_db timing_analysis_clock_propagation_mode
+set_db place_design_floorplan_mode 0
+reset_db place_design_floorplan_mode
+set_db place_global_reorder_scan 1
+reset_db place_global_reorder_scan
+set_db place_global_timing_driven 1
+reset_db place_global_timing_driven
+set_db place_design_floorplan_mode 0
+gui_redraw
+delete_global_net_connections
+connect_global_net vdd -type tie_hi -inst_base_name *
+connect_global_net gnd -type tie_lo -inst_base_name *
+add_rings -spacing 0.25 -width 0.5 -layer {top M1 bottom M1 left M2 right M2} -jog_distance 2.5 -offset 1.5 -nets {gnd vdd} -threshold 2.5
+route_special -connect {block_pin core_pin pad_pin pad_ring floating_stripe} -layer_change_range {M1 METTP} -block_pin_target nearest_target -pad_pin_port_connect {all_port one_geom} -block_pin use_lef -allow_jogging 1 -crossover_via_layer_range {M1 METTP} -allow_layer_change 1 -target_via_layer_range {M1 METTP} -nets {gnd vdd}
+add_well_taps -cell FEED1 -cell_interval 20 -fixed_gap -prefix WELLTAP -in_row_offset 8.0
+add_stripes -block_ring_top_layer_limit M3 -max_same_layer_jog_length 6 -pad_core_ring_bottom_layer_limit M1 -set_to_set_distance 25 -pad_core_ring_top_layer_limit M3 -spacing 6 -merge_stripes_value 2.5 -layer M2 -block_ring_bottom_layer_limit M1 -width 0.5 -nets {gnd vdd}
+set_db init_power_nets {VDD vdd vdd!}
+set_db init_ground_nets {VSS GND gnd gnd!}
+set_multi_cpu_usage -local_cpu 8
+is_attribute flow_edit_wildcard_end_steps -obj_type root
+is_attribute flow_edit_wildcard_start_steps -obj_type root
+is_attribute flow_footer_tcl -obj_type root
+set_db flow_footer_tcl {}
+is_attribute flow_header_tcl -obj_type root
+set_db flow_header_tcl {}
+is_attribute flow_metadata -obj_type root
+set_db flow_metadata {}
+is_attribute flow_step_begin_tcl -obj_type root
+set_db flow_step_begin_tcl {}
+is_attribute flow_step_check_tcl -obj_type root
+set_db flow_step_check_tcl {}
+is_attribute flow_step_end_tcl -obj_type root
+set_db flow_step_end_tcl {}
+is_attribute flow_step_order -obj_type root
+set_db flow_step_order {}
+is_attribute flow_summary_tcl -obj_type root
+set_db flow_summary_tcl {}
+is_attribute flow_template_feature_definition -obj_type root
+set_db flow_template_feature_definition {}
+is_attribute flow_template_type -obj_type root
+set_db flow_template_type {}
+is_attribute flow_template_version -obj_type root
+set_db flow_template_version {}
+is_attribute flow_user_templates -obj_type root
+set_db flow_user_templates {}
+is_attribute flow_branch -obj_type root
+set_db flow_branch {}
+is_attribute flow_caller_data -obj_type root
+set_db flow_caller_data {}
+is_attribute flow_current -obj_type root
+set_db flow_current {}
+is_attribute flow_database_directory -obj_type root
+set_db flow_database_directory flow.database
+is_attribute flow_exit_when_done -obj_type root
+set_db flow_exit_when_done false
+is_attribute flow_history -obj_type root
+set_db flow_history {}
+is_attribute flow_log_directory -obj_type root
+set_db flow_log_directory flow.log
+is_attribute flow_mail_on_error -obj_type root
+set_db flow_mail_on_error false
+is_attribute flow_mail_to -obj_type root
+set_db flow_mail_to {}
+is_attribute flow_metrics_file -obj_type root
+set_db flow_metrics_file {}
+is_attribute flow_metrics_snapshot_parent_uuid -obj_type root
+set_db flow_metrics_snapshot_parent_uuid {}
+is_attribute flow_metrics_snapshot_uuid -obj_type root
+set_db flow_metrics_snapshot_uuid 3acd5248
+is_attribute flow_overwrite_database -obj_type root
+set_db flow_overwrite_database false
+is_attribute flow_report_directory -obj_type root
+set_db flow_report_directory flow.report
+is_attribute flow_run_tag -obj_type root
+set_db flow_run_tag {}
+is_attribute flow_schedule -obj_type root
+set_db flow_schedule {}
+is_attribute flow_script -obj_type root
+set_db flow_script {}
+is_attribute flow_starting_db -obj_type root
+set_db flow_starting_db {}
+is_attribute flow_status_file -obj_type root
+set_db flow_status_file {}
+is_attribute flow_step_canonical_current -obj_type root
+set_db flow_step_canonical_current {}
+is_attribute flow_step_current -obj_type root
+set_db flow_step_current {}
+is_attribute flow_step_last -obj_type root
+set_db flow_step_last {}
+is_attribute flow_step_last_msg -obj_type root
+set_db flow_step_last_msg {}
+is_attribute flow_step_last_status -obj_type root
+set_db flow_step_last_status not_run
+is_attribute flow_step_next -obj_type root
+set_db flow_step_next {}
+is_attribute flow_working_directory -obj_type root
+set_db flow_working_directory .
+read_mmmc innovus/minimips.mmmc.tcl
+help
+help file

@@ -1,0 +1,1 @@
+restoreDesign [file dirname [file normalize [info script]]]/minimips_floor03_pin_preRoute.dat minimips

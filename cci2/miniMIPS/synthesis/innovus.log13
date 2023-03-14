@@ -1,0 +1,46 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v15.20-p005_1, built Wed Nov 11 11:16:39 PST 2015
+Options:	-init minimips_floor01 
+Date:		Wed Feb 15 18:23:12 2023
+Host:		pgmicro04 (x86_64 w/Linux 3.10.0-1160.81.1.el7.x86_64) (10cores*20cpus*Intel(R) Xeon(R) CPU E5-2650L v2 @ 1.70GHz 25600KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		invs	Innovus Implementation System	15.2	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+Loading fill procedures ...
+<CMD> getDrawView
+<CMD> loadWorkspace -name Physical
+Sourcing file "minimips_floor01" ...
+<CMD> restoreDesign /home/INF01185/matheus.almeida/cci2/miniMIPS/synthesis/minimips_floor01.dat minimips
+exclude_path_collection 0
+**WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+
+
+ERROR: invalid command name "create_opcond"
+
+invalid command name "create_opcond"
+    while executing
+"error $catchMsg"
+    (procedure "restoreDesign" line 24)
+
+
+**ERROR: (IMPSYT-6692):	Invalid return code while executing 'minimips_floor01' was returned and script processing was stopped. Review the following error in 'minimips_floor01' then restart.
+**ERROR: (IMPSYT-6693):	Error message: minimips_floor01: invalid command name "create_opcond".
+<CMD> win
+<CMD> pan -0.529 0.555
+<CMD> pan -3.303 3.005
+
+*** Memory Usage v#1 (Current mem = 453.523M, initial mem = 162.867M) ***
+*** Message Summary: 0 warning(s), 2 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:40.0, real=0:02:53, mem=453.5M) ---

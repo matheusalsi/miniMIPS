@@ -1,0 +1,13 @@
+[02/16 01:14:44     0s] 
+[02/16 01:14:44     0s] Cadence Innovus(TM) Implementation System.
+[02/16 01:14:44     0s] Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+[02/16 01:14:44     0s] 
+[02/16 01:14:44     0s] Version:	v15.20-p005_1, built Wed Nov 11 11:16:39 PST 2015
+[02/16 01:14:44     0s] Options:	-common_ui 
+[02/16 01:14:44     0s] Date:		Thu Feb 16 01:14:43 2023
+[02/16 01:14:44     0s] Host:		pgmicro04 (x86_64 w/Linux 3.10.0-1160.81.1.el7.x86_64) (10cores*20cpus*Intel(R) Xeon(R) CPU E5-2650L v2 @ 1.70GHz 25600KB)
+[02/16 01:14:44     0s] OS:		CentOS Linux release 7.9.2009 (Core)
+[02/16 01:14:44     0s] 
+[02/16 01:14:44     0s] License:
+[02/16 01:14:44     0s] 		invs	Innovus Implementation System	15.2	checkout succeeded
+[02/16 01:14:44     0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.

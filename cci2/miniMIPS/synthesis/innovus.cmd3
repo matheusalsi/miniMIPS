@@ -1,0 +1,2645 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Tue Jan 24 00:14:00 2023                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v15.20-p005_1 (64bit) 11/11/2015 11:16 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 15.20-p005_1 NR151028-1715/15_20-UB (database version 2.30, 298.6.1) {superthreading v1.26}
+#@(#)CDS: AAE 15.20-p002 (64bit) 11/11/2015 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 15.20-p001_1 () Oct 29 2015 01:50:39 ( )
+#@(#)CDS: SYNTECH 15.20-b002_1 () Oct 20 2015 02:35:29 ( )
+#@(#)CDS: CPE v15.20-p002
+#@(#)CDS: IQRC/TQRC 15.1.2-s269 (64bit) Mon Aug 24 18:22:18 PDT 2015 (Linux 2.6.18-194.el5)
+
+eval_legacy {source minimips_floor01}
+delete_global_net_connections
+connect_global_net vdd -type tie_hi -inst_base_name *
+connect_global_net gnd -type tie_lo -inst_base_name *
+route_special -connect {block_pin core_pin pad_pin pad_ring floating_stripe} -layer_change_range {M1 METTP} -block_pin_target nearest_target -pad_pin_port_connect {all_port one_geom} -block_pin use_lef -allow_jogging 1 -crossover_via_layer_range {M1 METTP} -allow_layer_change 1 -target_via_layer_range {M1 METTP} -nets {gnd vdd}
+add_well_taps -cell FEED1 -cell_interval 20 -fixed_gap -prefix WELLTAP -in_row_offset 8.0
+add_stripes -block_ring_top_layer_limit M3 -max_same_layer_jog_length 6 -pad_core_ring_bottom_layer_limit M1 -set_to_set_distance 25 -pad_core_ring_top_layer_limit M3 -spacing 6 -merge_stripes_value 2.5 -layer M2 -block_ring_bottom_layer_limit M1 -width 0.5 -nets {gnd vdd}
+eval_legacy {saveDesign minimips_floor02_powerRoute}
+place_design
+edit_pin -side Top -layer 4 -spread_type center -spacing 3 -pin {clock {ram_adr[0]} {ram_adr[1]} {ram_adr[2]} {ram_adr[3]} {ram_adr[4]} {ram_adr[5]} {ram_adr[6]} {ram_adr[7]} {ram_adr[8]} {ram_adr[9]} {ram_adr[10]} {ram_adr[11]} {ram_adr[12]} {ram_adr[13]} {ram_adr[14]} {ram_adr[15]}	{ram_adr[16]}	{ram_adr[17]}}
+edit_pin -side Left -layer 3 -spread_type center -spacing 3 -pin {{ram_adr[18]} {ram_adr[19]} {ram_adr[20]} {ram_adr[21]} {ram_adr[22]} {ram_adr[23]} {ram_adr[24]} {ram_adr[25]} {ram_adr[26]} {ram_adr[27]} {ram_adr[28]} {ram_adr[29]} {ram_adr[30]} {ram_adr[31]} ram_req	ram_r_w	ram_ack}
+edit_pin -side Bottom -layer 4 -spread_type center -spacing 3 -pin {{ram_data[0]} {ram_data[1]} {ram_data[2]} {ram_data[3]} {ram_data[4]} {ram_data[5]} {ram_data[6]} {ram_data[7]} {ram_data[8]} {ram_data[9]} {ram_data[10]} {ram_data[11]} {ram_data[12]} {ram_data[13]} {ram_data[14]} {ram_data[15]} {ram_data[16]} {ram_data[17]}}
+edit_pin -side Right -layer 3 -spread_type center -spacing 3 -pin {{ram_data[18]} {ram_data[19]} {ram_data[20]} {ram_data[21]} {ram_data[22]} {ram_data[23]} {ram_data[24]} {ram_data[25]} {ram_data[26]} {ram_data[27]} {ram_data[28]} {ram_data[29]} {ram_data[30]} {ram_data[31]} it_mat reset}
+ccopt_design
+report_timing
+gui_fit
+gui_fit
+gui_fit
+zoom_box 802.826 467.179 928.863 342.331
+zoom_box 833.096 454.888 874.820 377.101
+gui_fit
+gui_fit
+eval_legacy {saveDesign minimips_floor03_pin_preRoute}
+set_multi_cpu_usage -local_cpu 8 -cpu_per_remote_host 1 -remote_host 0 -keep_license true
+set_distribute_host -local
+set_multi_cpu_usage -local_cpu 8 -cpu_per_remote_host 1 -remote_host 0 -keep_license true
+set_distribute_host -local
+set_db place_design_floorplan_mode 0
+place_design -no_pre_place_opt
+set_db timing_analysis_type single
+set_db timing_analysis_type single
+set_db timing_analysis_type single
+set_db extract_rc_engine pre_route
+set_db timing_analysis_clock_source_paths 0
+set_db timing_analysis_clock_propagation_mode forced_ideal
+set_db timing_analysis_clock_source_paths 0
+set_db timing_analysis_clock_propagation_mode forced_ideal
+set_db place_global_ignore_scan 1
+set_db timing_analysis_type single
+set_db timing_analysis_type single
+set_db delaycal_use_default_delay_limit 101
+set_db delaycal_use_default_delay_limit 101
+set_db delaycal_default_net_delay 0
+set_db delaycal_default_net_delay 0
+set_db delaycal_default_net_load 0
+set_db delaycal_default_net_load 0
+set_db delaycal_default_net_load_ignore_for_ilm 0
+set_db timing_analysis_type single
+set_db timing_analysis_type single
+set_db timing_analysis_type single
+set_db delaycal_ignore_net_load 1
+set_db delaycal_ignore_net_load 0
+set_db delaycal_use_default_delay_limit 1000
+set_db delaycal_use_default_delay_limit 1000
+set_db delaycal_default_net_delay 1000ps
+set_db delaycal_default_net_delay 1000ps
+set_db delaycal_default_net_load 0.5pf
+set_db delaycal_default_net_load 0.5pf
+set_db delaycal_default_net_load_ignore_for_ilm 0
+set_clock_gating_check -rise -setup 0 
+set_clock_gating_check -fall -setup 0 
+create_clock [get_ports {clock}]  -name clock -period 4.000000 -waveform {0.000000 2.000000}
+set_propagated_clock  [get_clocks {clock}]
+set_propagated_clock  [get_ports {clock}]
+set_input_transition 0.003  [get_ports {clock}]
+set_input_transition 0.003  [get_ports {reset}]
+set_load -pin_load -max  0.008  [get_ports {ram_req}]
+set_load -pin_load -min  0.008  [get_ports {ram_req}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[31]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[31]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[30]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[30]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[29]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[29]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[28]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[28]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[27]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[27]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[26]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[26]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[25]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[25]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[24]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[24]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[23]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[23]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[22]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[22]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[21]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[21]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[20]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[20]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[19]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[19]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[18]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[18]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[17]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[17]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[16]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[16]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[15]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[15]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[14]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[14]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[13]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[13]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[12]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[12]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[11]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[11]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[10]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[10]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[9]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[9]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[8]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[8]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[7]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[7]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[6]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[6]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[5]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[5]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[4]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[4]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[3]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[3]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[2]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[2]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[1]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[1]}]
+set_load -pin_load -max  0.008  [get_ports {ram_adr[0]}]
+set_load -pin_load -min  0.008  [get_ports {ram_adr[0]}]
+set_load -pin_load -max  0.008  [get_ports {ram_r_w}]
+set_load -pin_load -min  0.008  [get_ports {ram_r_w}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[31]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[31]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[30]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[30]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[29]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[29]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[28]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[28]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[27]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[27]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[26]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[26]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[25]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[25]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[24]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[24]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[23]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[23]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[22]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[22]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[21]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[21]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[20]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[20]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[19]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[19]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[18]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[18]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[17]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[17]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[16]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[16]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[15]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[15]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[14]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[14]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[13]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[13]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[12]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[12]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[11]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[11]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[10]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[10]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[9]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[9]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[8]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[8]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[7]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[7]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[6]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[6]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[5]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[5]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[4]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[4]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[3]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[3]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[2]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[2]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[1]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[1]}]
+set_load -pin_load -max  0.008  [get_ports {ram_data[0]}]
+set_load -pin_load -min  0.008  [get_ports {ram_data[0]}]
+set_input_transition 0.003  [get_ports {ram_ack}]
+set_input_transition 0.003  [get_ports {it_mat}]
+set_input_transition 0.003  [get_ports {ram_data[0]}]
+set_input_transition 0.003  [get_ports {ram_data[1]}]
+set_input_transition 0.003  [get_ports {ram_data[2]}]
+set_input_transition 0.003  [get_ports {ram_data[3]}]
+set_input_transition 0.003  [get_ports {ram_data[4]}]
+set_input_transition 0.003  [get_ports {ram_data[5]}]
+set_input_transition 0.003  [get_ports {ram_data[6]}]
+set_input_transition 0.003  [get_ports {ram_data[7]}]
+set_input_transition 0.003  [get_ports {ram_data[8]}]
+set_input_transition 0.003  [get_ports {ram_data[9]}]
+set_input_transition 0.003  [get_ports {ram_data[10]}]
+set_input_transition 0.003  [get_ports {ram_data[11]}]
+set_input_transition 0.003  [get_ports {ram_data[12]}]
+set_input_transition 0.003  [get_ports {ram_data[13]}]
+set_input_transition 0.003  [get_ports {ram_data[14]}]
+set_input_transition 0.003  [get_ports {ram_data[15]}]
+set_input_transition 0.003  [get_ports {ram_data[16]}]
+set_input_transition 0.003  [get_ports {ram_data[17]}]
+set_input_transition 0.003  [get_ports {ram_data[18]}]
+set_input_transition 0.003  [get_ports {ram_data[19]}]
+set_input_transition 0.003  [get_ports {ram_data[20]}]
+set_input_transition 0.003  [get_ports {ram_data[21]}]
+set_input_transition 0.003  [get_ports {ram_data[22]}]
+set_input_transition 0.003  [get_ports {ram_data[23]}]
+set_input_transition 0.003  [get_ports {ram_data[24]}]
+set_input_transition 0.003  [get_ports {ram_data[25]}]
+set_input_transition 0.003  [get_ports {ram_data[26]}]
+set_input_transition 0.003  [get_ports {ram_data[27]}]
+set_input_transition 0.003  [get_ports {ram_data[28]}]
+set_input_transition 0.003  [get_ports {ram_data[29]}]
+set_input_transition 0.003  [get_ports {ram_data[30]}]
+set_input_transition 0.003  [get_ports {ram_data[31]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[29]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[27]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[25]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[18]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[30]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[23]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[16]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[21]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[14]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[8]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[12]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[6]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[10]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[4]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[2]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[0]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[28]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {reset}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[26]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[19]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[31]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[24]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[17]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[22]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[15]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[9]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[20]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[13]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[7]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[11]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[5]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {it_mat}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_ack}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[3]}]
+set_input_delay -add_delay 0.2 -max -clock [get_clocks {clock}] [get_ports {ram_data[1]}]
+set_false_path  -from [get_ports {reset}] 
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/ITP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTUD2P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/OR8X1}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSGCPX6}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/AO332X1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOSGD8SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBS4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCGD16P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCHD4SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LGCNX1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOTGD4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSUD24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOL8P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBL2SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTUD8SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/APR04P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/FILLER20P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTHD1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOS4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLUD24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOC4SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCA2P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/FEEDCAP5}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/OA331X0}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/AN332X0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/JSP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSGCNX4}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/AO322X1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOT24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSHD16SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/SIGNALHOLD}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCGD2SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCUD24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BT1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSUD8SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOLGD24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLHD16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BD2P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBC1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/ICAP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTHD4SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSOGCPX2}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOSGD16SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLUD8SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCA24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCHD16P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/FEEDCAP10}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/AN322X0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/VDDPADP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LGCPX6}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOT8SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSHD4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOL16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCUD8P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/ANTENNACELLN25}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BT4SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBT2P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOLGD8SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLHD4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOC16P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBC4SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/ISP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTUD24P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSOGCNX1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOSGD4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBS24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCA8P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCHD2SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/FEED1}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LGCNX4}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOTGD2P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSUD1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOL4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBL24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTUD4SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/APR01DP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/AND8X0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/FILLER02P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTHD16P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOS24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLUD16SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOC2SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCA24P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/FEEDCAP7LP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/OA332X1}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/AN333X1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/JLGDP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSGCPX0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOT1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBS8SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCGD24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCUD16SMP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/ON331X1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BT16P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSUD4SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOLGD16SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBL8SMP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/NA8X0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BD24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBC16P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/GNDOPADP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTHD2SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSOGCPX6}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOS8SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLUD4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCA16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCA8P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/FEEDCAP15LP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/OA322X1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/VDDIPADP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOT4SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSHD2P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCGD8SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCUD4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BT2SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBT24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOLGD4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLHD24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BD8P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBC2SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/ILP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTUD16SMP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSOGCNX4}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOSGD2P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBS1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCA4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCHD24SMP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/FEED2}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LGCPX0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOTGD24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSUD16P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOL24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBL16SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/NO8X0}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/ANTENNACELL2}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/CORNERESDP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBT8P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOS1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLHD8SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOC24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCA16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/JCAP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/OR7X1}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSGCPX3}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/AO331X1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOT16P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBS4SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCGD16SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCHD8SMP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/ON333X0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOTGD8P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSUD2SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOL8SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBL4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BD16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/APR10P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/FILLER50P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTHD24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOS4SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLUD2P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOC8SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCA4P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/FEEDCAP25LP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/AN331X0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/JTP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSGCNX2}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOT2SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSHD24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCGD4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCUD24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BT24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBT16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOLGD2P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLHD1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BD4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBC24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/ICP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTHD8SMP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSOGCPX0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOSGD24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBS16P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCA24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCHD16SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/FEED5}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LGCPX3}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOTGD16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSHD8P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOL1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCUD8SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/ANTENNACELLN10}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BT8SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBT4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOS16P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLHD4SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOC16SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBC8SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/ITHDP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTUD24SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSGCPX8}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/AO333X0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOSGD8P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBS2SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCA8SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCHD4SMP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LGCNX2}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOTGD4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSUD24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOL4SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBL2P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTUD8SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/APR04DP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/AND7X0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/FILLER10P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTHD16SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOS2SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLUD24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOC4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCA24SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/FEEDCAP5LP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/OA331X1}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/AN332X1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/JSGDP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSGCNX6}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOT24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSHD16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCGD2P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCUD1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BT16SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSUD8SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOLGD24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLHD16P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/NA7X0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BD24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBC16SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/GNDRPADP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTHD4SMP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSOGCPX3}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOSGD16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLUD8P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCA1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCA8SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/FEEDCAP10LP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/AN322X1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/VDDORPADP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LGCPX8}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOT8SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSHD4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOL16P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCUD4SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/ANTENNACELLN5}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BT4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBT24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOLGD8P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLHD2SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BD8SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBC4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/ISHDP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTUD1P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSOGCNX2}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOSGD4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBS24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCA4SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCHD2P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/FEED10}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LGCNX6}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOTGD24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSUD16SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOL2SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBL24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTUD4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/APR00P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/NO7X0}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/AND8X1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/FILLER01P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBT8SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOS24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLUD16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOC2P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCA1P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/OA333X0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/JCP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSGCPX1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOT16SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBS8SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCGD24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCUD16P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/ON332X0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOTGD8SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSUD4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOLGD16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBL8P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/NA8X1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BD1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/APR15P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/GNDIPADP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTHD2P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSOGCPX8}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOS8SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLUD4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCA16P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCA4SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/FEEDCAP2}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/VDDCPADP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSGCNX0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOT4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSHD24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCGD8P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCUD2SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/ON322X0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BT2P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBT1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOLGD4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLHD24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BD4SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBC2P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/ILHDP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTUD16P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSOGCNX6}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOSGD24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBS16SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCA2SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCHD24P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/FEED25}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LGCPX1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOTGD1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSHD8SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOL24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBL16SMP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/NO8X1}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/ANTENNACELL25}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/CORNERBP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBT4SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOS16SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLHD8SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOC24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCA16P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/ITUDP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTUD2SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/OR8X0}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSGCPX4}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/AO332X0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOSGD8SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBS4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCGD16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCHD8P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/ON333X1}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LGCNX0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOTGD4SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSUD2P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOL8SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBL4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BD16P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/APR10DP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/FILLER40P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTHD24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOS4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLUD24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOC8P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCA2SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/AN331X1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/JTGDP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSGCNX3}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/AO322X0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOT2P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSHD1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCGD4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCUD24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BT24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBT16P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOLGD24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLHD16SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BD2SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBC24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/ICHDP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTHD8P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSOGCPX1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOSGD1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLUD8SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCA24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCHD16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/VDDRPADP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LGCPX4}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOTGD16P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSHD4SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOL16SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCUD8SMP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/ANTENNACELLN2}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BT8P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBT2SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOLGD8SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLHD4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOC16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBC8P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/ISUDP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTUD24SMP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSOGCNX0}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/AO333X1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOSGD4SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBS2P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCA8SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCHD4P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LGCNX3}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOTGD2SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSUD24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOL4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBL24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTUD8P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/APR01P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/AND7X1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/FILLER05P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTHD16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOS2P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLUD1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOC4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCA24SMP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/FEEDCAP7}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/OA332X0}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/AN333X0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/JLP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSGCNX8}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOT24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSHD16P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCGD24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCUD16SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/ON331X0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BT16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSUD8P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOLGD1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBL8SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/NA7X1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BD24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBC16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/GNDORPADP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTHD4P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSOGCPX4}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOSGD16P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLUD4SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCA16SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCA8SMP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/FEEDCAP15}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/OA322X0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/VDDOPADP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOT8P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSHD2SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCGD8SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCUD4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BT4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBT24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOLGD4SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLHD2P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BD8SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBC4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/ILUDP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTUD16SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSOGCNX3}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOSGD2SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBS24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCA4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCHD24SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LGCNX8}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOTGD24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSUD16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOL2P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBL1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTUD4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/APR00DP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/NO7X1}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/ANTENNACELL10}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/CORNERP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBT8SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOS24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLUD16P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOC24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCA16SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/OA333X1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/JCGDP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/OR7X0}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSGCPX2}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/AO331X0}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOT16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBS8P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCGD1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCHD8SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/ON332X1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOTGD8SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSUD4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOLGD16P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBL4SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BD16SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/APR15DP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/FILLER60P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTHD24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOS8P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLUD2SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOC8SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCA4SMP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/FEEDCAP25}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/POWERCUTP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSGCNX1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOT4P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSHD24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCGD4SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCUD2P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/ON322X1}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BT24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBT16SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOLGD2SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLHD24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BD4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBC24SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/ICUDP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBTHD8SP}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LSOGCNX8}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOSGD24SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBS16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOCA2P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBCHD1P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/LGCPX2}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOTGD16SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBSHD8SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOL24P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBL16P}]
+set_dont_use  [get_lib_cells {D_CELLS_MOSST_typ_1_80V_25C/ANTENNACELL5}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BT8SP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBT4SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOS16SMP}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBLHD8P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BOC1P}]
+set_dont_use  [get_lib_cells {IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C/BBC8SP}]
+set_db timing_analysis_type single
+set_db timing_analysis_clock_source_paths 1
+set_db timing_analysis_clock_propagation_mode sdc_control
+set_db timing_analysis_clock_source_paths 1
+set_db timing_analysis_clock_propagation_mode sdc_control
+set_db extract_rc_engine pre_route
+set_db place_global_ignore_scan true
+reset_db place_global_ignore_scan
+set_metric -name design.name -value [get_db [current_design] .name]
+gui_window_select 19.259 265.045 235.661 300.715
+deselect_all
+gui_window_select 644.620 -31.006 688.619 -44.087
+gui_fit
+gui_fit
+eval_legacy {saveDesign minimips_floor03.1_after_placement}
+set_db opt_fix_fanout_load 0
+opt_design -pre_cts
+set_db opt_all_end_points 1
+set_db timing_analysis_type single
+set_db delaycal_enable_high_fanout 1
+set_db timing_analysis_type single
+set_db opt_drv_margin 0.2
+set_db timing_analysis_clock_propagation_mode forced_ideal
+set_db timing_analysis_clock_propagation_mode forced_ideal
+set_db opt_effort high
+set_db opt_setup_target_slack 0.1
+set_db timing_analysis_type single
+set_db timing_analysis_useful_skew 1
+set_db timing_analysis_useful_skew 1
+set_db opt_drv_margin 0
+set_db opt_setup_target_slack 0
+set_db opt_drv_margin 0
+set_metric -name design.name -value [get_db [current_design] .name]
+set_db opt_drv_margin 0
+set_db opt_all_end_points 0
+set_db opt_fix_fanout_load 0
+set_db opt_all_end_points 1
+set_db timing_analysis_type single
+get_computed_shapes {{{4.745 2.185 4.975 3.24}} {{4.535 2.86 4.975 3.24}} {{4.81 1.69 5.095 2.39}}} XOR {{{4.745 2.16 4.975 3.24}} {{4.535 2.86 4.975 3.24}} {{4.81 1.69 5.095 2.39}}}
+set_db delaycal_enable_high_fanout 1
+set_db timing_analysis_type single
+set_db opt_drv_margin 0.2
+set_db opt_effort high
+set_db opt_setup_target_slack 0.1
+set_opt_dont_use INCX12 true
+set_opt_dont_use INCX16 true
+set_opt_dont_use INCX20 true
+set_opt_dont_use BTHCX8 true
+set_opt_dont_use BTHCX6 true
+set_opt_dont_use BTHCX4 true
+set_opt_dont_use BTLCX8 true
+set_opt_dont_use BTLCX6 true
+set_opt_dont_use BTLCX4 true
+set_opt_dont_use DLY8X1 true
+set_opt_dont_use DLY8X0 true
+set_opt_dont_use DLY4X1 true
+set_opt_dont_use DLY2X1 true
+set_opt_dont_use DLY4X0 true
+set_opt_dont_use DLY1X1 true
+set_opt_dont_use DLY2X0 true
+set_opt_dont_use DLY1X0 true
+set_opt_dont_use ITHX1 true
+set_opt_dont_use ITHCX8 true
+set_opt_dont_use ITHCX16 true
+set_opt_dont_use ITLX1 true
+set_opt_dont_use ITLCX4 true
+set_opt_dont_use ITLCX8 true
+set_opt_dont_use INCX12 false
+set_opt_dont_use INCX16 false
+set_opt_dont_use INCX20 false
+set_opt_dont_use BTHCX8 false
+set_opt_dont_use BTHCX6 false
+set_opt_dont_use BTHCX4 false
+set_opt_dont_use BTLCX8 false
+set_opt_dont_use BTLCX6 false
+set_opt_dont_use BTLCX4 false
+set_opt_dont_use DLY8X1 false
+set_opt_dont_use DLY8X0 false
+set_opt_dont_use DLY4X1 false
+set_opt_dont_use DLY2X1 false
+set_opt_dont_use DLY4X0 false
+set_opt_dont_use DLY1X1 false
+set_opt_dont_use DLY2X0 false
+set_opt_dont_use DLY1X0 false
+set_opt_dont_use ITHX1 false
+set_opt_dont_use ITHCX8 false
+set_opt_dont_use ITHCX16 false
+set_opt_dont_use ITLX1 false
+set_opt_dont_use ITLCX4 false
+set_opt_dont_use ITLCX8 false
+set_db timing_analysis_type single
+set_db opt_drv_margin 0
+set_db opt_setup_target_slack 0
+set_db opt_drv_margin 0
+eval_legacy { set_db flow_schedule {} }
+eval_legacy { set_db flow_metrics_snapshot_uuid 3acdf65b }
+set_metric -name design.name -value [get_db [current_design] .name]
+get_log_file_name
+eval_legacy { is_attribute -obj_type root flow_run_tag }
+eval_legacy { is_attribute flow_template_feature_definition -obj_type root }
+eval_legacy { is_attribute flow_template_type -obj_type root }
+report_messages -errors
+get_message -id IMPSE-212 -count
+eval_legacy { set_db flow_schedule {} }
+eval_legacy { set_db flow_metrics_snapshot_uuid 3acdf657 }
+set_db opt_drv_margin 0
+set_db opt_all_end_points 0
+set_db opt_fix_fanout_load 0
+set_db opt_all_end_points 1
+set_db timing_analysis_type single
+get_computed_shapes {{{4.745 2.185 4.975 3.24}} {{4.535 2.86 4.975 3.24}} {{4.81 1.69 5.095 2.39}}} XOR {{{4.745 2.16 4.975 3.24}} {{4.535 2.86 4.975 3.24}} {{4.81 1.69 5.095 2.39}}}
+set_db delaycal_enable_high_fanout 1
+set_db timing_analysis_type single
+set_db opt_drv_margin 0.2
+set_db opt_effort high
+set_db opt_setup_target_slack 0.1
+set_opt_dont_use INCX12 true
+set_opt_dont_use INCX16 true
+set_opt_dont_use INCX20 true
+set_opt_dont_use BTHCX8 true
+set_opt_dont_use BTHCX6 true
+set_opt_dont_use BTHCX4 true
+set_opt_dont_use BTLCX8 true
+set_opt_dont_use BTLCX6 true
+set_opt_dont_use BTLCX4 true
+set_opt_dont_use DLY8X1 true
+set_opt_dont_use DLY8X0 true
+set_opt_dont_use DLY4X1 true
+set_opt_dont_use DLY2X1 true
+set_opt_dont_use DLY4X0 true
+set_opt_dont_use DLY1X1 true
+set_opt_dont_use DLY2X0 true
+set_opt_dont_use DLY1X0 true
+set_opt_dont_use ITHX1 true
+set_opt_dont_use ITHCX8 true
+set_opt_dont_use ITHCX16 true
+set_opt_dont_use ITLX1 true
+set_opt_dont_use ITLCX4 true
+set_opt_dont_use ITLCX8 true
+set_opt_dont_use INCX12 false
+set_opt_dont_use INCX16 false
+set_opt_dont_use INCX20 false
+set_opt_dont_use BTHCX8 false
+set_opt_dont_use BTHCX6 false
+set_opt_dont_use BTHCX4 false
+set_opt_dont_use BTLCX8 false
+set_opt_dont_use BTLCX6 false
+set_opt_dont_use BTLCX4 false
+set_opt_dont_use DLY8X1 false
+set_opt_dont_use DLY8X0 false
+set_opt_dont_use DLY4X1 false
+set_opt_dont_use DLY2X1 false
+set_opt_dont_use DLY4X0 false
+set_opt_dont_use DLY1X1 false
+set_opt_dont_use DLY2X0 false
+set_opt_dont_use DLY1X0 false
+set_opt_dont_use ITHX1 false
+set_opt_dont_use ITHCX8 false
+set_opt_dont_use ITHCX16 false
+set_opt_dont_use ITLX1 false
+set_opt_dont_use ITLCX4 false
+set_opt_dont_use ITLCX8 false
+set_db timing_analysis_type single
+set_db opt_drv_margin 0
+set_db opt_setup_target_slack 0
+set_db opt_drv_margin 0
+eval_legacy { set_db flow_schedule {} }
+eval_legacy { set_db flow_metrics_snapshot_uuid 3acdf645 }
+set_metric -name design.name -value [get_db [current_design] .name]
+get_log_file_name
+eval_legacy { is_attribute -obj_type root flow_run_tag }
+eval_legacy { is_attribute flow_template_feature_definition -obj_type root }
+eval_legacy { is_attribute flow_template_type -obj_type root }
+report_messages -errors
+get_message -id IMPSE-212 -count
+eval_legacy { set_db flow_schedule {} }
+eval_legacy { set_db flow_metrics_snapshot_uuid 3acdf640 }
+set_db opt_drv_margin 0
+set_db opt_all_end_points 0
+eval_legacy { selectWire 0.0000 394.8800 841.0500 395.6800 1 gnd }
+deselect_all
+set_db opt_fix_fanout_load 0
+set_db opt_all_end_points 1
+set_db timing_analysis_type single
+get_computed_shapes {{{4.745 2.185 4.975 3.24}} {{4.535 2.86 4.975 3.24}} {{4.81 1.69 5.095 2.39}}} XOR {{{4.745 2.16 4.975 3.24}} {{4.535 2.86 4.975 3.24}} {{4.81 1.69 5.095 2.39}}}
+set_db delaycal_enable_high_fanout 1
+set_db timing_analysis_type single
+set_db opt_drv_margin 0.2
+set_db opt_effort high
+set_db opt_setup_target_slack 0.1
+set_opt_dont_use INCX12 true
+set_opt_dont_use INCX16 true
+set_opt_dont_use INCX20 true
+set_opt_dont_use BTHCX8 true
+set_opt_dont_use BTHCX6 true
+set_opt_dont_use BTHCX4 true
+set_opt_dont_use BTLCX8 true
+set_opt_dont_use BTLCX6 true
+set_opt_dont_use BTLCX4 true
+set_opt_dont_use DLY8X1 true
+set_opt_dont_use DLY8X0 true
+set_opt_dont_use DLY4X1 true
+set_opt_dont_use DLY2X1 true
+set_opt_dont_use DLY4X0 true
+set_opt_dont_use DLY1X1 true
+set_opt_dont_use DLY2X0 true
+set_opt_dont_use DLY1X0 true
+set_opt_dont_use ITHX1 true
+set_opt_dont_use ITHCX8 true
+set_opt_dont_use ITHCX16 true
+set_opt_dont_use ITLX1 true
+set_opt_dont_use ITLCX4 true
+set_opt_dont_use ITLCX8 true
+set_opt_dont_use INCX12 false
+set_opt_dont_use INCX16 false
+set_opt_dont_use INCX20 false
+set_opt_dont_use BTHCX8 false
+set_opt_dont_use BTHCX6 false
+set_opt_dont_use BTHCX4 false
+set_opt_dont_use BTLCX8 false
+set_opt_dont_use BTLCX6 false
+set_opt_dont_use BTLCX4 false
+set_opt_dont_use DLY8X1 false
+set_opt_dont_use DLY8X0 false
+set_opt_dont_use DLY4X1 false
+set_opt_dont_use DLY2X1 false
+set_opt_dont_use DLY4X0 false
+set_opt_dont_use DLY1X1 false
+set_opt_dont_use DLY2X0 false
+set_opt_dont_use DLY1X0 false
+set_opt_dont_use ITHX1 false
+set_opt_dont_use ITHCX8 false
+set_opt_dont_use ITHCX16 false
+set_opt_dont_use ITLX1 false
+set_opt_dont_use ITLCX4 false
+set_opt_dont_use ITLCX8 false
+set_db timing_analysis_type single
+set_db opt_drv_margin 0
+set_db opt_setup_target_slack 0
+set_db opt_drv_margin 0
+eval_legacy { set_db flow_schedule {} }
+eval_legacy { set_db flow_metrics_snapshot_uuid 3acdf6ca }
+set_metric -name design.name -value [get_db [current_design] .name]
+get_log_file_name
+eval_legacy { is_attribute -obj_type root flow_run_tag }
+eval_legacy { is_attribute flow_template_feature_definition -obj_type root }
+eval_legacy { is_attribute flow_template_type -obj_type root }
+report_messages -errors
+get_message -id IMPSE-212 -count
+eval_legacy { set_db flow_schedule {} }
+eval_legacy { set_db flow_metrics_snapshot_uuid 3acdf649 }
+set_db opt_drv_margin 0
+set_db opt_all_end_points 0
+zoom_box 822.826 588.453 822.826 589.143
+gui_fit
+gui_window_select 106.203 667.381 576.334 349.121
+deselect_all
+zoom_selected
+gui_window_select -41.201 791.335 207.823 618.246
+zoom_box -65.768 815.902 358.578 437.341
+deselect_all
+zoom_box -26.878 847.306 159.878 718.013
+zoom_box 441.035 888.363 787.377 690.065
+zoom_box 502.151 863.274 754.969 775.222
+gui_fit
+eval_legacy {setCTSMode -engine ck}
+eval_legacy { report_message -start_cmd }
+create_clock_tree -name clock -source clock -no_skew_group -prep_for_save
+deselect_all
+deselect_all
+set_db route_detail_end_iteration 5
+set_db route_detail_auto_stop 0
+set_db route_with_eco 1
+set_db route_with_timing_driven 0
+set_db route_selected_net_only 1
+route_global_detail
+set_db route_with_timing_driven 0
+set_db route_with_si_driven 0
+set_db route_with_timing_driven 0
+set_db route_with_si_driven 0
+delete_routes_with_violations -selected
+route_global_detail
+set_db route_with_timing_driven 0
+set_db route_with_si_driven 0
+set_db route_with_timing_driven 0
+set_db route_with_si_driven 0
+set_db route_detail_end_iteration 0
+reset_db route_detail_end_iteration
+set_db route_detail_auto_stop 1
+reset_db route_detail_auto_stop
+set_db route_selected_net_only 0
+reset_db route_selected_net_only
+set_db route_with_eco 0
+reset_db route_with_eco
+set_db route_with_timing_driven 0
+reset_db route_with_timing_driven
+deselect_all
+deselect_all
+deselect_all
+select_net U3_di_RC_CG_HIER_INST4/CTS_6__N4
+select_net U7_banc_RC_CG_HIER_INST26/CTS_1__N3
+select_net U7_banc_RC_CG_HIER_INST26/CTS_1__N2
+select_net CTS_37__N1
+select_net clock__N0
+select_net clock__L2_N0
+select_net clock__L1_N0
+select_net CTS_46__L1_N0
+select_net CTS_45__L1_N1
+select_net CTS_45__L1_N0
+select_net CTS_44__L1_N1
+select_net CTS_44__L1_N0
+select_net CTS_43__L1_N1
+select_net CTS_43__L1_N0
+select_net CTS_42__L1_N0
+select_net CTS_41__L1_N0
+select_net CTS_40__L2_N2
+select_net CTS_40__L2_N1
+select_net CTS_40__L2_N0
+select_net CTS_40__L1_N0
+select_net CTS_38__L1_N1
+select_net CTS_38__L1_N0
+select_net U1_pf_rc_gclk__L1_N0
+select_net U2_ei_rc_gclk__L1_N0
+select_net U2_ei_rc_gclk_1264__L1_N0
+select_net U9_bus_ctrl_rc_gclk__L1_N0
+select_net U4_ex_U1_alu_rc_gclk__L1_N0
+select_net U7_banc_rc_gclk_13972__L1_N1
+select_net U7_banc_rc_gclk_13972__L1_N0
+select_net U7_banc_rc_gclk_13975__L1_N0
+select_net U7_banc_rc_gclk_13978__L1_N0
+select_net U7_banc_rc_gclk_13981__L1_N0
+select_net U7_banc_rc_gclk_13984__L1_N1
+select_net U7_banc_rc_gclk_13984__L1_N0
+select_net U7_banc_rc_gclk_13987__L1_N1
+select_net U7_banc_rc_gclk_13987__L1_N0
+select_net U7_banc_rc_gclk_13990__L1_N0
+select_net U7_banc_rc_gclk_13993__L1_N1
+select_net U7_banc_rc_gclk_13993__L1_N0
+select_net CTS_37__L1_N0
+select_net U7_banc_rc_gclk_13996__L1_N0
+select_net U7_banc_rc_gclk_13999__L1_N0
+select_net U7_banc_RC_CG_HIER_INST20/CTS_9__L1_N0
+select_net U7_banc_rc_gclk_14002__L1_N0
+select_net U7_banc_RC_CG_HIER_INST21/CTS_9__L1_N0
+select_net U7_banc_rc_gclk_14005__L1_N1
+select_net U7_banc_rc_gclk_14005__L1_N0
+select_net U7_banc_RC_CG_HIER_INST22/CTS_9__L1_N0
+select_net U7_banc_rc_gclk_14008__L1_N0
+select_net U7_banc_rc_gclk_14011__L1_N1
+select_net U7_banc_rc_gclk_14011__L1_N0
+select_net U7_banc_rc_gclk_14014__L1_N0
+select_net U7_banc_rc_gclk_14017__L1_N0
+select_net U7_banc_rc_gclk_14023__L1_N1
+select_net U7_banc_rc_gclk_14023__L1_N0
+select_net U7_banc_rc_gclk_14026__L1_N0
+select_net U7_banc_rc_gclk_14029__L1_N0
+select_net U7_banc_rc_gclk_14032__L1_N1
+select_net U7_banc_rc_gclk_14032__L1_N0
+select_net U7_banc_rc_gclk_14035__L1_N0
+select_net U7_banc_rc_gclk_14038__L1_N1
+select_net U7_banc_rc_gclk_14038__L1_N0
+select_net U7_banc_rc_gclk_14041__L1_N0
+select_net U7_banc_rc_gclk_14044__L1_N1
+select_net U7_banc_rc_gclk_14044__L1_N0
+select_net U7_banc_rc_gclk_14047__L1_N0
+select_net U7_banc_rc_gclk_14050__L1_N1
+select_net U7_banc_rc_gclk_14050__L1_N0
+select_net CTS_36__L1_N0
+select_net U7_banc_rc_gclk_14056__L1_N1
+select_net U7_banc_rc_gclk_14056__L1_N0
+select_net U7_banc_rc_gclk__L1_N0
+select_net U8_syscop_rc_gclk__L1_N0
+select_net U8_syscop_rc_gclk_5742__L1_N0
+select_net CTS_48
+select_net CTS_47
+select_net U3_di_RC_CG_HIER_INST4/CTS_6
+select_net U3_di_RC_CG_HIER_INST4/CTS_5
+select_net CTS_46
+select_net CTS_45
+select_net CTS_44
+select_net RC_CG_DECLONE_HIER_INST/CTS_6
+select_net RC_CG_DECLONE_HIER_INST/CTS_5
+select_net CTS_43
+select_net CTS_42
+select_net CTS_41
+select_net CTS_40
+select_net CTS_39
+select_net CTS_38
+select_net U1_pf_RC_CG_HIER_INST1/CTS_7
+select_net U1_pf_RC_CG_HIER_INST1/CTS_6
+select_net U2_ei_RC_CG_HIER_INST2/CTS_7
+select_net U2_ei_RC_CG_HIER_INST2/CTS_6
+select_net U2_ei_RC_CG_HIER_INST3/CTS_7
+select_net U2_ei_RC_CG_HIER_INST3/CTS_6
+select_net U9_bus_ctrl_RC_CG_HIER_INST42/CTS_7
+select_net U9_bus_ctrl_RC_CG_HIER_INST42/CTS_6
+select_net U4_ex_U1_alu_RC_CG_HIER_INST6/CTS_7
+select_net U4_ex_U1_alu_RC_CG_HIER_INST6/CTS_6
+select_net U4_ex_U1_alu_RC_CG_HIER_INST7/CTS_7
+select_net U4_ex_U1_alu_RC_CG_HIER_INST7/CTS_6
+select_net U7_banc_RC_CG_HIER_INST10/CTS_7
+select_net U7_banc_RC_CG_HIER_INST10/CTS_6
+select_net U7_banc_RC_CG_HIER_INST11/CTS_7
+select_net U7_banc_RC_CG_HIER_INST11/CTS_6
+select_net U7_banc_RC_CG_HIER_INST12/CTS_7
+select_net U7_banc_RC_CG_HIER_INST12/CTS_6
+select_net U7_banc_RC_CG_HIER_INST13/CTS_7
+select_net U7_banc_RC_CG_HIER_INST13/CTS_6
+select_net U7_banc_RC_CG_HIER_INST14/CTS_7
+select_net U7_banc_RC_CG_HIER_INST14/CTS_6
+select_net U7_banc_RC_CG_HIER_INST15/CTS_7
+select_net U7_banc_RC_CG_HIER_INST15/CTS_6
+select_net U7_banc_RC_CG_HIER_INST16/CTS_7
+select_net U7_banc_RC_CG_HIER_INST16/CTS_6
+select_net U7_banc_RC_CG_HIER_INST17/CTS_7
+select_net U7_banc_RC_CG_HIER_INST17/CTS_6
+select_net CTS_37
+select_net U7_banc_RC_CG_HIER_INST18/CTS_7
+select_net U7_banc_RC_CG_HIER_INST18/CTS_6
+select_net U7_banc_RC_CG_HIER_INST19/CTS_9
+select_net U7_banc_RC_CG_HIER_INST19/CTS_8
+select_net U7_banc_RC_CG_HIER_INST19/CTS_7
+select_net U7_banc_RC_CG_HIER_INST20/CTS_9
+select_net U7_banc_RC_CG_HIER_INST20/CTS_8
+select_net U7_banc_RC_CG_HIER_INST20/CTS_7
+select_net U7_banc_RC_CG_HIER_INST21/CTS_9
+select_net U7_banc_RC_CG_HIER_INST21/CTS_8
+select_net U7_banc_RC_CG_HIER_INST21/CTS_7
+select_net U7_banc_RC_CG_HIER_INST22/CTS_9
+select_net U7_banc_RC_CG_HIER_INST22/CTS_8
+select_net U7_banc_RC_CG_HIER_INST22/CTS_7
+select_net U7_banc_RC_CG_HIER_INST23/CTS_11
+select_net U7_banc_RC_CG_HIER_INST23/CTS_10
+select_net U7_banc_RC_CG_HIER_INST23/CTS_9
+select_net U7_banc_RC_CG_HIER_INST23/CTS_8
+select_net U7_banc_RC_CG_HIER_INST24/CTS_11
+select_net U7_banc_RC_CG_HIER_INST24/CTS_10
+select_net U7_banc_RC_CG_HIER_INST24/CTS_9
+select_net U7_banc_RC_CG_HIER_INST24/CTS_8
+select_net U7_banc_RC_CG_HIER_INST25/CTS_11
+select_net U7_banc_RC_CG_HIER_INST25/CTS_10
+select_net U7_banc_RC_CG_HIER_INST25/CTS_9
+select_net U7_banc_RC_CG_HIER_INST25/CTS_8
+select_net U7_banc_RC_CG_HIER_INST26/CTS_9
+select_net U7_banc_RC_CG_HIER_INST26/CTS_8
+select_net U7_banc_RC_CG_HIER_INST26/CTS_7
+select_net U7_banc_RC_CG_HIER_INST27/CTS_7
+select_net U7_banc_RC_CG_HIER_INST27/CTS_6
+select_net U7_banc_RC_CG_HIER_INST28/CTS_9
+select_net U7_banc_RC_CG_HIER_INST28/CTS_8
+select_net U7_banc_RC_CG_HIER_INST28/CTS_7
+select_net U7_banc_RC_CG_HIER_INST29/CTS_9
+select_net U7_banc_RC_CG_HIER_INST29/CTS_8
+select_net U7_banc_RC_CG_HIER_INST29/CTS_7
+select_net U7_banc_RC_CG_HIER_INST30/CTS_9
+select_net U7_banc_RC_CG_HIER_INST30/CTS_8
+select_net U7_banc_RC_CG_HIER_INST30/CTS_7
+select_net U7_banc_RC_CG_HIER_INST31/CTS_9
+select_net U7_banc_RC_CG_HIER_INST31/CTS_8
+select_net U7_banc_RC_CG_HIER_INST31/CTS_7
+select_net U7_banc_RC_CG_HIER_INST32/CTS_7
+select_net U7_banc_RC_CG_HIER_INST32/CTS_6
+select_net U7_banc_RC_CG_HIER_INST33/CTS_7
+select_net U7_banc_RC_CG_HIER_INST33/CTS_6
+select_net U7_banc_RC_CG_HIER_INST34/CTS_7
+select_net U7_banc_RC_CG_HIER_INST34/CTS_6
+select_net U7_banc_RC_CG_HIER_INST35/CTS_9
+select_net U7_banc_RC_CG_HIER_INST35/CTS_8
+select_net U7_banc_RC_CG_HIER_INST35/CTS_7
+select_net U7_banc_RC_CG_HIER_INST36/CTS_11
+select_net U7_banc_RC_CG_HIER_INST36/CTS_10
+select_net U7_banc_RC_CG_HIER_INST36/CTS_9
+select_net U7_banc_RC_CG_HIER_INST36/CTS_8
+select_net U7_banc_RC_CG_HIER_INST37/CTS_9
+select_net U7_banc_RC_CG_HIER_INST37/CTS_8
+select_net U7_banc_RC_CG_HIER_INST37/CTS_7
+select_net CTS_36
+select_net U7_banc_RC_CG_HIER_INST38/CTS_9
+select_net U7_banc_RC_CG_HIER_INST38/CTS_8
+select_net U7_banc_RC_CG_HIER_INST38/CTS_7
+select_net U7_banc_RC_CG_HIER_INST39/CTS_9
+select_net U7_banc_RC_CG_HIER_INST39/CTS_8
+select_net U7_banc_RC_CG_HIER_INST39/CTS_7
+select_net U7_banc_RC_CG_HIER_INST9/CTS_9
+select_net U7_banc_RC_CG_HIER_INST9/CTS_8
+select_net U7_banc_RC_CG_HIER_INST9/CTS_7
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_11
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_10
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_9
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_8
+select_net U8_syscop_RC_CG_HIER_INST41/CTS_7
+select_net U8_syscop_RC_CG_HIER_INST41/CTS_6
+select_net U1_pf_RC_CG_HIER_INST1/CTS_1
+select_net U2_ei_RC_CG_HIER_INST2/CTS_1
+select_net U2_ei_RC_CG_HIER_INST3/CTS_1
+select_net U9_bus_ctrl_RC_CG_HIER_INST42/CTS_1
+select_net U4_ex_U1_alu_RC_CG_HIER_INST6/CTS_1
+select_net U4_ex_U1_alu_RC_CG_HIER_INST7/CTS_1
+select_net U7_banc_RC_CG_HIER_INST10/CTS_1
+select_net U7_banc_RC_CG_HIER_INST11/CTS_1
+select_net U7_banc_RC_CG_HIER_INST12/CTS_1
+select_net U7_banc_RC_CG_HIER_INST13/CTS_1
+select_net U7_banc_RC_CG_HIER_INST14/CTS_1
+select_net U7_banc_RC_CG_HIER_INST15/CTS_1
+select_net U7_banc_RC_CG_HIER_INST16/CTS_1
+select_net U7_banc_RC_CG_HIER_INST17/CTS_1
+select_net U7_banc_RC_CG_HIER_INST18/CTS_1
+select_net U7_banc_RC_CG_HIER_INST19/CTS_1
+select_net U7_banc_RC_CG_HIER_INST20/CTS_1
+select_net U7_banc_RC_CG_HIER_INST21/CTS_1
+select_net U7_banc_RC_CG_HIER_INST22/CTS_1
+select_net U7_banc_RC_CG_HIER_INST23/CTS_1
+select_net U7_banc_RC_CG_HIER_INST24/CTS_1
+select_net U7_banc_RC_CG_HIER_INST25/CTS_1
+select_net U7_banc_RC_CG_HIER_INST26/CTS_1
+select_net U7_banc_RC_CG_HIER_INST27/CTS_1
+select_net U7_banc_RC_CG_HIER_INST28/CTS_1
+select_net U7_banc_RC_CG_HIER_INST29/CTS_1
+select_net U7_banc_RC_CG_HIER_INST30/CTS_1
+select_net U7_banc_RC_CG_HIER_INST31/CTS_1
+select_net U7_banc_RC_CG_HIER_INST32/CTS_1
+select_net U7_banc_RC_CG_HIER_INST33/CTS_1
+select_net U7_banc_RC_CG_HIER_INST34/CTS_1
+select_net U7_banc_RC_CG_HIER_INST35/CTS_1
+select_net U7_banc_RC_CG_HIER_INST36/CTS_1
+select_net U7_banc_RC_CG_HIER_INST37/CTS_1
+select_net U7_banc_RC_CG_HIER_INST38/CTS_1
+select_net U7_banc_RC_CG_HIER_INST39/CTS_1
+select_net U7_banc_RC_CG_HIER_INST9/CTS_1
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_1
+select_net U8_syscop_RC_CG_HIER_INST41/CTS_1
+select_net clock
+select_net U1_pf_rc_gclk
+select_net U2_ei_rc_gclk
+select_net U2_ei_rc_gclk_1264
+select_net U3_di_rc_gclk
+select_net U4_ex_U1_alu_rc_gclk
+select_net U4_ex_U1_alu_rc_gclk_6887
+select_net U7_banc_rc_gclk
+select_net U7_banc_rc_gclk_13972
+select_net U7_banc_rc_gclk_13975
+select_net U7_banc_rc_gclk_13978
+select_net U7_banc_rc_gclk_13981
+select_net U7_banc_rc_gclk_13984
+select_net U7_banc_rc_gclk_13987
+select_net U7_banc_rc_gclk_13990
+select_net U7_banc_rc_gclk_13993
+select_net U7_banc_rc_gclk_13996
+select_net U7_banc_rc_gclk_13999
+select_net U7_banc_rc_gclk_14002
+select_net U7_banc_rc_gclk_14005
+select_net U7_banc_rc_gclk_14008
+select_net U7_banc_rc_gclk_14011
+select_net U7_banc_rc_gclk_14014
+select_net U7_banc_rc_gclk_14017
+select_net U7_banc_rc_gclk_14020
+select_net U7_banc_rc_gclk_14023
+select_net U7_banc_rc_gclk_14026
+select_net U7_banc_rc_gclk_14029
+select_net U7_banc_rc_gclk_14032
+select_net U7_banc_rc_gclk_14035
+select_net U7_banc_rc_gclk_14038
+select_net U7_banc_rc_gclk_14041
+select_net U7_banc_rc_gclk_14044
+select_net U7_banc_rc_gclk_14047
+select_net U7_banc_rc_gclk_14050
+select_net U7_banc_rc_gclk_14053
+select_net U7_banc_rc_gclk_14056
+select_net U7_banc_rc_gclk_14059
+select_net U8_syscop_rc_gclk
+select_net U8_syscop_rc_gclk_5742
+select_net U9_bus_ctrl_rc_gclk
+select_net rc_gclk
+select_net U1_pf_RC_CG_HIER_INST1/CTS_40__N10
+select_net U9_bus_ctrl_RC_CG_HIER_INST42/CTS_40__N7
+select_net U4_ex_U1_alu_RC_CG_HIER_INST6/CTS_40__N5
+select_net U4_ex_U1_alu_RC_CG_HIER_INST7/CTS_40__N6
+select_net U7_banc_RC_CG_HIER_INST9/CTS_37__N8
+select_net U7_banc_RC_CG_HIER_INST23/CTS_11__N9
+set_db route_selected_net_only 1
+set_db route_with_eco 1
+route_global_detail
+set_db route_with_timing_driven 0
+set_db route_with_si_driven 0
+set_db route_with_timing_driven 0
+set_db route_with_si_driven 0
+set_db route_selected_net_only 0
+reset_db route_selected_net_only
+set_db route_with_eco 0
+reset_db route_with_eco
+deselect_all
+deselect_all
+select_net U1_pf_RC_CG_HIER_INST1/CTS_40__N10
+select_net U7_banc_RC_CG_HIER_INST23/CTS_11__N9
+select_net U7_banc_RC_CG_HIER_INST9/CTS_37__N8
+select_net U9_bus_ctrl_RC_CG_HIER_INST42/CTS_40__N7
+select_net U4_ex_U1_alu_RC_CG_HIER_INST7/CTS_40__N6
+select_net U4_ex_U1_alu_RC_CG_HIER_INST6/CTS_40__N5
+select_net U3_di_RC_CG_HIER_INST4/CTS_6__N4
+select_net U7_banc_RC_CG_HIER_INST26/CTS_1__N3
+select_net U7_banc_RC_CG_HIER_INST26/CTS_1__N2
+select_net CTS_37__N1
+select_net clock__N0
+select_net clock__L2_N0
+select_net clock__L1_N0
+select_net CTS_46__L1_N0
+select_net CTS_45__L1_N1
+select_net CTS_45__L1_N0
+select_net CTS_44__L1_N1
+select_net CTS_44__L1_N0
+select_net CTS_43__L1_N1
+select_net CTS_43__L1_N0
+select_net CTS_42__L1_N0
+select_net CTS_41__L1_N0
+select_net CTS_40__L2_N2
+select_net CTS_40__L2_N1
+select_net CTS_40__L2_N0
+select_net CTS_40__L1_N0
+select_net CTS_38__L1_N1
+select_net CTS_38__L1_N0
+select_net U1_pf_rc_gclk__L1_N0
+select_net U2_ei_rc_gclk__L1_N0
+select_net U2_ei_rc_gclk_1264__L1_N0
+select_net U9_bus_ctrl_rc_gclk__L1_N0
+select_net U4_ex_U1_alu_rc_gclk__L1_N0
+select_net U7_banc_rc_gclk_13972__L1_N1
+select_net U7_banc_rc_gclk_13972__L1_N0
+select_net U7_banc_rc_gclk_13975__L1_N0
+select_net U7_banc_rc_gclk_13978__L1_N0
+select_net U7_banc_rc_gclk_13981__L1_N0
+select_net U7_banc_rc_gclk_13984__L1_N1
+select_net U7_banc_rc_gclk_13984__L1_N0
+select_net U7_banc_rc_gclk_13987__L1_N1
+select_net U7_banc_rc_gclk_13987__L1_N0
+select_net U7_banc_rc_gclk_13990__L1_N0
+select_net U7_banc_rc_gclk_13993__L1_N1
+select_net U7_banc_rc_gclk_13993__L1_N0
+select_net CTS_37__L1_N0
+select_net U7_banc_rc_gclk_13996__L1_N0
+select_net U7_banc_rc_gclk_13999__L1_N0
+select_net U7_banc_RC_CG_HIER_INST20/CTS_9__L1_N0
+select_net U7_banc_rc_gclk_14002__L1_N0
+select_net U7_banc_RC_CG_HIER_INST21/CTS_9__L1_N0
+select_net U7_banc_rc_gclk_14005__L1_N1
+select_net U7_banc_rc_gclk_14005__L1_N0
+select_net U7_banc_RC_CG_HIER_INST22/CTS_9__L1_N0
+select_net U7_banc_rc_gclk_14008__L1_N0
+select_net U7_banc_rc_gclk_14011__L1_N1
+select_net U7_banc_rc_gclk_14011__L1_N0
+select_net U7_banc_rc_gclk_14014__L1_N0
+select_net U7_banc_rc_gclk_14017__L1_N0
+select_net U7_banc_rc_gclk_14023__L1_N1
+select_net U7_banc_rc_gclk_14023__L1_N0
+select_net U7_banc_rc_gclk_14026__L1_N0
+select_net U7_banc_rc_gclk_14029__L1_N0
+select_net U7_banc_rc_gclk_14032__L1_N1
+select_net U7_banc_rc_gclk_14032__L1_N0
+select_net U7_banc_rc_gclk_14035__L1_N0
+select_net U7_banc_rc_gclk_14038__L1_N1
+select_net U7_banc_rc_gclk_14038__L1_N0
+select_net U7_banc_rc_gclk_14041__L1_N0
+select_net U7_banc_rc_gclk_14044__L1_N1
+select_net U7_banc_rc_gclk_14044__L1_N0
+select_net U7_banc_rc_gclk_14047__L1_N0
+select_net U7_banc_rc_gclk_14050__L1_N1
+select_net U7_banc_rc_gclk_14050__L1_N0
+select_net CTS_36__L1_N0
+select_net U7_banc_rc_gclk_14056__L1_N1
+select_net U7_banc_rc_gclk_14056__L1_N0
+select_net U7_banc_rc_gclk__L1_N0
+select_net U8_syscop_rc_gclk__L1_N0
+select_net U8_syscop_rc_gclk_5742__L1_N0
+select_net CTS_48
+select_net CTS_47
+select_net U3_di_RC_CG_HIER_INST4/CTS_6
+select_net U3_di_RC_CG_HIER_INST4/CTS_5
+select_net CTS_46
+select_net CTS_45
+select_net CTS_44
+select_net RC_CG_DECLONE_HIER_INST/CTS_6
+select_net RC_CG_DECLONE_HIER_INST/CTS_5
+select_net CTS_43
+select_net CTS_42
+select_net CTS_41
+select_net CTS_40
+select_net CTS_39
+select_net CTS_38
+select_net U1_pf_RC_CG_HIER_INST1/CTS_7
+select_net U1_pf_RC_CG_HIER_INST1/CTS_6
+select_net U2_ei_RC_CG_HIER_INST2/CTS_7
+select_net U2_ei_RC_CG_HIER_INST2/CTS_6
+select_net U2_ei_RC_CG_HIER_INST3/CTS_7
+select_net U2_ei_RC_CG_HIER_INST3/CTS_6
+select_net U9_bus_ctrl_RC_CG_HIER_INST42/CTS_7
+select_net U9_bus_ctrl_RC_CG_HIER_INST42/CTS_6
+select_net U4_ex_U1_alu_RC_CG_HIER_INST6/CTS_7
+select_net U4_ex_U1_alu_RC_CG_HIER_INST6/CTS_6
+select_net U4_ex_U1_alu_RC_CG_HIER_INST7/CTS_7
+select_net U4_ex_U1_alu_RC_CG_HIER_INST7/CTS_6
+select_net U7_banc_RC_CG_HIER_INST10/CTS_7
+select_net U7_banc_RC_CG_HIER_INST10/CTS_6
+select_net U7_banc_RC_CG_HIER_INST11/CTS_7
+select_net U7_banc_RC_CG_HIER_INST11/CTS_6
+select_net U7_banc_RC_CG_HIER_INST12/CTS_7
+select_net U7_banc_RC_CG_HIER_INST12/CTS_6
+select_net U7_banc_RC_CG_HIER_INST13/CTS_7
+select_net U7_banc_RC_CG_HIER_INST13/CTS_6
+select_net U7_banc_RC_CG_HIER_INST14/CTS_7
+select_net U7_banc_RC_CG_HIER_INST14/CTS_6
+select_net U7_banc_RC_CG_HIER_INST15/CTS_7
+select_net U7_banc_RC_CG_HIER_INST15/CTS_6
+select_net U7_banc_RC_CG_HIER_INST16/CTS_7
+select_net U7_banc_RC_CG_HIER_INST16/CTS_6
+select_net U7_banc_RC_CG_HIER_INST17/CTS_7
+select_net U7_banc_RC_CG_HIER_INST17/CTS_6
+select_net CTS_37
+select_net U7_banc_RC_CG_HIER_INST18/CTS_7
+select_net U7_banc_RC_CG_HIER_INST18/CTS_6
+select_net U7_banc_RC_CG_HIER_INST19/CTS_9
+select_net U7_banc_RC_CG_HIER_INST19/CTS_8
+select_net U7_banc_RC_CG_HIER_INST19/CTS_7
+select_net U7_banc_RC_CG_HIER_INST20/CTS_9
+select_net U7_banc_RC_CG_HIER_INST20/CTS_8
+select_net U7_banc_RC_CG_HIER_INST20/CTS_7
+select_net U7_banc_RC_CG_HIER_INST21/CTS_9
+select_net U7_banc_RC_CG_HIER_INST21/CTS_8
+select_net U7_banc_RC_CG_HIER_INST21/CTS_7
+select_net U7_banc_RC_CG_HIER_INST22/CTS_9
+select_net U7_banc_RC_CG_HIER_INST22/CTS_8
+select_net U7_banc_RC_CG_HIER_INST22/CTS_7
+select_net U7_banc_RC_CG_HIER_INST23/CTS_11
+select_net U7_banc_RC_CG_HIER_INST23/CTS_10
+select_net U7_banc_RC_CG_HIER_INST23/CTS_9
+select_net U7_banc_RC_CG_HIER_INST23/CTS_8
+select_net U7_banc_RC_CG_HIER_INST24/CTS_11
+select_net U7_banc_RC_CG_HIER_INST24/CTS_10
+select_net U7_banc_RC_CG_HIER_INST24/CTS_9
+select_net U7_banc_RC_CG_HIER_INST24/CTS_8
+select_net U7_banc_RC_CG_HIER_INST25/CTS_11
+select_net U7_banc_RC_CG_HIER_INST25/CTS_10
+select_net U7_banc_RC_CG_HIER_INST25/CTS_9
+select_net U7_banc_RC_CG_HIER_INST25/CTS_8
+select_net U7_banc_RC_CG_HIER_INST26/CTS_9
+select_net U7_banc_RC_CG_HIER_INST26/CTS_8
+select_net U7_banc_RC_CG_HIER_INST26/CTS_7
+select_net U7_banc_RC_CG_HIER_INST27/CTS_7
+select_net U7_banc_RC_CG_HIER_INST27/CTS_6
+select_net U7_banc_RC_CG_HIER_INST28/CTS_9
+select_net U7_banc_RC_CG_HIER_INST28/CTS_8
+select_net U7_banc_RC_CG_HIER_INST28/CTS_7
+select_net U7_banc_RC_CG_HIER_INST29/CTS_9
+select_net U7_banc_RC_CG_HIER_INST29/CTS_8
+select_net U7_banc_RC_CG_HIER_INST29/CTS_7
+select_net U7_banc_RC_CG_HIER_INST30/CTS_9
+select_net U7_banc_RC_CG_HIER_INST30/CTS_8
+select_net U7_banc_RC_CG_HIER_INST30/CTS_7
+select_net U7_banc_RC_CG_HIER_INST31/CTS_9
+select_net U7_banc_RC_CG_HIER_INST31/CTS_8
+select_net U7_banc_RC_CG_HIER_INST31/CTS_7
+select_net U7_banc_RC_CG_HIER_INST32/CTS_7
+select_net U7_banc_RC_CG_HIER_INST32/CTS_6
+select_net U7_banc_RC_CG_HIER_INST33/CTS_7
+select_net U7_banc_RC_CG_HIER_INST33/CTS_6
+select_net U7_banc_RC_CG_HIER_INST34/CTS_7
+select_net U7_banc_RC_CG_HIER_INST34/CTS_6
+select_net U7_banc_RC_CG_HIER_INST35/CTS_9
+select_net U7_banc_RC_CG_HIER_INST35/CTS_8
+select_net U7_banc_RC_CG_HIER_INST35/CTS_7
+select_net U7_banc_RC_CG_HIER_INST36/CTS_11
+select_net U7_banc_RC_CG_HIER_INST36/CTS_10
+select_net U7_banc_RC_CG_HIER_INST36/CTS_9
+select_net U7_banc_RC_CG_HIER_INST36/CTS_8
+select_net U7_banc_RC_CG_HIER_INST37/CTS_9
+select_net U7_banc_RC_CG_HIER_INST37/CTS_8
+select_net U7_banc_RC_CG_HIER_INST37/CTS_7
+select_net CTS_36
+select_net U7_banc_RC_CG_HIER_INST38/CTS_9
+select_net U7_banc_RC_CG_HIER_INST38/CTS_8
+select_net U7_banc_RC_CG_HIER_INST38/CTS_7
+select_net U7_banc_RC_CG_HIER_INST39/CTS_9
+select_net U7_banc_RC_CG_HIER_INST39/CTS_8
+select_net U7_banc_RC_CG_HIER_INST39/CTS_7
+select_net U7_banc_RC_CG_HIER_INST9/CTS_9
+select_net U7_banc_RC_CG_HIER_INST9/CTS_8
+select_net U7_banc_RC_CG_HIER_INST9/CTS_7
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_11
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_10
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_9
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_8
+select_net U8_syscop_RC_CG_HIER_INST41/CTS_7
+select_net U8_syscop_RC_CG_HIER_INST41/CTS_6
+select_net U1_pf_RC_CG_HIER_INST1/CTS_1
+select_net U2_ei_RC_CG_HIER_INST2/CTS_1
+select_net U2_ei_RC_CG_HIER_INST3/CTS_1
+select_net U9_bus_ctrl_RC_CG_HIER_INST42/CTS_1
+select_net U4_ex_U1_alu_RC_CG_HIER_INST6/CTS_1
+select_net U4_ex_U1_alu_RC_CG_HIER_INST7/CTS_1
+select_net U7_banc_RC_CG_HIER_INST10/CTS_1
+select_net U7_banc_RC_CG_HIER_INST11/CTS_1
+select_net U7_banc_RC_CG_HIER_INST12/CTS_1
+select_net U7_banc_RC_CG_HIER_INST13/CTS_1
+select_net U7_banc_RC_CG_HIER_INST14/CTS_1
+select_net U7_banc_RC_CG_HIER_INST15/CTS_1
+select_net U7_banc_RC_CG_HIER_INST16/CTS_1
+select_net U7_banc_RC_CG_HIER_INST17/CTS_1
+select_net U7_banc_RC_CG_HIER_INST18/CTS_1
+select_net U7_banc_RC_CG_HIER_INST19/CTS_1
+select_net U7_banc_RC_CG_HIER_INST20/CTS_1
+select_net U7_banc_RC_CG_HIER_INST21/CTS_1
+select_net U7_banc_RC_CG_HIER_INST22/CTS_1
+select_net U7_banc_RC_CG_HIER_INST23/CTS_1
+select_net U7_banc_RC_CG_HIER_INST24/CTS_1
+select_net U7_banc_RC_CG_HIER_INST25/CTS_1
+select_net U7_banc_RC_CG_HIER_INST26/CTS_1
+select_net U7_banc_RC_CG_HIER_INST27/CTS_1
+select_net U7_banc_RC_CG_HIER_INST28/CTS_1
+select_net U7_banc_RC_CG_HIER_INST29/CTS_1
+select_net U7_banc_RC_CG_HIER_INST30/CTS_1
+select_net U7_banc_RC_CG_HIER_INST31/CTS_1
+select_net U7_banc_RC_CG_HIER_INST32/CTS_1
+select_net U7_banc_RC_CG_HIER_INST33/CTS_1
+select_net U7_banc_RC_CG_HIER_INST34/CTS_1
+select_net U7_banc_RC_CG_HIER_INST35/CTS_1
+select_net U7_banc_RC_CG_HIER_INST36/CTS_1
+select_net U7_banc_RC_CG_HIER_INST37/CTS_1
+select_net U7_banc_RC_CG_HIER_INST38/CTS_1
+select_net U7_banc_RC_CG_HIER_INST39/CTS_1
+select_net U7_banc_RC_CG_HIER_INST9/CTS_1
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_1
+select_net U8_syscop_RC_CG_HIER_INST41/CTS_1
+select_net clock
+select_net U1_pf_rc_gclk
+select_net U2_ei_rc_gclk
+select_net U2_ei_rc_gclk_1264
+select_net U3_di_rc_gclk
+select_net U4_ex_U1_alu_rc_gclk
+select_net U4_ex_U1_alu_rc_gclk_6887
+select_net U7_banc_rc_gclk
+select_net U7_banc_rc_gclk_13972
+select_net U7_banc_rc_gclk_13975
+select_net U7_banc_rc_gclk_13978
+select_net U7_banc_rc_gclk_13981
+select_net U7_banc_rc_gclk_13984
+select_net U7_banc_rc_gclk_13987
+select_net U7_banc_rc_gclk_13990
+select_net U7_banc_rc_gclk_13993
+select_net U7_banc_rc_gclk_13996
+select_net U7_banc_rc_gclk_13999
+select_net U7_banc_rc_gclk_14002
+select_net U7_banc_rc_gclk_14005
+select_net U7_banc_rc_gclk_14008
+select_net U7_banc_rc_gclk_14011
+select_net U7_banc_rc_gclk_14014
+select_net U7_banc_rc_gclk_14017
+select_net U7_banc_rc_gclk_14020
+select_net U7_banc_rc_gclk_14023
+select_net U7_banc_rc_gclk_14026
+select_net U7_banc_rc_gclk_14029
+select_net U7_banc_rc_gclk_14032
+select_net U7_banc_rc_gclk_14035
+select_net U7_banc_rc_gclk_14038
+select_net U7_banc_rc_gclk_14041
+select_net U7_banc_rc_gclk_14044
+select_net U7_banc_rc_gclk_14047
+select_net U7_banc_rc_gclk_14050
+select_net U7_banc_rc_gclk_14053
+select_net U7_banc_rc_gclk_14056
+select_net U7_banc_rc_gclk_14059
+select_net U8_syscop_rc_gclk
+select_net U8_syscop_rc_gclk_5742
+select_net U9_bus_ctrl_rc_gclk
+select_net rc_gclk
+deselect_all
+set_db timing_analysis_clock_propagation_mode sdc_control
+set_db timing_analysis_clock_propagation_mode sdc_control
+set_db timing_analysis_clock_propagation_mode sdc_control
+set_db timing_analysis_clock_source_paths 1
+set_db timing_analysis_clock_source_paths 1
+set_db timing_analysis_clock_propagation_mode sdc_control
+eval_legacy { trialRoute -handlePreRoute }
+deselect_all
+select_net U1_pf_RC_CG_HIER_INST1/CTS_40__N10
+select_net U7_banc_RC_CG_HIER_INST23/CTS_11__N9
+select_net U7_banc_RC_CG_HIER_INST9/CTS_37__N8
+select_net U9_bus_ctrl_RC_CG_HIER_INST42/CTS_40__N7
+select_net U4_ex_U1_alu_RC_CG_HIER_INST7/CTS_40__N6
+select_net U4_ex_U1_alu_RC_CG_HIER_INST6/CTS_40__N5
+select_net U3_di_RC_CG_HIER_INST4/CTS_6__N4
+select_net U7_banc_RC_CG_HIER_INST26/CTS_1__N3
+select_net U7_banc_RC_CG_HIER_INST26/CTS_1__N2
+select_net CTS_37__N1
+select_net clock__N0
+select_net clock__L2_N0
+select_net clock__L1_N0
+select_net CTS_46__L1_N0
+select_net CTS_45__L1_N1
+select_net CTS_45__L1_N0
+select_net CTS_44__L1_N1
+select_net CTS_44__L1_N0
+select_net CTS_43__L1_N1
+select_net CTS_43__L1_N0
+select_net CTS_42__L1_N0
+select_net CTS_41__L1_N0
+select_net CTS_40__L2_N2
+select_net CTS_40__L2_N1
+select_net CTS_40__L2_N0
+select_net CTS_40__L1_N0
+select_net CTS_38__L1_N1
+select_net CTS_38__L1_N0
+select_net U1_pf_rc_gclk__L1_N0
+select_net U2_ei_rc_gclk__L1_N0
+select_net U2_ei_rc_gclk_1264__L1_N0
+select_net U9_bus_ctrl_rc_gclk__L1_N0
+select_net U4_ex_U1_alu_rc_gclk__L1_N0
+select_net U7_banc_rc_gclk_13972__L1_N1
+select_net U7_banc_rc_gclk_13972__L1_N0
+select_net U7_banc_rc_gclk_13975__L1_N0
+select_net U7_banc_rc_gclk_13978__L1_N0
+select_net U7_banc_rc_gclk_13981__L1_N0
+select_net U7_banc_rc_gclk_13984__L1_N1
+select_net U7_banc_rc_gclk_13984__L1_N0
+select_net U7_banc_rc_gclk_13987__L1_N1
+select_net U7_banc_rc_gclk_13987__L1_N0
+select_net U7_banc_rc_gclk_13990__L1_N0
+select_net U7_banc_rc_gclk_13993__L1_N1
+select_net U7_banc_rc_gclk_13993__L1_N0
+select_net CTS_37__L1_N0
+select_net U7_banc_rc_gclk_13996__L1_N0
+select_net U7_banc_rc_gclk_13999__L1_N0
+select_net U7_banc_RC_CG_HIER_INST20/CTS_9__L1_N0
+select_net U7_banc_rc_gclk_14002__L1_N0
+select_net U7_banc_RC_CG_HIER_INST21/CTS_9__L1_N0
+select_net U7_banc_rc_gclk_14005__L1_N1
+select_net U7_banc_rc_gclk_14005__L1_N0
+select_net U7_banc_RC_CG_HIER_INST22/CTS_9__L1_N0
+select_net U7_banc_rc_gclk_14008__L1_N0
+select_net U7_banc_rc_gclk_14011__L1_N1
+select_net U7_banc_rc_gclk_14011__L1_N0
+select_net U7_banc_rc_gclk_14014__L1_N0
+select_net U7_banc_rc_gclk_14017__L1_N0
+select_net U7_banc_rc_gclk_14023__L1_N1
+select_net U7_banc_rc_gclk_14023__L1_N0
+select_net U7_banc_rc_gclk_14026__L1_N0
+select_net U7_banc_rc_gclk_14029__L1_N0
+select_net U7_banc_rc_gclk_14032__L1_N1
+select_net U7_banc_rc_gclk_14032__L1_N0
+select_net U7_banc_rc_gclk_14035__L1_N0
+select_net U7_banc_rc_gclk_14038__L1_N1
+select_net U7_banc_rc_gclk_14038__L1_N0
+select_net U7_banc_rc_gclk_14041__L1_N0
+select_net U7_banc_rc_gclk_14044__L1_N1
+select_net U7_banc_rc_gclk_14044__L1_N0
+select_net U7_banc_rc_gclk_14047__L1_N0
+select_net U7_banc_rc_gclk_14050__L1_N1
+select_net U7_banc_rc_gclk_14050__L1_N0
+select_net CTS_36__L1_N0
+select_net U7_banc_rc_gclk_14056__L1_N1
+select_net U7_banc_rc_gclk_14056__L1_N0
+select_net U7_banc_rc_gclk__L1_N0
+select_net U8_syscop_rc_gclk__L1_N0
+select_net U8_syscop_rc_gclk_5742__L1_N0
+select_net CTS_48
+select_net CTS_47
+select_net U3_di_RC_CG_HIER_INST4/CTS_6
+select_net U3_di_RC_CG_HIER_INST4/CTS_5
+select_net CTS_46
+select_net CTS_45
+select_net CTS_44
+select_net RC_CG_DECLONE_HIER_INST/CTS_6
+select_net RC_CG_DECLONE_HIER_INST/CTS_5
+select_net CTS_43
+select_net CTS_42
+select_net CTS_41
+select_net CTS_40
+select_net CTS_39
+select_net CTS_38
+select_net U1_pf_RC_CG_HIER_INST1/CTS_7
+select_net U1_pf_RC_CG_HIER_INST1/CTS_6
+select_net U2_ei_RC_CG_HIER_INST2/CTS_7
+select_net U2_ei_RC_CG_HIER_INST2/CTS_6
+select_net U2_ei_RC_CG_HIER_INST3/CTS_7
+select_net U2_ei_RC_CG_HIER_INST3/CTS_6
+select_net U9_bus_ctrl_RC_CG_HIER_INST42/CTS_7
+select_net U9_bus_ctrl_RC_CG_HIER_INST42/CTS_6
+select_net U4_ex_U1_alu_RC_CG_HIER_INST6/CTS_7
+select_net U4_ex_U1_alu_RC_CG_HIER_INST6/CTS_6
+select_net U4_ex_U1_alu_RC_CG_HIER_INST7/CTS_7
+select_net U4_ex_U1_alu_RC_CG_HIER_INST7/CTS_6
+select_net U7_banc_RC_CG_HIER_INST10/CTS_7
+select_net U7_banc_RC_CG_HIER_INST10/CTS_6
+select_net U7_banc_RC_CG_HIER_INST11/CTS_7
+select_net U7_banc_RC_CG_HIER_INST11/CTS_6
+select_net U7_banc_RC_CG_HIER_INST12/CTS_7
+select_net U7_banc_RC_CG_HIER_INST12/CTS_6
+select_net U7_banc_RC_CG_HIER_INST13/CTS_7
+select_net U7_banc_RC_CG_HIER_INST13/CTS_6
+select_net U7_banc_RC_CG_HIER_INST14/CTS_7
+select_net U7_banc_RC_CG_HIER_INST14/CTS_6
+select_net U7_banc_RC_CG_HIER_INST15/CTS_7
+select_net U7_banc_RC_CG_HIER_INST15/CTS_6
+select_net U7_banc_RC_CG_HIER_INST16/CTS_7
+select_net U7_banc_RC_CG_HIER_INST16/CTS_6
+select_net U7_banc_RC_CG_HIER_INST17/CTS_7
+select_net U7_banc_RC_CG_HIER_INST17/CTS_6
+select_net CTS_37
+select_net U7_banc_RC_CG_HIER_INST18/CTS_7
+select_net U7_banc_RC_CG_HIER_INST18/CTS_6
+select_net U7_banc_RC_CG_HIER_INST19/CTS_9
+select_net U7_banc_RC_CG_HIER_INST19/CTS_8
+select_net U7_banc_RC_CG_HIER_INST19/CTS_7
+select_net U7_banc_RC_CG_HIER_INST20/CTS_9
+select_net U7_banc_RC_CG_HIER_INST20/CTS_8
+select_net U7_banc_RC_CG_HIER_INST20/CTS_7
+select_net U7_banc_RC_CG_HIER_INST21/CTS_9
+select_net U7_banc_RC_CG_HIER_INST21/CTS_8
+select_net U7_banc_RC_CG_HIER_INST21/CTS_7
+select_net U7_banc_RC_CG_HIER_INST22/CTS_9
+select_net U7_banc_RC_CG_HIER_INST22/CTS_8
+select_net U7_banc_RC_CG_HIER_INST22/CTS_7
+select_net U7_banc_RC_CG_HIER_INST23/CTS_11
+select_net U7_banc_RC_CG_HIER_INST23/CTS_10
+select_net U7_banc_RC_CG_HIER_INST23/CTS_9
+select_net U7_banc_RC_CG_HIER_INST23/CTS_8
+select_net U7_banc_RC_CG_HIER_INST24/CTS_11
+select_net U7_banc_RC_CG_HIER_INST24/CTS_10
+select_net U7_banc_RC_CG_HIER_INST24/CTS_9
+select_net U7_banc_RC_CG_HIER_INST24/CTS_8
+select_net U7_banc_RC_CG_HIER_INST25/CTS_11
+select_net U7_banc_RC_CG_HIER_INST25/CTS_10
+select_net U7_banc_RC_CG_HIER_INST25/CTS_9
+select_net U7_banc_RC_CG_HIER_INST25/CTS_8
+select_net U7_banc_RC_CG_HIER_INST26/CTS_9
+select_net U7_banc_RC_CG_HIER_INST26/CTS_8
+select_net U7_banc_RC_CG_HIER_INST26/CTS_7
+select_net U7_banc_RC_CG_HIER_INST27/CTS_7
+select_net U7_banc_RC_CG_HIER_INST27/CTS_6
+select_net U7_banc_RC_CG_HIER_INST28/CTS_9
+select_net U7_banc_RC_CG_HIER_INST28/CTS_8
+select_net U7_banc_RC_CG_HIER_INST28/CTS_7
+select_net U7_banc_RC_CG_HIER_INST29/CTS_9
+select_net U7_banc_RC_CG_HIER_INST29/CTS_8
+select_net U7_banc_RC_CG_HIER_INST29/CTS_7
+select_net U7_banc_RC_CG_HIER_INST30/CTS_9
+select_net U7_banc_RC_CG_HIER_INST30/CTS_8
+select_net U7_banc_RC_CG_HIER_INST30/CTS_7
+select_net U7_banc_RC_CG_HIER_INST31/CTS_9
+select_net U7_banc_RC_CG_HIER_INST31/CTS_8
+select_net U7_banc_RC_CG_HIER_INST31/CTS_7
+select_net U7_banc_RC_CG_HIER_INST32/CTS_7
+select_net U7_banc_RC_CG_HIER_INST32/CTS_6
+select_net U7_banc_RC_CG_HIER_INST33/CTS_7
+select_net U7_banc_RC_CG_HIER_INST33/CTS_6
+select_net U7_banc_RC_CG_HIER_INST34/CTS_7
+select_net U7_banc_RC_CG_HIER_INST34/CTS_6
+select_net U7_banc_RC_CG_HIER_INST35/CTS_9
+select_net U7_banc_RC_CG_HIER_INST35/CTS_8
+select_net U7_banc_RC_CG_HIER_INST35/CTS_7
+select_net U7_banc_RC_CG_HIER_INST36/CTS_11
+select_net U7_banc_RC_CG_HIER_INST36/CTS_10
+select_net U7_banc_RC_CG_HIER_INST36/CTS_9
+select_net U7_banc_RC_CG_HIER_INST36/CTS_8
+select_net U7_banc_RC_CG_HIER_INST37/CTS_9
+select_net U7_banc_RC_CG_HIER_INST37/CTS_8
+select_net U7_banc_RC_CG_HIER_INST37/CTS_7
+select_net CTS_36
+select_net U7_banc_RC_CG_HIER_INST38/CTS_9
+select_net U7_banc_RC_CG_HIER_INST38/CTS_8
+select_net U7_banc_RC_CG_HIER_INST38/CTS_7
+select_net U7_banc_RC_CG_HIER_INST39/CTS_9
+select_net U7_banc_RC_CG_HIER_INST39/CTS_8
+select_net U7_banc_RC_CG_HIER_INST39/CTS_7
+select_net U7_banc_RC_CG_HIER_INST9/CTS_9
+select_net U7_banc_RC_CG_HIER_INST9/CTS_8
+select_net U7_banc_RC_CG_HIER_INST9/CTS_7
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_11
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_10
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_9
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_8
+select_net U8_syscop_RC_CG_HIER_INST41/CTS_7
+select_net U8_syscop_RC_CG_HIER_INST41/CTS_6
+select_net U1_pf_RC_CG_HIER_INST1/CTS_1
+select_net U2_ei_RC_CG_HIER_INST2/CTS_1
+select_net U2_ei_RC_CG_HIER_INST3/CTS_1
+select_net U9_bus_ctrl_RC_CG_HIER_INST42/CTS_1
+select_net U4_ex_U1_alu_RC_CG_HIER_INST6/CTS_1
+select_net U4_ex_U1_alu_RC_CG_HIER_INST7/CTS_1
+select_net U7_banc_RC_CG_HIER_INST10/CTS_1
+select_net U7_banc_RC_CG_HIER_INST11/CTS_1
+select_net U7_banc_RC_CG_HIER_INST12/CTS_1
+select_net U7_banc_RC_CG_HIER_INST13/CTS_1
+select_net U7_banc_RC_CG_HIER_INST14/CTS_1
+select_net U7_banc_RC_CG_HIER_INST15/CTS_1
+select_net U7_banc_RC_CG_HIER_INST16/CTS_1
+select_net U7_banc_RC_CG_HIER_INST17/CTS_1
+select_net U7_banc_RC_CG_HIER_INST18/CTS_1
+select_net U7_banc_RC_CG_HIER_INST19/CTS_1
+select_net U7_banc_RC_CG_HIER_INST20/CTS_1
+select_net U7_banc_RC_CG_HIER_INST21/CTS_1
+select_net U7_banc_RC_CG_HIER_INST22/CTS_1
+select_net U7_banc_RC_CG_HIER_INST23/CTS_1
+select_net U7_banc_RC_CG_HIER_INST24/CTS_1
+select_net U7_banc_RC_CG_HIER_INST25/CTS_1
+select_net U7_banc_RC_CG_HIER_INST26/CTS_1
+select_net U7_banc_RC_CG_HIER_INST27/CTS_1
+select_net U7_banc_RC_CG_HIER_INST28/CTS_1
+select_net U7_banc_RC_CG_HIER_INST29/CTS_1
+select_net U7_banc_RC_CG_HIER_INST30/CTS_1
+select_net U7_banc_RC_CG_HIER_INST31/CTS_1
+select_net U7_banc_RC_CG_HIER_INST32/CTS_1
+select_net U7_banc_RC_CG_HIER_INST33/CTS_1
+select_net U7_banc_RC_CG_HIER_INST34/CTS_1
+select_net U7_banc_RC_CG_HIER_INST35/CTS_1
+select_net U7_banc_RC_CG_HIER_INST36/CTS_1
+select_net U7_banc_RC_CG_HIER_INST37/CTS_1
+select_net U7_banc_RC_CG_HIER_INST38/CTS_1
+select_net U7_banc_RC_CG_HIER_INST39/CTS_1
+select_net U7_banc_RC_CG_HIER_INST9/CTS_1
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_1
+select_net U8_syscop_RC_CG_HIER_INST41/CTS_1
+select_net clock
+select_net U1_pf_rc_gclk
+select_net U2_ei_rc_gclk
+select_net U2_ei_rc_gclk_1264
+select_net U3_di_rc_gclk
+select_net U4_ex_U1_alu_rc_gclk
+select_net U4_ex_U1_alu_rc_gclk_6887
+select_net U7_banc_rc_gclk
+select_net U7_banc_rc_gclk_13972
+select_net U7_banc_rc_gclk_13975
+select_net U7_banc_rc_gclk_13978
+select_net U7_banc_rc_gclk_13981
+select_net U7_banc_rc_gclk_13984
+select_net U7_banc_rc_gclk_13987
+select_net U7_banc_rc_gclk_13990
+select_net U7_banc_rc_gclk_13993
+select_net U7_banc_rc_gclk_13996
+select_net U7_banc_rc_gclk_13999
+select_net U7_banc_rc_gclk_14002
+select_net U7_banc_rc_gclk_14005
+select_net U7_banc_rc_gclk_14008
+select_net U7_banc_rc_gclk_14011
+select_net U7_banc_rc_gclk_14014
+select_net U7_banc_rc_gclk_14017
+select_net U7_banc_rc_gclk_14020
+select_net U7_banc_rc_gclk_14023
+select_net U7_banc_rc_gclk_14026
+select_net U7_banc_rc_gclk_14029
+select_net U7_banc_rc_gclk_14032
+select_net U7_banc_rc_gclk_14035
+select_net U7_banc_rc_gclk_14038
+select_net U7_banc_rc_gclk_14041
+select_net U7_banc_rc_gclk_14044
+select_net U7_banc_rc_gclk_14047
+select_net U7_banc_rc_gclk_14050
+select_net U7_banc_rc_gclk_14053
+select_net U7_banc_rc_gclk_14056
+select_net U7_banc_rc_gclk_14059
+select_net U8_syscop_rc_gclk
+select_net U8_syscop_rc_gclk_5742
+select_net U9_bus_ctrl_rc_gclk
+select_net rc_gclk
+deselect_all
+deselect_all
+select_net U1_pf_RC_CG_HIER_INST1/CTS_40__N10
+select_net U7_banc_RC_CG_HIER_INST23/CTS_11__N9
+select_net U7_banc_RC_CG_HIER_INST9/CTS_37__N8
+select_net U9_bus_ctrl_RC_CG_HIER_INST42/CTS_40__N7
+select_net U4_ex_U1_alu_RC_CG_HIER_INST7/CTS_40__N6
+select_net U4_ex_U1_alu_RC_CG_HIER_INST6/CTS_40__N5
+select_net U3_di_RC_CG_HIER_INST4/CTS_6__N4
+select_net U7_banc_RC_CG_HIER_INST26/CTS_1__N3
+select_net U7_banc_RC_CG_HIER_INST26/CTS_1__N2
+select_net CTS_37__N1
+select_net clock__N0
+select_net clock__L2_N0
+select_net clock__L1_N0
+select_net CTS_46__L1_N0
+select_net CTS_45__L1_N1
+select_net CTS_45__L1_N0
+select_net CTS_44__L1_N1
+select_net CTS_44__L1_N0
+select_net CTS_43__L1_N1
+select_net CTS_43__L1_N0
+select_net CTS_42__L1_N0
+select_net CTS_41__L1_N0
+select_net CTS_40__L2_N2
+select_net CTS_40__L2_N1
+select_net CTS_40__L2_N0
+select_net CTS_40__L1_N0
+select_net CTS_38__L1_N1
+select_net CTS_38__L1_N0
+select_net U1_pf_rc_gclk__L1_N0
+select_net U2_ei_rc_gclk__L1_N0
+select_net U2_ei_rc_gclk_1264__L1_N0
+select_net U9_bus_ctrl_rc_gclk__L1_N0
+select_net U4_ex_U1_alu_rc_gclk__L1_N0
+select_net U7_banc_rc_gclk_13972__L1_N1
+select_net U7_banc_rc_gclk_13972__L1_N0
+select_net U7_banc_rc_gclk_13975__L1_N0
+select_net U7_banc_rc_gclk_13978__L1_N0
+select_net U7_banc_rc_gclk_13981__L1_N0
+select_net U7_banc_rc_gclk_13984__L1_N1
+select_net U7_banc_rc_gclk_13984__L1_N0
+select_net U7_banc_rc_gclk_13987__L1_N1
+select_net U7_banc_rc_gclk_13987__L1_N0
+select_net U7_banc_rc_gclk_13990__L1_N0
+select_net U7_banc_rc_gclk_13993__L1_N1
+select_net U7_banc_rc_gclk_13993__L1_N0
+select_net CTS_37__L1_N0
+select_net U7_banc_rc_gclk_13996__L1_N0
+select_net U7_banc_rc_gclk_13999__L1_N0
+select_net U7_banc_RC_CG_HIER_INST20/CTS_9__L1_N0
+select_net U7_banc_rc_gclk_14002__L1_N0
+select_net U7_banc_RC_CG_HIER_INST21/CTS_9__L1_N0
+select_net U7_banc_rc_gclk_14005__L1_N1
+select_net U7_banc_rc_gclk_14005__L1_N0
+select_net U7_banc_RC_CG_HIER_INST22/CTS_9__L1_N0
+select_net U7_banc_rc_gclk_14008__L1_N0
+select_net U7_banc_rc_gclk_14011__L1_N1
+select_net U7_banc_rc_gclk_14011__L1_N0
+select_net U7_banc_rc_gclk_14014__L1_N0
+select_net U7_banc_rc_gclk_14017__L1_N0
+select_net U7_banc_rc_gclk_14023__L1_N1
+select_net U7_banc_rc_gclk_14023__L1_N0
+select_net U7_banc_rc_gclk_14026__L1_N0
+select_net U7_banc_rc_gclk_14029__L1_N0
+select_net U7_banc_rc_gclk_14032__L1_N1
+select_net U7_banc_rc_gclk_14032__L1_N0
+select_net U7_banc_rc_gclk_14035__L1_N0
+select_net U7_banc_rc_gclk_14038__L1_N1
+select_net U7_banc_rc_gclk_14038__L1_N0
+select_net U7_banc_rc_gclk_14041__L1_N0
+select_net U7_banc_rc_gclk_14044__L1_N1
+select_net U7_banc_rc_gclk_14044__L1_N0
+select_net U7_banc_rc_gclk_14047__L1_N0
+select_net U7_banc_rc_gclk_14050__L1_N1
+select_net U7_banc_rc_gclk_14050__L1_N0
+select_net CTS_36__L1_N0
+select_net U7_banc_rc_gclk_14056__L1_N1
+select_net U7_banc_rc_gclk_14056__L1_N0
+select_net U7_banc_rc_gclk__L1_N0
+select_net U8_syscop_rc_gclk__L1_N0
+select_net U8_syscop_rc_gclk_5742__L1_N0
+select_net CTS_48
+select_net CTS_47
+select_net U3_di_RC_CG_HIER_INST4/CTS_6
+select_net U3_di_RC_CG_HIER_INST4/CTS_5
+select_net CTS_46
+select_net CTS_45
+select_net CTS_44
+select_net RC_CG_DECLONE_HIER_INST/CTS_6
+select_net RC_CG_DECLONE_HIER_INST/CTS_5
+select_net CTS_43
+select_net CTS_42
+select_net CTS_41
+select_net CTS_40
+select_net CTS_39
+select_net CTS_38
+select_net U1_pf_RC_CG_HIER_INST1/CTS_7
+select_net U1_pf_RC_CG_HIER_INST1/CTS_6
+select_net U2_ei_RC_CG_HIER_INST2/CTS_7
+select_net U2_ei_RC_CG_HIER_INST2/CTS_6
+select_net U2_ei_RC_CG_HIER_INST3/CTS_7
+select_net U2_ei_RC_CG_HIER_INST3/CTS_6
+select_net U9_bus_ctrl_RC_CG_HIER_INST42/CTS_7
+select_net U9_bus_ctrl_RC_CG_HIER_INST42/CTS_6
+select_net U4_ex_U1_alu_RC_CG_HIER_INST6/CTS_7
+select_net U4_ex_U1_alu_RC_CG_HIER_INST6/CTS_6
+select_net U4_ex_U1_alu_RC_CG_HIER_INST7/CTS_7
+select_net U4_ex_U1_alu_RC_CG_HIER_INST7/CTS_6
+select_net U7_banc_RC_CG_HIER_INST10/CTS_7
+select_net U7_banc_RC_CG_HIER_INST10/CTS_6
+select_net U7_banc_RC_CG_HIER_INST11/CTS_7
+select_net U7_banc_RC_CG_HIER_INST11/CTS_6
+select_net U7_banc_RC_CG_HIER_INST12/CTS_7
+select_net U7_banc_RC_CG_HIER_INST12/CTS_6
+select_net U7_banc_RC_CG_HIER_INST13/CTS_7
+select_net U7_banc_RC_CG_HIER_INST13/CTS_6
+select_net U7_banc_RC_CG_HIER_INST14/CTS_7
+select_net U7_banc_RC_CG_HIER_INST14/CTS_6
+select_net U7_banc_RC_CG_HIER_INST15/CTS_7
+select_net U7_banc_RC_CG_HIER_INST15/CTS_6
+select_net U7_banc_RC_CG_HIER_INST16/CTS_7
+select_net U7_banc_RC_CG_HIER_INST16/CTS_6
+select_net U7_banc_RC_CG_HIER_INST17/CTS_7
+select_net U7_banc_RC_CG_HIER_INST17/CTS_6
+select_net CTS_37
+select_net U7_banc_RC_CG_HIER_INST18/CTS_7
+select_net U7_banc_RC_CG_HIER_INST18/CTS_6
+select_net U7_banc_RC_CG_HIER_INST19/CTS_9
+select_net U7_banc_RC_CG_HIER_INST19/CTS_8
+select_net U7_banc_RC_CG_HIER_INST19/CTS_7
+select_net U7_banc_RC_CG_HIER_INST20/CTS_9
+select_net U7_banc_RC_CG_HIER_INST20/CTS_8
+select_net U7_banc_RC_CG_HIER_INST20/CTS_7
+select_net U7_banc_RC_CG_HIER_INST21/CTS_9
+select_net U7_banc_RC_CG_HIER_INST21/CTS_8
+select_net U7_banc_RC_CG_HIER_INST21/CTS_7
+select_net U7_banc_RC_CG_HIER_INST22/CTS_9
+select_net U7_banc_RC_CG_HIER_INST22/CTS_8
+select_net U7_banc_RC_CG_HIER_INST22/CTS_7
+select_net U7_banc_RC_CG_HIER_INST23/CTS_11
+select_net U7_banc_RC_CG_HIER_INST23/CTS_10
+select_net U7_banc_RC_CG_HIER_INST23/CTS_9
+select_net U7_banc_RC_CG_HIER_INST23/CTS_8
+select_net U7_banc_RC_CG_HIER_INST24/CTS_11
+select_net U7_banc_RC_CG_HIER_INST24/CTS_10
+select_net U7_banc_RC_CG_HIER_INST24/CTS_9
+select_net U7_banc_RC_CG_HIER_INST24/CTS_8
+select_net U7_banc_RC_CG_HIER_INST25/CTS_11
+select_net U7_banc_RC_CG_HIER_INST25/CTS_10
+select_net U7_banc_RC_CG_HIER_INST25/CTS_9
+select_net U7_banc_RC_CG_HIER_INST25/CTS_8
+select_net U7_banc_RC_CG_HIER_INST26/CTS_9
+select_net U7_banc_RC_CG_HIER_INST26/CTS_8
+select_net U7_banc_RC_CG_HIER_INST26/CTS_7
+select_net U7_banc_RC_CG_HIER_INST27/CTS_7
+select_net U7_banc_RC_CG_HIER_INST27/CTS_6
+select_net U7_banc_RC_CG_HIER_INST28/CTS_9
+select_net U7_banc_RC_CG_HIER_INST28/CTS_8
+select_net U7_banc_RC_CG_HIER_INST28/CTS_7
+select_net U7_banc_RC_CG_HIER_INST29/CTS_9
+select_net U7_banc_RC_CG_HIER_INST29/CTS_8
+select_net U7_banc_RC_CG_HIER_INST29/CTS_7
+select_net U7_banc_RC_CG_HIER_INST30/CTS_9
+select_net U7_banc_RC_CG_HIER_INST30/CTS_8
+select_net U7_banc_RC_CG_HIER_INST30/CTS_7
+select_net U7_banc_RC_CG_HIER_INST31/CTS_9
+select_net U7_banc_RC_CG_HIER_INST31/CTS_8
+select_net U7_banc_RC_CG_HIER_INST31/CTS_7
+select_net U7_banc_RC_CG_HIER_INST32/CTS_7
+select_net U7_banc_RC_CG_HIER_INST32/CTS_6
+select_net U7_banc_RC_CG_HIER_INST33/CTS_7
+select_net U7_banc_RC_CG_HIER_INST33/CTS_6
+select_net U7_banc_RC_CG_HIER_INST34/CTS_7
+select_net U7_banc_RC_CG_HIER_INST34/CTS_6
+select_net U7_banc_RC_CG_HIER_INST35/CTS_9
+select_net U7_banc_RC_CG_HIER_INST35/CTS_8
+select_net U7_banc_RC_CG_HIER_INST35/CTS_7
+select_net U7_banc_RC_CG_HIER_INST36/CTS_11
+select_net U7_banc_RC_CG_HIER_INST36/CTS_10
+select_net U7_banc_RC_CG_HIER_INST36/CTS_9
+select_net U7_banc_RC_CG_HIER_INST36/CTS_8
+select_net U7_banc_RC_CG_HIER_INST37/CTS_9
+select_net U7_banc_RC_CG_HIER_INST37/CTS_8
+select_net U7_banc_RC_CG_HIER_INST37/CTS_7
+select_net CTS_36
+select_net U7_banc_RC_CG_HIER_INST38/CTS_9
+select_net U7_banc_RC_CG_HIER_INST38/CTS_8
+select_net U7_banc_RC_CG_HIER_INST38/CTS_7
+select_net U7_banc_RC_CG_HIER_INST39/CTS_9
+select_net U7_banc_RC_CG_HIER_INST39/CTS_8
+select_net U7_banc_RC_CG_HIER_INST39/CTS_7
+select_net U7_banc_RC_CG_HIER_INST9/CTS_9
+select_net U7_banc_RC_CG_HIER_INST9/CTS_8
+select_net U7_banc_RC_CG_HIER_INST9/CTS_7
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_11
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_10
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_9
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_8
+select_net U8_syscop_RC_CG_HIER_INST41/CTS_7
+select_net U8_syscop_RC_CG_HIER_INST41/CTS_6
+select_net U1_pf_RC_CG_HIER_INST1/CTS_1
+select_net U2_ei_RC_CG_HIER_INST2/CTS_1
+select_net U2_ei_RC_CG_HIER_INST3/CTS_1
+select_net U9_bus_ctrl_RC_CG_HIER_INST42/CTS_1
+select_net U4_ex_U1_alu_RC_CG_HIER_INST6/CTS_1
+select_net U4_ex_U1_alu_RC_CG_HIER_INST7/CTS_1
+select_net U7_banc_RC_CG_HIER_INST10/CTS_1
+select_net U7_banc_RC_CG_HIER_INST11/CTS_1
+select_net U7_banc_RC_CG_HIER_INST12/CTS_1
+select_net U7_banc_RC_CG_HIER_INST13/CTS_1
+select_net U7_banc_RC_CG_HIER_INST14/CTS_1
+select_net U7_banc_RC_CG_HIER_INST15/CTS_1
+select_net U7_banc_RC_CG_HIER_INST16/CTS_1
+select_net U7_banc_RC_CG_HIER_INST17/CTS_1
+select_net U7_banc_RC_CG_HIER_INST18/CTS_1
+select_net U7_banc_RC_CG_HIER_INST19/CTS_1
+select_net U7_banc_RC_CG_HIER_INST20/CTS_1
+select_net U7_banc_RC_CG_HIER_INST21/CTS_1
+select_net U7_banc_RC_CG_HIER_INST22/CTS_1
+select_net U7_banc_RC_CG_HIER_INST23/CTS_1
+select_net U7_banc_RC_CG_HIER_INST24/CTS_1
+select_net U7_banc_RC_CG_HIER_INST25/CTS_1
+select_net U7_banc_RC_CG_HIER_INST26/CTS_1
+select_net U7_banc_RC_CG_HIER_INST27/CTS_1
+select_net U7_banc_RC_CG_HIER_INST28/CTS_1
+select_net U7_banc_RC_CG_HIER_INST29/CTS_1
+select_net U7_banc_RC_CG_HIER_INST30/CTS_1
+select_net U7_banc_RC_CG_HIER_INST31/CTS_1
+select_net U7_banc_RC_CG_HIER_INST32/CTS_1
+select_net U7_banc_RC_CG_HIER_INST33/CTS_1
+select_net U7_banc_RC_CG_HIER_INST34/CTS_1
+select_net U7_banc_RC_CG_HIER_INST35/CTS_1
+select_net U7_banc_RC_CG_HIER_INST36/CTS_1
+select_net U7_banc_RC_CG_HIER_INST37/CTS_1
+select_net U7_banc_RC_CG_HIER_INST38/CTS_1
+select_net U7_banc_RC_CG_HIER_INST39/CTS_1
+select_net U7_banc_RC_CG_HIER_INST9/CTS_1
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_1
+select_net U8_syscop_RC_CG_HIER_INST41/CTS_1
+select_net clock
+select_net U1_pf_rc_gclk
+select_net U2_ei_rc_gclk
+select_net U2_ei_rc_gclk_1264
+select_net U3_di_rc_gclk
+select_net U4_ex_U1_alu_rc_gclk
+select_net U4_ex_U1_alu_rc_gclk_6887
+select_net U7_banc_rc_gclk
+select_net U7_banc_rc_gclk_13972
+select_net U7_banc_rc_gclk_13975
+select_net U7_banc_rc_gclk_13978
+select_net U7_banc_rc_gclk_13981
+select_net U7_banc_rc_gclk_13984
+select_net U7_banc_rc_gclk_13987
+select_net U7_banc_rc_gclk_13990
+select_net U7_banc_rc_gclk_13993
+select_net U7_banc_rc_gclk_13996
+select_net U7_banc_rc_gclk_13999
+select_net U7_banc_rc_gclk_14002
+select_net U7_banc_rc_gclk_14005
+select_net U7_banc_rc_gclk_14008
+select_net U7_banc_rc_gclk_14011
+select_net U7_banc_rc_gclk_14014
+select_net U7_banc_rc_gclk_14017
+select_net U7_banc_rc_gclk_14020
+select_net U7_banc_rc_gclk_14023
+select_net U7_banc_rc_gclk_14026
+select_net U7_banc_rc_gclk_14029
+select_net U7_banc_rc_gclk_14032
+select_net U7_banc_rc_gclk_14035
+select_net U7_banc_rc_gclk_14038
+select_net U7_banc_rc_gclk_14041
+select_net U7_banc_rc_gclk_14044
+select_net U7_banc_rc_gclk_14047
+select_net U7_banc_rc_gclk_14050
+select_net U7_banc_rc_gclk_14053
+select_net U7_banc_rc_gclk_14056
+select_net U7_banc_rc_gclk_14059
+select_net U8_syscop_rc_gclk
+select_net U8_syscop_rc_gclk_5742
+select_net U9_bus_ctrl_rc_gclk
+select_net rc_gclk
+set_db route_selected_net_only 1
+set_db route_with_eco 1
+route_global_detail
+set_db route_with_timing_driven 0
+set_db route_with_si_driven 0
+set_db route_with_timing_driven 0
+set_db route_with_si_driven 0
+set_db route_selected_net_only 0
+reset_db route_selected_net_only
+set_db route_with_eco 0
+reset_db route_with_eco
+deselect_all
+deselect_all
+select_net U1_pf_RC_CG_HIER_INST1/CTS_40__N10
+select_net U7_banc_RC_CG_HIER_INST23/CTS_11__N9
+select_net U7_banc_RC_CG_HIER_INST9/CTS_37__N8
+select_net U9_bus_ctrl_RC_CG_HIER_INST42/CTS_40__N7
+select_net U4_ex_U1_alu_RC_CG_HIER_INST7/CTS_40__N6
+select_net U4_ex_U1_alu_RC_CG_HIER_INST6/CTS_40__N5
+select_net U3_di_RC_CG_HIER_INST4/CTS_6__N4
+select_net U7_banc_RC_CG_HIER_INST26/CTS_1__N3
+select_net U7_banc_RC_CG_HIER_INST26/CTS_1__N2
+select_net CTS_37__N1
+select_net clock__N0
+select_net clock__L2_N0
+select_net clock__L1_N0
+select_net CTS_46__L1_N0
+select_net CTS_45__L1_N1
+select_net CTS_45__L1_N0
+select_net CTS_44__L1_N1
+select_net CTS_44__L1_N0
+select_net CTS_43__L1_N1
+select_net CTS_43__L1_N0
+select_net CTS_42__L1_N0
+select_net CTS_41__L1_N0
+select_net CTS_40__L2_N2
+select_net CTS_40__L2_N1
+select_net CTS_40__L2_N0
+select_net CTS_40__L1_N0
+select_net CTS_38__L1_N1
+select_net CTS_38__L1_N0
+select_net U1_pf_rc_gclk__L1_N0
+select_net U2_ei_rc_gclk__L1_N0
+select_net U2_ei_rc_gclk_1264__L1_N0
+select_net U9_bus_ctrl_rc_gclk__L1_N0
+select_net U4_ex_U1_alu_rc_gclk__L1_N0
+select_net U7_banc_rc_gclk_13972__L1_N1
+select_net U7_banc_rc_gclk_13972__L1_N0
+select_net U7_banc_rc_gclk_13975__L1_N0
+select_net U7_banc_rc_gclk_13978__L1_N0
+select_net U7_banc_rc_gclk_13981__L1_N0
+select_net U7_banc_rc_gclk_13984__L1_N1
+select_net U7_banc_rc_gclk_13984__L1_N0
+select_net U7_banc_rc_gclk_13987__L1_N1
+select_net U7_banc_rc_gclk_13987__L1_N0
+select_net U7_banc_rc_gclk_13990__L1_N0
+select_net U7_banc_rc_gclk_13993__L1_N1
+select_net U7_banc_rc_gclk_13993__L1_N0
+select_net CTS_37__L1_N0
+select_net U7_banc_rc_gclk_13996__L1_N0
+select_net U7_banc_rc_gclk_13999__L1_N0
+select_net U7_banc_RC_CG_HIER_INST20/CTS_9__L1_N0
+select_net U7_banc_rc_gclk_14002__L1_N0
+select_net U7_banc_RC_CG_HIER_INST21/CTS_9__L1_N0
+select_net U7_banc_rc_gclk_14005__L1_N1
+select_net U7_banc_rc_gclk_14005__L1_N0
+select_net U7_banc_RC_CG_HIER_INST22/CTS_9__L1_N0
+select_net U7_banc_rc_gclk_14008__L1_N0
+select_net U7_banc_rc_gclk_14011__L1_N1
+select_net U7_banc_rc_gclk_14011__L1_N0
+select_net U7_banc_rc_gclk_14014__L1_N0
+select_net U7_banc_rc_gclk_14017__L1_N0
+select_net U7_banc_rc_gclk_14023__L1_N1
+select_net U7_banc_rc_gclk_14023__L1_N0
+select_net U7_banc_rc_gclk_14026__L1_N0
+select_net U7_banc_rc_gclk_14029__L1_N0
+select_net U7_banc_rc_gclk_14032__L1_N1
+select_net U7_banc_rc_gclk_14032__L1_N0
+select_net U7_banc_rc_gclk_14035__L1_N0
+select_net U7_banc_rc_gclk_14038__L1_N1
+select_net U7_banc_rc_gclk_14038__L1_N0
+select_net U7_banc_rc_gclk_14041__L1_N0
+select_net U7_banc_rc_gclk_14044__L1_N1
+select_net U7_banc_rc_gclk_14044__L1_N0
+select_net U7_banc_rc_gclk_14047__L1_N0
+select_net U7_banc_rc_gclk_14050__L1_N1
+select_net U7_banc_rc_gclk_14050__L1_N0
+select_net CTS_36__L1_N0
+select_net U7_banc_rc_gclk_14056__L1_N1
+select_net U7_banc_rc_gclk_14056__L1_N0
+select_net U7_banc_rc_gclk__L1_N0
+select_net U8_syscop_rc_gclk__L1_N0
+select_net U8_syscop_rc_gclk_5742__L1_N0
+select_net CTS_48
+select_net CTS_47
+select_net U3_di_RC_CG_HIER_INST4/CTS_6
+select_net U3_di_RC_CG_HIER_INST4/CTS_5
+select_net CTS_46
+select_net CTS_45
+select_net CTS_44
+select_net RC_CG_DECLONE_HIER_INST/CTS_6
+select_net RC_CG_DECLONE_HIER_INST/CTS_5
+select_net CTS_43
+select_net CTS_42
+select_net CTS_41
+select_net CTS_40
+select_net CTS_39
+select_net CTS_38
+select_net U1_pf_RC_CG_HIER_INST1/CTS_7
+select_net U1_pf_RC_CG_HIER_INST1/CTS_6
+select_net U2_ei_RC_CG_HIER_INST2/CTS_7
+select_net U2_ei_RC_CG_HIER_INST2/CTS_6
+select_net U2_ei_RC_CG_HIER_INST3/CTS_7
+select_net U2_ei_RC_CG_HIER_INST3/CTS_6
+select_net U9_bus_ctrl_RC_CG_HIER_INST42/CTS_7
+select_net U9_bus_ctrl_RC_CG_HIER_INST42/CTS_6
+select_net U4_ex_U1_alu_RC_CG_HIER_INST6/CTS_7
+select_net U4_ex_U1_alu_RC_CG_HIER_INST6/CTS_6
+select_net U4_ex_U1_alu_RC_CG_HIER_INST7/CTS_7
+select_net U4_ex_U1_alu_RC_CG_HIER_INST7/CTS_6
+select_net U7_banc_RC_CG_HIER_INST10/CTS_7
+select_net U7_banc_RC_CG_HIER_INST10/CTS_6
+select_net U7_banc_RC_CG_HIER_INST11/CTS_7
+select_net U7_banc_RC_CG_HIER_INST11/CTS_6
+select_net U7_banc_RC_CG_HIER_INST12/CTS_7
+select_net U7_banc_RC_CG_HIER_INST12/CTS_6
+select_net U7_banc_RC_CG_HIER_INST13/CTS_7
+select_net U7_banc_RC_CG_HIER_INST13/CTS_6
+select_net U7_banc_RC_CG_HIER_INST14/CTS_7
+select_net U7_banc_RC_CG_HIER_INST14/CTS_6
+select_net U7_banc_RC_CG_HIER_INST15/CTS_7
+select_net U7_banc_RC_CG_HIER_INST15/CTS_6
+select_net U7_banc_RC_CG_HIER_INST16/CTS_7
+select_net U7_banc_RC_CG_HIER_INST16/CTS_6
+select_net U7_banc_RC_CG_HIER_INST17/CTS_7
+select_net U7_banc_RC_CG_HIER_INST17/CTS_6
+select_net CTS_37
+select_net U7_banc_RC_CG_HIER_INST18/CTS_7
+select_net U7_banc_RC_CG_HIER_INST18/CTS_6
+select_net U7_banc_RC_CG_HIER_INST19/CTS_9
+select_net U7_banc_RC_CG_HIER_INST19/CTS_8
+select_net U7_banc_RC_CG_HIER_INST19/CTS_7
+select_net U7_banc_RC_CG_HIER_INST20/CTS_9
+select_net U7_banc_RC_CG_HIER_INST20/CTS_8
+select_net U7_banc_RC_CG_HIER_INST20/CTS_7
+select_net U7_banc_RC_CG_HIER_INST21/CTS_9
+select_net U7_banc_RC_CG_HIER_INST21/CTS_8
+select_net U7_banc_RC_CG_HIER_INST21/CTS_7
+select_net U7_banc_RC_CG_HIER_INST22/CTS_9
+select_net U7_banc_RC_CG_HIER_INST22/CTS_8
+select_net U7_banc_RC_CG_HIER_INST22/CTS_7
+select_net U7_banc_RC_CG_HIER_INST23/CTS_11
+select_net U7_banc_RC_CG_HIER_INST23/CTS_10
+select_net U7_banc_RC_CG_HIER_INST23/CTS_9
+select_net U7_banc_RC_CG_HIER_INST23/CTS_8
+select_net U7_banc_RC_CG_HIER_INST24/CTS_11
+select_net U7_banc_RC_CG_HIER_INST24/CTS_10
+select_net U7_banc_RC_CG_HIER_INST24/CTS_9
+select_net U7_banc_RC_CG_HIER_INST24/CTS_8
+select_net U7_banc_RC_CG_HIER_INST25/CTS_11
+select_net U7_banc_RC_CG_HIER_INST25/CTS_10
+select_net U7_banc_RC_CG_HIER_INST25/CTS_9
+select_net U7_banc_RC_CG_HIER_INST25/CTS_8
+select_net U7_banc_RC_CG_HIER_INST26/CTS_9
+select_net U7_banc_RC_CG_HIER_INST26/CTS_8
+select_net U7_banc_RC_CG_HIER_INST26/CTS_7
+select_net U7_banc_RC_CG_HIER_INST27/CTS_7
+select_net U7_banc_RC_CG_HIER_INST27/CTS_6
+select_net U7_banc_RC_CG_HIER_INST28/CTS_9
+select_net U7_banc_RC_CG_HIER_INST28/CTS_8
+select_net U7_banc_RC_CG_HIER_INST28/CTS_7
+select_net U7_banc_RC_CG_HIER_INST29/CTS_9
+select_net U7_banc_RC_CG_HIER_INST29/CTS_8
+select_net U7_banc_RC_CG_HIER_INST29/CTS_7
+select_net U7_banc_RC_CG_HIER_INST30/CTS_9
+select_net U7_banc_RC_CG_HIER_INST30/CTS_8
+select_net U7_banc_RC_CG_HIER_INST30/CTS_7
+select_net U7_banc_RC_CG_HIER_INST31/CTS_9
+select_net U7_banc_RC_CG_HIER_INST31/CTS_8
+select_net U7_banc_RC_CG_HIER_INST31/CTS_7
+select_net U7_banc_RC_CG_HIER_INST32/CTS_7
+select_net U7_banc_RC_CG_HIER_INST32/CTS_6
+select_net U7_banc_RC_CG_HIER_INST33/CTS_7
+select_net U7_banc_RC_CG_HIER_INST33/CTS_6
+select_net U7_banc_RC_CG_HIER_INST34/CTS_7
+select_net U7_banc_RC_CG_HIER_INST34/CTS_6
+select_net U7_banc_RC_CG_HIER_INST35/CTS_9
+select_net U7_banc_RC_CG_HIER_INST35/CTS_8
+select_net U7_banc_RC_CG_HIER_INST35/CTS_7
+select_net U7_banc_RC_CG_HIER_INST36/CTS_11
+select_net U7_banc_RC_CG_HIER_INST36/CTS_10
+select_net U7_banc_RC_CG_HIER_INST36/CTS_9
+select_net U7_banc_RC_CG_HIER_INST36/CTS_8
+select_net U7_banc_RC_CG_HIER_INST37/CTS_9
+select_net U7_banc_RC_CG_HIER_INST37/CTS_8
+select_net U7_banc_RC_CG_HIER_INST37/CTS_7
+select_net CTS_36
+select_net U7_banc_RC_CG_HIER_INST38/CTS_9
+select_net U7_banc_RC_CG_HIER_INST38/CTS_8
+select_net U7_banc_RC_CG_HIER_INST38/CTS_7
+select_net U7_banc_RC_CG_HIER_INST39/CTS_9
+select_net U7_banc_RC_CG_HIER_INST39/CTS_8
+select_net U7_banc_RC_CG_HIER_INST39/CTS_7
+select_net U7_banc_RC_CG_HIER_INST9/CTS_9
+select_net U7_banc_RC_CG_HIER_INST9/CTS_8
+select_net U7_banc_RC_CG_HIER_INST9/CTS_7
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_11
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_10
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_9
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_8
+select_net U8_syscop_RC_CG_HIER_INST41/CTS_7
+select_net U8_syscop_RC_CG_HIER_INST41/CTS_6
+select_net U1_pf_RC_CG_HIER_INST1/CTS_1
+select_net U2_ei_RC_CG_HIER_INST2/CTS_1
+select_net U2_ei_RC_CG_HIER_INST3/CTS_1
+select_net U9_bus_ctrl_RC_CG_HIER_INST42/CTS_1
+select_net U4_ex_U1_alu_RC_CG_HIER_INST6/CTS_1
+select_net U4_ex_U1_alu_RC_CG_HIER_INST7/CTS_1
+select_net U7_banc_RC_CG_HIER_INST10/CTS_1
+select_net U7_banc_RC_CG_HIER_INST11/CTS_1
+select_net U7_banc_RC_CG_HIER_INST12/CTS_1
+select_net U7_banc_RC_CG_HIER_INST13/CTS_1
+select_net U7_banc_RC_CG_HIER_INST14/CTS_1
+select_net U7_banc_RC_CG_HIER_INST15/CTS_1
+select_net U7_banc_RC_CG_HIER_INST16/CTS_1
+select_net U7_banc_RC_CG_HIER_INST17/CTS_1
+select_net U7_banc_RC_CG_HIER_INST18/CTS_1
+select_net U7_banc_RC_CG_HIER_INST19/CTS_1
+select_net U7_banc_RC_CG_HIER_INST20/CTS_1
+select_net U7_banc_RC_CG_HIER_INST21/CTS_1
+select_net U7_banc_RC_CG_HIER_INST22/CTS_1
+select_net U7_banc_RC_CG_HIER_INST23/CTS_1
+select_net U7_banc_RC_CG_HIER_INST24/CTS_1
+select_net U7_banc_RC_CG_HIER_INST25/CTS_1
+select_net U7_banc_RC_CG_HIER_INST26/CTS_1
+select_net U7_banc_RC_CG_HIER_INST27/CTS_1
+select_net U7_banc_RC_CG_HIER_INST28/CTS_1
+select_net U7_banc_RC_CG_HIER_INST29/CTS_1
+select_net U7_banc_RC_CG_HIER_INST30/CTS_1
+select_net U7_banc_RC_CG_HIER_INST31/CTS_1
+select_net U7_banc_RC_CG_HIER_INST32/CTS_1
+select_net U7_banc_RC_CG_HIER_INST33/CTS_1
+select_net U7_banc_RC_CG_HIER_INST34/CTS_1
+select_net U7_banc_RC_CG_HIER_INST35/CTS_1
+select_net U7_banc_RC_CG_HIER_INST36/CTS_1
+select_net U7_banc_RC_CG_HIER_INST37/CTS_1
+select_net U7_banc_RC_CG_HIER_INST38/CTS_1
+select_net U7_banc_RC_CG_HIER_INST39/CTS_1
+select_net U7_banc_RC_CG_HIER_INST9/CTS_1
+select_net U8_syscop_RC_CG_HIER_INST40/CTS_1
+select_net U8_syscop_RC_CG_HIER_INST41/CTS_1
+select_net clock
+select_net U1_pf_rc_gclk
+select_net U2_ei_rc_gclk
+select_net U2_ei_rc_gclk_1264
+select_net U3_di_rc_gclk
+select_net U4_ex_U1_alu_rc_gclk
+select_net U4_ex_U1_alu_rc_gclk_6887
+select_net U7_banc_rc_gclk
+select_net U7_banc_rc_gclk_13972
+select_net U7_banc_rc_gclk_13975
+select_net U7_banc_rc_gclk_13978
+select_net U7_banc_rc_gclk_13981
+select_net U7_banc_rc_gclk_13984
+select_net U7_banc_rc_gclk_13987
+select_net U7_banc_rc_gclk_13990
+select_net U7_banc_rc_gclk_13993
+select_net U7_banc_rc_gclk_13996
+select_net U7_banc_rc_gclk_13999
+select_net U7_banc_rc_gclk_14002
+select_net U7_banc_rc_gclk_14005
+select_net U7_banc_rc_gclk_14008
+select_net U7_banc_rc_gclk_14011
+select_net U7_banc_rc_gclk_14014
+select_net U7_banc_rc_gclk_14017
+select_net U7_banc_rc_gclk_14020
+select_net U7_banc_rc_gclk_14023
+select_net U7_banc_rc_gclk_14026
+select_net U7_banc_rc_gclk_14029
+select_net U7_banc_rc_gclk_14032
+select_net U7_banc_rc_gclk_14035
+select_net U7_banc_rc_gclk_14038
+select_net U7_banc_rc_gclk_14041
+select_net U7_banc_rc_gclk_14044
+select_net U7_banc_rc_gclk_14047
+select_net U7_banc_rc_gclk_14050
+select_net U7_banc_rc_gclk_14053
+select_net U7_banc_rc_gclk_14056
+select_net U7_banc_rc_gclk_14059
+select_net U8_syscop_rc_gclk
+select_net U8_syscop_rc_gclk_5742
+select_net U9_bus_ctrl_rc_gclk
+select_net rc_gclk
+deselect_all
+eval_legacy { report_message -end_cmd }
+eval_legacy {saveDesign minimips_floor03.3_clockTreeSynthesis}
+gui_fit
+gui_fit
+gui_fit
+opt_design -post_cts
+zoom_box -129.282 624.701 -334.756 622.468
+gui_fit
+eval_legacy {saveDesign minimips_floor03.4_posCTS_optmization}
+set_db route_with_timing_driven 0
+set_db route_with_si_driven 0
+eval_legacy { report_message -start_cmd }
+eval_legacy { report_message -end_cmd }
+eval_legacy { routeDesign -globalDetail }
+set_db route_reserve_space_for_multi_cut 1
+set_db route_concurrent_minimize_via_count_effort high
+set_db route_detail_post_route_spread_wire 0.500000
+set_db route_detail_post_route_spread_wire false
+set_metric -name design.name -value [get_db [current_design] .name]
+set_db route_with_si_driven 0
+set_db route_with_timing_driven 0
+set_db route_concurrent_minimize_via_count_effort medium
+set_db route_reserve_space_for_multi_cut 0
+gui_fit
+gui_fit
+gui_window_select 538.367 854.987 897.944 533.377
+deselect_all
+zoom_box 538.367 865.037 872.260 513.276
+zoom_box 509.534 857.334 857.015 542.803
+zoom_box 561.403 844.324 777.213 705.043
+select_inst WELLTAP_7170
+deselect_all
+eval_legacy { selectWire 615.6850 807.4500 615.9650 816.9800 2 {U1_pf_plus_90_43[8]} }
+deselect_all
+eval_legacy { selectWire 0.0000 809.6800 841.0500 810.4800 1 vdd }
+deselect_all
+eval_legacy { selectWire 0.0000 809.6800 841.0500 810.4800 1 vdd }
+deselect_all
+eval_legacy { selectWire 576.6250 831.8500 576.9050 834.1150 2 {ram_adr[20]} }
+deselect_all
+eval_legacy { selectWire 575.3900 831.9250 581.2900 832.1550 1 U7_banc_n_1114 }
+deselect_all
+eval_legacy { selectWire 574.1050 830.6800 583.8850 830.9600 3 U7_banc_n_17060 }
+deselect_all
+eval_legacy { selectWire 566.4950 828.8500 594.5950 829.1300 3 n_463 }
+gui_fit
+gui_fit
+eval_legacy {saveDesign minimips_floor04_nanoRouting}
+eval_legacy {setAnalysisMode -analysisType onChipVariation}
+opt_design -post_route
+gui_fit
+eval_legacy { selectMarker 174.6950 692.2200 174.9550 692.4800 2 1 24 }
+deselect_all
+eval_legacy { selectMarker 174.7200 692.4900 175.0150 692.5600 1 1 2 }
+deselect_all
+eval_legacy { selectMarker 174.6950 692.2200 174.9550 692.4800 2 1 24 }
+deselect_all
+eval_legacy { selectMarker 174.6350 692.2500 174.7200 692.4650 1 1 6 }
+gui_window_select 175.107 692.162 175.134 692.162
+eval_legacy { selectWire 175.0000 0.0000 175.5000 834.4800 2 gnd }
+deselect_all
+eval_legacy { selectMarker 174.6950 692.2200 174.9550 692.4800 2 1 24 }
+deselect_all
+eval_legacy { selectMarker 174.6950 692.2200 174.9550 692.4800 2 1 24 }
+deselect_all
+eval_legacy { selectMarker 174.6950 692.2200 174.9550 692.4800 2 1 24 }
+deselect_all
+eval_legacy { selectMarker 174.6950 692.2200 174.9550 692.4800 2 1 24 }
+deselect_all
+eval_legacy { selectMarker 174.7200 692.4900 175.0150 692.5600 1 1 2 }
+gui_fit
+deselect_all
+eval_legacy { selectWire 606.5000 0.0000 607.0000 834.4800 2 vdd }
+deselect_all
+eval_legacy { selectMarker 606.8650 827.1700 607.0000 827.8950 2 1 6 }
+deselect_all
+eval_legacy { selectMarker 606.8650 827.1700 607.0000 827.8950 2 1 6 }
+deselect_all
+eval_legacy { selectWire 607.4950 742.1800 607.7750 833.4500 4 {ram_adr[17]} }
+deselect_all
+eval_legacy { selectMarker 606.8650 827.1700 607.0000 827.8950 2 1 6 }
+deselect_all
+eval_legacy { selectMarker 606.8650 827.1700 607.0000 827.8950 2 1 6 }
+gui_fit
+gui_fit
+gui_fit
+add_fillers -base_cells HS65_GS_FILLERPFP4 HS65_GS_FILLERPFP3 HS65_GS_FILLERPFP2 HS65_GS_FILLERPFP1 -prefix FILLER
+report_summary -out_dir summaryReport
+add_fillers -base_cells FEED1 FEED2 FEED3 FEED5 FEED7 FEED10 FEED15 FEED25 -prefix FILLER
+report_summary -out_dir summaryReport
+time_design -post_route
+eval_legacy {verifyGeometry -noOverlap}
+gui_window_select 1012.082 488.377 1022.133 491.727
+gui_fit
+eval_legacy {saveDesign minimips_floor05_Filler_n_GeometryVerification_fail_}
+eval_legacy { selectWire 0.0000 87.4400 841.0500 88.2400 1 vdd }

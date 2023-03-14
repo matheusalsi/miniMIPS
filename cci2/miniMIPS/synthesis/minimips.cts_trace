@@ -1,0 +1,2197 @@
+
+
+
+
+
+Tracing Clock clock
+
+****** Clock Tree (clock) Structure
+Nr. Subtrees                   : 42
+Nr. Sinks                      : 1723
+Nr.          Rising  Sync Pins : 1723
+Nr. Inverter Rising  Sync Pins : 0
+Nr.          Falling Sync Pins : 0
+Nr. Inverter Falling Sync Pins : 0
+Nr. Unsync Pins                : 0
+
+** Leaf Pins
+CELL (PORT)                            Nr.
+-----------------------------------------------
+DFRRX1 (C)                              1
+DFRQX4 (C)                              9
+DLLQX1 (GN)                             41
+DFRX1 (C)                               328
+DFRQX1 (C)                              1307
+DFRSQX1 (C)                             4
+SDFRQX1 (C)                             1
+DFRX0 (C)                               1
+DFRQX2 (C)                              29
+DFRQX0 (C)                              2
+-----------------------------------------------
+
+
+
+
+** Unsync Pins
+CELL (PORT)                            Nr.
+-----------------------------------------------
+-----------------------------------------------
+
+
+
+
+** Gate Component Input Pins
+CELL (PORT)                            Nr.
+-----------------------------------------------
+AND2X1 (A)                              41
+-----------------------------------------------
+
+
+
+** Subtree Detail
+*DEPTH 0 Input_Pin: (EMPTY) Output_Pin: (clock) Cell: (EMPTY) Net: (clock) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 110
+          Nr. of     Rising  Sync Pins  : 110
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 41
+*DEPTH 1 Input_Pin: (U1_pf_RC_CG_HIER_INST1/g12/A) Output_Pin: (U1_pf_RC_CG_HIER_INST1/g12/Q) Cell: (AND2X1) Net: (U1_pf_rc_gclk) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U2_ei_RC_CG_HIER_INST2/g12/A) Output_Pin: (U2_ei_RC_CG_HIER_INST2/g12/Q) Cell: (AND2X1) Net: (U2_ei_rc_gclk) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 33
+          Nr. of     Rising  Sync Pins  : 33
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U2_ei_RC_CG_HIER_INST3/g12/A) Output_Pin: (U2_ei_RC_CG_HIER_INST3/g12/Q) Cell: (AND2X1) Net: (U2_ei_rc_gclk_1264) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U9_bus_ctrl_RC_CG_HIER_INST42/g13/A) Output_Pin: (U9_bus_ctrl_RC_CG_HIER_INST42/g13/Q) Cell: (AND2X1) Net: (U9_bus_ctrl_rc_gclk) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U4_ex_U1_alu_RC_CG_HIER_INST6/g13/A) Output_Pin: (U4_ex_U1_alu_RC_CG_HIER_INST6/g13/Q) Cell: (AND2X1) Net: (U4_ex_U1_alu_rc_gclk) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U4_ex_U1_alu_RC_CG_HIER_INST7/g13/A) Output_Pin: (U4_ex_U1_alu_RC_CG_HIER_INST7/g13/Q) Cell: (AND2X1) Net: (U4_ex_U1_alu_rc_gclk_6887) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST10/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST10/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_13972) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST11/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST11/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_13975) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST12/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST12/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_13978) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST13/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST13/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_13981) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST14/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST14/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_13984) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST15/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST15/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_13987) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST16/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST16/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_13990) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST17/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST17/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_13993) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST18/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST18/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_13996) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST19/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST19/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_13999) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST20/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST20/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_14002) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST21/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST21/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_14005) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST22/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST22/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_14008) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST23/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST23/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_14011) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST24/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST24/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_14014) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST25/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST25/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_14017) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST26/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST26/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_14020) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST27/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST27/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_14023) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST28/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST28/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_14026) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST29/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST29/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_14029) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST30/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST30/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_14032) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST31/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST31/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_14035) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST32/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST32/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_14038) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST33/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST33/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_14041) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST34/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST34/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_14044) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST35/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST35/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_14047) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST36/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST36/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_14050) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST37/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST37/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_14053) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST38/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST38/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_14056) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST39/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST39/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk_14059) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U7_banc_RC_CG_HIER_INST9/g13/A) Output_Pin: (U7_banc_RC_CG_HIER_INST9/g13/Q) Cell: (AND2X1) Net: (U7_banc_rc_gclk) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U3_di_RC_CG_HIER_INST4/g12/A) Output_Pin: (U3_di_RC_CG_HIER_INST4/g12/Q) Cell: (AND2X1) Net: (U3_di_rc_gclk) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 174
+          Nr. of     Rising  Sync Pins  : 174
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U8_syscop_RC_CG_HIER_INST40/g12/A) Output_Pin: (U8_syscop_RC_CG_HIER_INST40/g12/Q) Cell: (AND2X1) Net: (U8_syscop_rc_gclk) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 32
+          Nr. of     Rising  Sync Pins  : 32
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (U8_syscop_RC_CG_HIER_INST41/g12/A) Output_Pin: (U8_syscop_RC_CG_HIER_INST41/g12/Q) Cell: (AND2X1) Net: (U8_syscop_rc_gclk_5742) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 31
+          Nr. of     Rising  Sync Pins  : 31
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (RC_CG_DECLONE_HIER_INST/g12/A) Output_Pin: (RC_CG_DECLONE_HIER_INST/g12/Q) Cell: (AND2X1) Net: (rc_gclk) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Unsync Pins            : 0
+          Nr. of Total Sync Pins        : 191
+          Nr. of     Rising  Sync Pins  : 191
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+***********************************************************
+
+****** Pre CTS Detail Structure for clock clock
+*DEPTH 0: clock
+ (Sync)U1_pf_RC_CG_HIER_INST1/enl_reg/GN
+ (Sync)U2_ei_RC_CG_HIER_INST2/enl_reg/GN
+ (Sync)U2_ei_RC_CG_HIER_INST3/enl_reg/GN
+ (Sync)U9_bus_ctrl_RC_CG_HIER_INST42/enl_reg/GN
+ (Sync)U4_ex_U1_alu_RC_CG_HIER_INST6/enl_reg/GN
+ (Sync)U4_ex_U1_alu_RC_CG_HIER_INST7/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST10/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST11/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST12/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST13/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST14/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST15/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST16/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST17/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST18/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST19/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST20/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST21/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST22/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST23/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST24/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST25/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST26/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST27/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST28/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST29/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST30/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST31/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST32/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST33/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST34/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST35/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST36/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST37/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST38/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST39/enl_reg/GN
+ (Sync)U7_banc_RC_CG_HIER_INST9/enl_reg/GN
+ (Sync)U3_di_RC_CG_HIER_INST4/enl_reg/GN
+ (Sync)U8_syscop_RC_CG_HIER_INST40/enl_reg/GN
+ (Sync)U8_syscop_RC_CG_HIER_INST41/enl_reg/GN
+ (Sync)RC_CG_DECLONE_HIER_INST/enl_reg/GN
+ (Sync)U9_bus_ctrl_cs_reg/C
+ (Sync)U9_bus_ctrl_req_allowed_reg/C
+ (Sync)it_mat_clk_reg/C
+ (Sync)U8_syscop_scp_reg_reg[12][0]/C
+ (Sync)U8_syscop_scp_reg_reg[14][0]/C
+ (Sync)U8_syscop_scp_reg_reg[14][8]/C
+ (Sync)U8_syscop_scp_reg_reg[14][4]/C
+ (Sync)U8_syscop_scp_reg_reg[14][26]/C
+ (Sync)U8_syscop_scp_reg_reg[14][15]/C
+ (Sync)U8_syscop_scp_reg_reg[14][19]/C
+ (Sync)U8_syscop_scp_reg_reg[14][11]/C
+ (Sync)U8_syscop_scp_reg_reg[14][7]/C
+ (Sync)U8_syscop_scp_reg_reg[14][1]/C
+ (Sync)U8_syscop_scp_reg_reg[14][9]/C
+ (Sync)U8_syscop_scp_reg_reg[14][10]/C
+ (Sync)U8_syscop_scp_reg_reg[14][12]/C
+ (Sync)U8_syscop_scp_reg_reg[14][13]/C
+ (Sync)U8_syscop_scp_reg_reg[14][14]/C
+ (Sync)U8_syscop_scp_reg_reg[14][16]/C
+ (Sync)U8_syscop_scp_reg_reg[14][17]/C
+ (Sync)U8_syscop_scp_reg_reg[14][2]/C
+ (Sync)U8_syscop_scp_reg_reg[14][29]/C
+ (Sync)U8_syscop_scp_reg_reg[14][22]/C
+ (Sync)U8_syscop_scp_reg_reg[14][23]/C
+ (Sync)U8_syscop_scp_reg_reg[14][24]/C
+ (Sync)U8_syscop_scp_reg_reg[14][25]/C
+ (Sync)U8_syscop_scp_reg_reg[14][27]/C
+ (Sync)U8_syscop_scp_reg_reg[14][28]/C
+ (Sync)U8_syscop_scp_reg_reg[14][21]/C
+ (Sync)U8_syscop_scp_reg_reg[14][30]/C
+ (Sync)U8_syscop_scp_reg_reg[14][31]/C
+ (Sync)U8_syscop_scp_reg_reg[14][3]/C
+ (Sync)U8_syscop_scp_reg_reg[14][5]/C
+ (Sync)U8_syscop_scp_reg_reg[14][6]/C
+ (Sync)U8_syscop_scp_reg_reg[14][18]/C
+ (Sync)U8_syscop_scp_reg_reg[14][20]/C
+ (Sync)U8_syscop_scp_reg_reg[13][20]/C
+ (Sync)U8_syscop_scp_reg_reg[13][21]/C
+ (Sync)U8_syscop_scp_reg_reg[13][22]/C
+ (Sync)U8_syscop_scp_reg_reg[13][26]/C
+ (Sync)U8_syscop_scp_reg_reg[13][28]/C
+ (Sync)U8_syscop_scp_reg_reg[13][30]/C
+ (Sync)U8_syscop_scp_reg_reg[13][4]/C
+ (Sync)U8_syscop_scp_reg_reg[13][6]/C
+ (Sync)U8_syscop_scp_reg_reg[13][8]/C
+ (Sync)U8_syscop_scp_reg_reg[13][0]/C
+ (Sync)U8_syscop_scp_reg_reg[13][10]/C
+ (Sync)U8_syscop_scp_reg_reg[13][11]/C
+ (Sync)U8_syscop_scp_reg_reg[13][12]/C
+ (Sync)U8_syscop_scp_reg_reg[13][13]/C
+ (Sync)U8_syscop_scp_reg_reg[13][14]/C
+ (Sync)U8_syscop_scp_reg_reg[13][15]/C
+ (Sync)U8_syscop_scp_reg_reg[13][16]/C
+ (Sync)U8_syscop_scp_reg_reg[13][17]/C
+ (Sync)U8_syscop_scp_reg_reg[13][18]/C
+ (Sync)U8_syscop_scp_reg_reg[13][19]/C
+ (Sync)U8_syscop_scp_reg_reg[13][1]/C
+ (Sync)U8_syscop_scp_reg_reg[13][23]/C
+ (Sync)U8_syscop_scp_reg_reg[13][24]/C
+ (Sync)U8_syscop_scp_reg_reg[13][25]/C
+ (Sync)U8_syscop_scp_reg_reg[13][27]/C
+ (Sync)U8_syscop_scp_reg_reg[13][29]/C
+ (Sync)U8_syscop_scp_reg_reg[13][2]/C
+ (Sync)U8_syscop_scp_reg_reg[13][31]/C
+ (Sync)U8_syscop_scp_reg_reg[13][3]/C
+ (Sync)U8_syscop_scp_reg_reg[13][5]/C
+ (Sync)U8_syscop_scp_reg_reg[13][7]/C
+ (Sync)U8_syscop_scp_reg_reg[13][9]/C
+ (Sync)U8_syscop_save_msk_reg/C
+ *DEPTH 1: U1_pf_RC_CG_HIER_INST1/g12(A->Q)
+  (Sync)U1_pf_pc_interne_reg[0]/C
+  (Sync)U1_pf_pc_interne_reg[8]/C
+  (Sync)U1_pf_pc_interne_reg[4]/C
+  (Sync)U1_pf_pc_interne_reg[26]/C
+  (Sync)U1_pf_pc_interne_reg[15]/C
+  (Sync)U1_pf_pc_interne_reg[19]/C
+  (Sync)U1_pf_pc_interne_reg[11]/C
+  (Sync)U1_pf_pc_interne_reg[7]/C
+  (Sync)U1_pf_pc_interne_reg[1]/C
+  (Sync)U1_pf_pc_interne_reg[9]/C
+  (Sync)U1_pf_pc_interne_reg[10]/C
+  (Sync)U1_pf_pc_interne_reg[12]/C
+  (Sync)U1_pf_pc_interne_reg[13]/C
+  (Sync)U1_pf_pc_interne_reg[14]/C
+  (Sync)U1_pf_pc_interne_reg[16]/C
+  (Sync)U1_pf_pc_interne_reg[17]/C
+  (Sync)U1_pf_pc_interne_reg[2]/C
+  (Sync)U1_pf_pc_interne_reg[29]/C
+  (Sync)U1_pf_pc_interne_reg[22]/C
+  (Sync)U1_pf_pc_interne_reg[23]/C
+  (Sync)U1_pf_pc_interne_reg[24]/C
+  (Sync)U1_pf_pc_interne_reg[25]/C
+  (Sync)U1_pf_pc_interne_reg[27]/C
+  (Sync)U1_pf_pc_interne_reg[28]/C
+  (Sync)U1_pf_pc_interne_reg[21]/C
+  (Sync)U1_pf_pc_interne_reg[30]/C
+  (Sync)U1_pf_pc_interne_reg[31]/C
+  (Sync)U1_pf_pc_interne_reg[3]/C
+  (Sync)U1_pf_pc_interne_reg[5]/C
+  (Sync)U1_pf_pc_interne_reg[6]/C
+  (Sync)U1_pf_pc_interne_reg[18]/C
+  (Sync)U1_pf_pc_interne_reg[20]/C
+ *DEPTH 1: U2_ei_RC_CG_HIER_INST2/g12(A->Q)
+  (Sync)U2_ei_EI_instr_reg[4]/C
+  (Sync)U2_ei_EI_instr_reg[0]/C
+  (Sync)U2_ei_EI_instr_reg[1]/C
+  (Sync)U2_ei_EI_instr_reg[2]/C
+  (Sync)U2_ei_EI_instr_reg[3]/C
+  (Sync)U2_ei_EI_instr_reg[13]/C
+  (Sync)U2_ei_EI_instr_reg[11]/C
+  (Sync)U2_ei_EI_instr_reg[10]/C
+  (Sync)U2_ei_EI_instr_reg[14]/C
+  (Sync)U2_ei_EI_instr_reg[18]/C
+  (Sync)U2_ei_EI_instr_reg[16]/C
+  (Sync)U2_ei_EI_instr_reg[22]/C
+  (Sync)U2_ei_EI_instr_reg[26]/C
+  (Sync)U2_ei_EI_instr_reg[27]/C
+  (Sync)U2_ei_EI_instr_reg[25]/C
+  (Sync)U2_ei_EI_instr_reg[21]/C
+  (Sync)U2_ei_EI_instr_reg[23]/C
+  (Sync)U2_ei_EI_instr_reg[5]/C
+  (Sync)U2_ei_EI_instr_reg[6]/C
+  (Sync)U2_ei_EI_instr_reg[7]/C
+  (Sync)U2_ei_EI_instr_reg[12]/C
+  (Sync)U2_ei_EI_instr_reg[17]/C
+  (Sync)U2_ei_EI_instr_reg[20]/C
+  (Sync)U2_ei_EI_instr_reg[24]/C
+  (Sync)U2_ei_EI_instr_reg[28]/C
+  (Sync)U2_ei_EI_instr_reg[31]/C
+  (Sync)U2_ei_EI_instr_reg[29]/C
+  (Sync)U2_ei_EI_instr_reg[9]/C
+  (Sync)U2_ei_EI_instr_reg[8]/C
+  (Sync)U2_ei_EI_instr_reg[19]/C
+  (Sync)U2_ei_EI_it_ok_reg/C
+  (Sync)U2_ei_EI_instr_reg[15]/C
+  (Sync)U2_ei_EI_instr_reg[30]/C
+ *DEPTH 1: U2_ei_RC_CG_HIER_INST3/g12(A->Q)
+  (Sync)U2_ei_EI_adr_reg[27]/C
+  (Sync)U2_ei_EI_adr_reg[19]/C
+  (Sync)U2_ei_EI_adr_reg[25]/C
+  (Sync)U2_ei_EI_adr_reg[3]/C
+  (Sync)U2_ei_EI_adr_reg[1]/C
+  (Sync)U2_ei_EI_adr_reg[18]/C
+  (Sync)U2_ei_EI_adr_reg[10]/C
+  (Sync)U2_ei_EI_adr_reg[7]/C
+  (Sync)U2_ei_EI_adr_reg[23]/C
+  (Sync)U2_ei_EI_adr_reg[20]/C
+  (Sync)U2_ei_EI_adr_reg[14]/C
+  (Sync)U2_ei_EI_adr_reg[5]/C
+  (Sync)U2_ei_EI_adr_reg[17]/C
+  (Sync)U2_ei_EI_adr_reg[31]/C
+  (Sync)U2_ei_EI_adr_reg[29]/C
+  (Sync)U2_ei_EI_adr_reg[28]/C
+  (Sync)U2_ei_EI_adr_reg[0]/C
+  (Sync)U2_ei_EI_adr_reg[30]/C
+  (Sync)U2_ei_EI_adr_reg[26]/C
+  (Sync)U2_ei_EI_adr_reg[16]/C
+  (Sync)U2_ei_EI_adr_reg[4]/C
+  (Sync)U2_ei_EI_adr_reg[12]/C
+  (Sync)U2_ei_EI_adr_reg[21]/C
+  (Sync)U2_ei_EI_adr_reg[6]/C
+  (Sync)U2_ei_EI_adr_reg[2]/C
+  (Sync)U2_ei_EI_adr_reg[24]/C
+  (Sync)U2_ei_EI_adr_reg[9]/C
+  (Sync)U2_ei_EI_adr_reg[15]/C
+  (Sync)U2_ei_EI_adr_reg[22]/C
+  (Sync)U2_ei_EI_adr_reg[11]/C
+  (Sync)U2_ei_EI_adr_reg[8]/C
+  (Sync)U2_ei_EI_adr_reg[13]/C
+ *DEPTH 1: U9_bus_ctrl_RC_CG_HIER_INST42/g13(A->Q)
+  (Sync)U9_bus_ctrl_ei_buffer_reg[0]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[1]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[2]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[3]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[4]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[22]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[6]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[8]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[7]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[9]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[10]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[12]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[14]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[16]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[17]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[18]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[20]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[21]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[13]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[24]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[25]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[26]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[28]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[27]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[31]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[30]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[5]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[11]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[29]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[19]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[15]/C
+  (Sync)U9_bus_ctrl_ei_buffer_reg[23]/C
+ *DEPTH 1: U4_ex_U1_alu_RC_CG_HIER_INST6/g13(A->Q)
+  (Sync)U4_ex_U1_alu_hilo_reg[0]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[10]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[11]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[12]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[13]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[14]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[15]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[16]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[17]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[18]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[19]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[1]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[20]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[21]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[22]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[23]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[24]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[25]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[26]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[27]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[28]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[29]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[2]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[30]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[31]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[3]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[4]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[5]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[6]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[7]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[8]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[9]/C
+ *DEPTH 1: U4_ex_U1_alu_RC_CG_HIER_INST7/g13(A->Q)
+  (Sync)U4_ex_U1_alu_hilo_reg[32]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[33]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[34]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[35]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[36]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[37]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[38]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[39]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[40]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[41]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[42]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[43]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[44]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[45]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[46]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[47]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[48]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[49]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[50]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[51]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[52]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[53]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[54]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[55]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[56]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[57]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[58]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[59]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[60]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[61]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[62]/C
+  (Sync)U4_ex_U1_alu_hilo_reg[63]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST10/g13(A->Q)
+  (Sync)U7_banc_registres_reg[9][0]/C
+  (Sync)U7_banc_registres_reg[9][10]/C
+  (Sync)U7_banc_registres_reg[9][11]/C
+  (Sync)U7_banc_registres_reg[9][12]/C
+  (Sync)U7_banc_registres_reg[9][13]/C
+  (Sync)U7_banc_registres_reg[9][14]/C
+  (Sync)U7_banc_registres_reg[9][15]/C
+  (Sync)U7_banc_registres_reg[9][16]/C
+  (Sync)U7_banc_registres_reg[9][17]/C
+  (Sync)U7_banc_registres_reg[9][18]/C
+  (Sync)U7_banc_registres_reg[9][19]/C
+  (Sync)U7_banc_registres_reg[9][1]/C
+  (Sync)U7_banc_registres_reg[9][20]/C
+  (Sync)U7_banc_registres_reg[9][21]/C
+  (Sync)U7_banc_registres_reg[9][22]/C
+  (Sync)U7_banc_registres_reg[9][23]/C
+  (Sync)U7_banc_registres_reg[9][24]/C
+  (Sync)U7_banc_registres_reg[9][25]/C
+  (Sync)U7_banc_registres_reg[9][26]/C
+  (Sync)U7_banc_registres_reg[9][27]/C
+  (Sync)U7_banc_registres_reg[9][28]/C
+  (Sync)U7_banc_registres_reg[9][29]/C
+  (Sync)U7_banc_registres_reg[9][2]/C
+  (Sync)U7_banc_registres_reg[9][30]/C
+  (Sync)U7_banc_registres_reg[9][31]/C
+  (Sync)U7_banc_registres_reg[9][3]/C
+  (Sync)U7_banc_registres_reg[9][4]/C
+  (Sync)U7_banc_registres_reg[9][5]/C
+  (Sync)U7_banc_registres_reg[9][6]/C
+  (Sync)U7_banc_registres_reg[9][7]/C
+  (Sync)U7_banc_registres_reg[9][8]/C
+  (Sync)U7_banc_registres_reg[9][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST11/g13(A->Q)
+  (Sync)U7_banc_registres_reg[11][0]/C
+  (Sync)U7_banc_registres_reg[11][10]/C
+  (Sync)U7_banc_registres_reg[11][11]/C
+  (Sync)U7_banc_registres_reg[11][12]/C
+  (Sync)U7_banc_registres_reg[11][13]/C
+  (Sync)U7_banc_registres_reg[11][14]/C
+  (Sync)U7_banc_registres_reg[11][15]/C
+  (Sync)U7_banc_registres_reg[11][16]/C
+  (Sync)U7_banc_registres_reg[11][17]/C
+  (Sync)U7_banc_registres_reg[11][18]/C
+  (Sync)U7_banc_registres_reg[11][19]/C
+  (Sync)U7_banc_registres_reg[11][1]/C
+  (Sync)U7_banc_registres_reg[11][20]/C
+  (Sync)U7_banc_registres_reg[11][21]/C
+  (Sync)U7_banc_registres_reg[11][22]/C
+  (Sync)U7_banc_registres_reg[11][23]/C
+  (Sync)U7_banc_registres_reg[11][24]/C
+  (Sync)U7_banc_registres_reg[11][25]/C
+  (Sync)U7_banc_registres_reg[11][26]/C
+  (Sync)U7_banc_registres_reg[11][27]/C
+  (Sync)U7_banc_registres_reg[11][28]/C
+  (Sync)U7_banc_registres_reg[11][29]/C
+  (Sync)U7_banc_registres_reg[11][2]/C
+  (Sync)U7_banc_registres_reg[11][30]/C
+  (Sync)U7_banc_registres_reg[11][31]/C
+  (Sync)U7_banc_registres_reg[11][3]/C
+  (Sync)U7_banc_registres_reg[11][4]/C
+  (Sync)U7_banc_registres_reg[11][5]/C
+  (Sync)U7_banc_registres_reg[11][6]/C
+  (Sync)U7_banc_registres_reg[11][7]/C
+  (Sync)U7_banc_registres_reg[11][8]/C
+  (Sync)U7_banc_registres_reg[11][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST12/g13(A->Q)
+  (Sync)U7_banc_registres_reg[13][0]/C
+  (Sync)U7_banc_registres_reg[13][10]/C
+  (Sync)U7_banc_registres_reg[13][11]/C
+  (Sync)U7_banc_registres_reg[13][12]/C
+  (Sync)U7_banc_registres_reg[13][13]/C
+  (Sync)U7_banc_registres_reg[13][14]/C
+  (Sync)U7_banc_registres_reg[13][15]/C
+  (Sync)U7_banc_registres_reg[13][16]/C
+  (Sync)U7_banc_registres_reg[13][17]/C
+  (Sync)U7_banc_registres_reg[13][18]/C
+  (Sync)U7_banc_registres_reg[13][19]/C
+  (Sync)U7_banc_registres_reg[13][1]/C
+  (Sync)U7_banc_registres_reg[13][20]/C
+  (Sync)U7_banc_registres_reg[13][21]/C
+  (Sync)U7_banc_registres_reg[13][22]/C
+  (Sync)U7_banc_registres_reg[13][23]/C
+  (Sync)U7_banc_registres_reg[13][24]/C
+  (Sync)U7_banc_registres_reg[13][25]/C
+  (Sync)U7_banc_registres_reg[13][26]/C
+  (Sync)U7_banc_registres_reg[13][27]/C
+  (Sync)U7_banc_registres_reg[13][28]/C
+  (Sync)U7_banc_registres_reg[13][29]/C
+  (Sync)U7_banc_registres_reg[13][2]/C
+  (Sync)U7_banc_registres_reg[13][30]/C
+  (Sync)U7_banc_registres_reg[13][31]/C
+  (Sync)U7_banc_registres_reg[13][3]/C
+  (Sync)U7_banc_registres_reg[13][4]/C
+  (Sync)U7_banc_registres_reg[13][5]/C
+  (Sync)U7_banc_registres_reg[13][6]/C
+  (Sync)U7_banc_registres_reg[13][7]/C
+  (Sync)U7_banc_registres_reg[13][8]/C
+  (Sync)U7_banc_registres_reg[13][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST13/g13(A->Q)
+  (Sync)U7_banc_registres_reg[17][0]/C
+  (Sync)U7_banc_registres_reg[17][10]/C
+  (Sync)U7_banc_registres_reg[17][11]/C
+  (Sync)U7_banc_registres_reg[17][12]/C
+  (Sync)U7_banc_registres_reg[17][13]/C
+  (Sync)U7_banc_registres_reg[17][14]/C
+  (Sync)U7_banc_registres_reg[17][15]/C
+  (Sync)U7_banc_registres_reg[17][16]/C
+  (Sync)U7_banc_registres_reg[17][17]/C
+  (Sync)U7_banc_registres_reg[17][18]/C
+  (Sync)U7_banc_registres_reg[17][19]/C
+  (Sync)U7_banc_registres_reg[17][1]/C
+  (Sync)U7_banc_registres_reg[17][20]/C
+  (Sync)U7_banc_registres_reg[17][21]/C
+  (Sync)U7_banc_registres_reg[17][22]/C
+  (Sync)U7_banc_registres_reg[17][24]/C
+  (Sync)U7_banc_registres_reg[17][25]/C
+  (Sync)U7_banc_registres_reg[17][26]/C
+  (Sync)U7_banc_registres_reg[17][27]/C
+  (Sync)U7_banc_registres_reg[17][28]/C
+  (Sync)U7_banc_registres_reg[17][29]/C
+  (Sync)U7_banc_registres_reg[17][2]/C
+  (Sync)U7_banc_registres_reg[17][30]/C
+  (Sync)U7_banc_registres_reg[17][31]/C
+  (Sync)U7_banc_registres_reg[17][3]/C
+  (Sync)U7_banc_registres_reg[17][4]/C
+  (Sync)U7_banc_registres_reg[17][5]/C
+  (Sync)U7_banc_registres_reg[17][6]/C
+  (Sync)U7_banc_registres_reg[17][7]/C
+  (Sync)U7_banc_registres_reg[17][8]/C
+  (Sync)U7_banc_registres_reg[17][9]/C
+  (Sync)U7_banc_registres_reg[17][23]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST14/g13(A->Q)
+  (Sync)U7_banc_registres_reg[24][0]/C
+  (Sync)U7_banc_registres_reg[24][11]/C
+  (Sync)U7_banc_registres_reg[24][13]/C
+  (Sync)U7_banc_registres_reg[24][14]/C
+  (Sync)U7_banc_registres_reg[24][15]/C
+  (Sync)U7_banc_registres_reg[24][17]/C
+  (Sync)U7_banc_registres_reg[24][18]/C
+  (Sync)U7_banc_registres_reg[24][1]/C
+  (Sync)U7_banc_registres_reg[24][20]/C
+  (Sync)U7_banc_registres_reg[24][21]/C
+  (Sync)U7_banc_registres_reg[24][22]/C
+  (Sync)U7_banc_registres_reg[24][23]/C
+  (Sync)U7_banc_registres_reg[24][24]/C
+  (Sync)U7_banc_registres_reg[24][25]/C
+  (Sync)U7_banc_registres_reg[24][26]/C
+  (Sync)U7_banc_registres_reg[24][27]/C
+  (Sync)U7_banc_registres_reg[24][28]/C
+  (Sync)U7_banc_registres_reg[24][29]/C
+  (Sync)U7_banc_registres_reg[24][2]/C
+  (Sync)U7_banc_registres_reg[24][30]/C
+  (Sync)U7_banc_registres_reg[24][31]/C
+  (Sync)U7_banc_registres_reg[24][3]/C
+  (Sync)U7_banc_registres_reg[24][4]/C
+  (Sync)U7_banc_registres_reg[24][5]/C
+  (Sync)U7_banc_registres_reg[24][6]/C
+  (Sync)U7_banc_registres_reg[24][7]/C
+  (Sync)U7_banc_registres_reg[24][8]/C
+  (Sync)U7_banc_registres_reg[24][10]/C
+  (Sync)U7_banc_registres_reg[24][12]/C
+  (Sync)U7_banc_registres_reg[24][16]/C
+  (Sync)U7_banc_registres_reg[24][19]/C
+  (Sync)U7_banc_registres_reg[24][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST15/g13(A->Q)
+  (Sync)U7_banc_registres_reg[25][0]/C
+  (Sync)U7_banc_registres_reg[25][10]/C
+  (Sync)U7_banc_registres_reg[25][11]/C
+  (Sync)U7_banc_registres_reg[25][12]/C
+  (Sync)U7_banc_registres_reg[25][13]/C
+  (Sync)U7_banc_registres_reg[25][14]/C
+  (Sync)U7_banc_registres_reg[25][15]/C
+  (Sync)U7_banc_registres_reg[25][16]/C
+  (Sync)U7_banc_registres_reg[25][17]/C
+  (Sync)U7_banc_registres_reg[25][18]/C
+  (Sync)U7_banc_registres_reg[25][19]/C
+  (Sync)U7_banc_registres_reg[25][1]/C
+  (Sync)U7_banc_registres_reg[25][20]/C
+  (Sync)U7_banc_registres_reg[25][22]/C
+  (Sync)U7_banc_registres_reg[25][23]/C
+  (Sync)U7_banc_registres_reg[25][24]/C
+  (Sync)U7_banc_registres_reg[25][25]/C
+  (Sync)U7_banc_registres_reg[25][26]/C
+  (Sync)U7_banc_registres_reg[25][27]/C
+  (Sync)U7_banc_registres_reg[25][28]/C
+  (Sync)U7_banc_registres_reg[25][29]/C
+  (Sync)U7_banc_registres_reg[25][2]/C
+  (Sync)U7_banc_registres_reg[25][30]/C
+  (Sync)U7_banc_registres_reg[25][31]/C
+  (Sync)U7_banc_registres_reg[25][3]/C
+  (Sync)U7_banc_registres_reg[25][4]/C
+  (Sync)U7_banc_registres_reg[25][5]/C
+  (Sync)U7_banc_registres_reg[25][6]/C
+  (Sync)U7_banc_registres_reg[25][7]/C
+  (Sync)U7_banc_registres_reg[25][8]/C
+  (Sync)U7_banc_registres_reg[25][9]/C
+  (Sync)U7_banc_registres_reg[25][21]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST16/g13(A->Q)
+  (Sync)U7_banc_registres_reg[18][0]/C
+  (Sync)U7_banc_registres_reg[18][10]/C
+  (Sync)U7_banc_registres_reg[18][11]/C
+  (Sync)U7_banc_registres_reg[18][12]/C
+  (Sync)U7_banc_registres_reg[18][13]/C
+  (Sync)U7_banc_registres_reg[18][14]/C
+  (Sync)U7_banc_registres_reg[18][15]/C
+  (Sync)U7_banc_registres_reg[18][16]/C
+  (Sync)U7_banc_registres_reg[18][17]/C
+  (Sync)U7_banc_registres_reg[18][18]/C
+  (Sync)U7_banc_registres_reg[18][19]/C
+  (Sync)U7_banc_registres_reg[18][1]/C
+  (Sync)U7_banc_registres_reg[18][20]/C
+  (Sync)U7_banc_registres_reg[18][21]/C
+  (Sync)U7_banc_registres_reg[18][22]/C
+  (Sync)U7_banc_registres_reg[18][23]/C
+  (Sync)U7_banc_registres_reg[18][24]/C
+  (Sync)U7_banc_registres_reg[18][25]/C
+  (Sync)U7_banc_registres_reg[18][26]/C
+  (Sync)U7_banc_registres_reg[18][27]/C
+  (Sync)U7_banc_registres_reg[18][28]/C
+  (Sync)U7_banc_registres_reg[18][29]/C
+  (Sync)U7_banc_registres_reg[18][2]/C
+  (Sync)U7_banc_registres_reg[18][30]/C
+  (Sync)U7_banc_registres_reg[18][31]/C
+  (Sync)U7_banc_registres_reg[18][3]/C
+  (Sync)U7_banc_registres_reg[18][4]/C
+  (Sync)U7_banc_registres_reg[18][5]/C
+  (Sync)U7_banc_registres_reg[18][6]/C
+  (Sync)U7_banc_registres_reg[18][7]/C
+  (Sync)U7_banc_registres_reg[18][8]/C
+  (Sync)U7_banc_registres_reg[18][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST17/g13(A->Q)
+  (Sync)U7_banc_registres_reg[26][0]/C
+  (Sync)U7_banc_registres_reg[26][10]/C
+  (Sync)U7_banc_registres_reg[26][11]/C
+  (Sync)U7_banc_registres_reg[26][12]/C
+  (Sync)U7_banc_registres_reg[26][13]/C
+  (Sync)U7_banc_registres_reg[26][14]/C
+  (Sync)U7_banc_registres_reg[26][15]/C
+  (Sync)U7_banc_registres_reg[26][16]/C
+  (Sync)U7_banc_registres_reg[26][17]/C
+  (Sync)U7_banc_registres_reg[26][18]/C
+  (Sync)U7_banc_registres_reg[26][19]/C
+  (Sync)U7_banc_registres_reg[26][1]/C
+  (Sync)U7_banc_registres_reg[26][20]/C
+  (Sync)U7_banc_registres_reg[26][22]/C
+  (Sync)U7_banc_registres_reg[26][23]/C
+  (Sync)U7_banc_registres_reg[26][24]/C
+  (Sync)U7_banc_registres_reg[26][25]/C
+  (Sync)U7_banc_registres_reg[26][26]/C
+  (Sync)U7_banc_registres_reg[26][27]/C
+  (Sync)U7_banc_registres_reg[26][28]/C
+  (Sync)U7_banc_registres_reg[26][29]/C
+  (Sync)U7_banc_registres_reg[26][2]/C
+  (Sync)U7_banc_registres_reg[26][30]/C
+  (Sync)U7_banc_registres_reg[26][31]/C
+  (Sync)U7_banc_registres_reg[26][3]/C
+  (Sync)U7_banc_registres_reg[26][4]/C
+  (Sync)U7_banc_registres_reg[26][5]/C
+  (Sync)U7_banc_registres_reg[26][6]/C
+  (Sync)U7_banc_registres_reg[26][7]/C
+  (Sync)U7_banc_registres_reg[26][8]/C
+  (Sync)U7_banc_registres_reg[26][9]/C
+  (Sync)U7_banc_registres_reg[26][21]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST18/g13(A->Q)
+  (Sync)U7_banc_registres_reg[27][0]/C
+  (Sync)U7_banc_registres_reg[27][10]/C
+  (Sync)U7_banc_registres_reg[27][11]/C
+  (Sync)U7_banc_registres_reg[27][12]/C
+  (Sync)U7_banc_registres_reg[27][13]/C
+  (Sync)U7_banc_registres_reg[27][14]/C
+  (Sync)U7_banc_registres_reg[27][16]/C
+  (Sync)U7_banc_registres_reg[27][17]/C
+  (Sync)U7_banc_registres_reg[27][18]/C
+  (Sync)U7_banc_registres_reg[27][19]/C
+  (Sync)U7_banc_registres_reg[27][1]/C
+  (Sync)U7_banc_registres_reg[27][20]/C
+  (Sync)U7_banc_registres_reg[27][21]/C
+  (Sync)U7_banc_registres_reg[27][22]/C
+  (Sync)U7_banc_registres_reg[27][23]/C
+  (Sync)U7_banc_registres_reg[27][24]/C
+  (Sync)U7_banc_registres_reg[27][25]/C
+  (Sync)U7_banc_registres_reg[27][26]/C
+  (Sync)U7_banc_registres_reg[27][27]/C
+  (Sync)U7_banc_registres_reg[27][28]/C
+  (Sync)U7_banc_registres_reg[27][29]/C
+  (Sync)U7_banc_registres_reg[27][2]/C
+  (Sync)U7_banc_registres_reg[27][30]/C
+  (Sync)U7_banc_registres_reg[27][31]/C
+  (Sync)U7_banc_registres_reg[27][3]/C
+  (Sync)U7_banc_registres_reg[27][4]/C
+  (Sync)U7_banc_registres_reg[27][5]/C
+  (Sync)U7_banc_registres_reg[27][6]/C
+  (Sync)U7_banc_registres_reg[27][7]/C
+  (Sync)U7_banc_registres_reg[27][8]/C
+  (Sync)U7_banc_registres_reg[27][9]/C
+  (Sync)U7_banc_registres_reg[27][15]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST19/g13(A->Q)
+  (Sync)U7_banc_registres_reg[14][0]/C
+  (Sync)U7_banc_registres_reg[14][10]/C
+  (Sync)U7_banc_registres_reg[14][11]/C
+  (Sync)U7_banc_registres_reg[14][12]/C
+  (Sync)U7_banc_registres_reg[14][13]/C
+  (Sync)U7_banc_registres_reg[14][14]/C
+  (Sync)U7_banc_registres_reg[14][15]/C
+  (Sync)U7_banc_registres_reg[14][16]/C
+  (Sync)U7_banc_registres_reg[14][17]/C
+  (Sync)U7_banc_registres_reg[14][18]/C
+  (Sync)U7_banc_registres_reg[14][19]/C
+  (Sync)U7_banc_registres_reg[14][1]/C
+  (Sync)U7_banc_registres_reg[14][20]/C
+  (Sync)U7_banc_registres_reg[14][21]/C
+  (Sync)U7_banc_registres_reg[14][22]/C
+  (Sync)U7_banc_registres_reg[14][23]/C
+  (Sync)U7_banc_registres_reg[14][24]/C
+  (Sync)U7_banc_registres_reg[14][25]/C
+  (Sync)U7_banc_registres_reg[14][26]/C
+  (Sync)U7_banc_registres_reg[14][27]/C
+  (Sync)U7_banc_registres_reg[14][28]/C
+  (Sync)U7_banc_registres_reg[14][29]/C
+  (Sync)U7_banc_registres_reg[14][2]/C
+  (Sync)U7_banc_registres_reg[14][30]/C
+  (Sync)U7_banc_registres_reg[14][31]/C
+  (Sync)U7_banc_registres_reg[14][3]/C
+  (Sync)U7_banc_registres_reg[14][4]/C
+  (Sync)U7_banc_registres_reg[14][5]/C
+  (Sync)U7_banc_registres_reg[14][6]/C
+  (Sync)U7_banc_registres_reg[14][7]/C
+  (Sync)U7_banc_registres_reg[14][8]/C
+  (Sync)U7_banc_registres_reg[14][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST20/g13(A->Q)
+  (Sync)U7_banc_registres_reg[19][0]/C
+  (Sync)U7_banc_registres_reg[19][10]/C
+  (Sync)U7_banc_registres_reg[19][11]/C
+  (Sync)U7_banc_registres_reg[19][12]/C
+  (Sync)U7_banc_registres_reg[19][13]/C
+  (Sync)U7_banc_registres_reg[19][14]/C
+  (Sync)U7_banc_registres_reg[19][15]/C
+  (Sync)U7_banc_registres_reg[19][16]/C
+  (Sync)U7_banc_registres_reg[19][17]/C
+  (Sync)U7_banc_registres_reg[19][18]/C
+  (Sync)U7_banc_registres_reg[19][19]/C
+  (Sync)U7_banc_registres_reg[19][1]/C
+  (Sync)U7_banc_registres_reg[19][20]/C
+  (Sync)U7_banc_registres_reg[19][21]/C
+  (Sync)U7_banc_registres_reg[19][22]/C
+  (Sync)U7_banc_registres_reg[19][23]/C
+  (Sync)U7_banc_registres_reg[19][24]/C
+  (Sync)U7_banc_registres_reg[19][25]/C
+  (Sync)U7_banc_registres_reg[19][26]/C
+  (Sync)U7_banc_registres_reg[19][27]/C
+  (Sync)U7_banc_registres_reg[19][28]/C
+  (Sync)U7_banc_registres_reg[19][29]/C
+  (Sync)U7_banc_registres_reg[19][2]/C
+  (Sync)U7_banc_registres_reg[19][30]/C
+  (Sync)U7_banc_registres_reg[19][31]/C
+  (Sync)U7_banc_registres_reg[19][3]/C
+  (Sync)U7_banc_registres_reg[19][4]/C
+  (Sync)U7_banc_registres_reg[19][5]/C
+  (Sync)U7_banc_registres_reg[19][6]/C
+  (Sync)U7_banc_registres_reg[19][7]/C
+  (Sync)U7_banc_registres_reg[19][8]/C
+  (Sync)U7_banc_registres_reg[19][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST21/g13(A->Q)
+  (Sync)U7_banc_registres_reg[28][0]/C
+  (Sync)U7_banc_registres_reg[28][10]/C
+  (Sync)U7_banc_registres_reg[28][11]/C
+  (Sync)U7_banc_registres_reg[28][12]/C
+  (Sync)U7_banc_registres_reg[28][13]/C
+  (Sync)U7_banc_registres_reg[28][14]/C
+  (Sync)U7_banc_registres_reg[28][15]/C
+  (Sync)U7_banc_registres_reg[28][16]/C
+  (Sync)U7_banc_registres_reg[28][17]/C
+  (Sync)U7_banc_registres_reg[28][18]/C
+  (Sync)U7_banc_registres_reg[28][19]/C
+  (Sync)U7_banc_registres_reg[28][1]/C
+  (Sync)U7_banc_registres_reg[28][20]/C
+  (Sync)U7_banc_registres_reg[28][21]/C
+  (Sync)U7_banc_registres_reg[28][22]/C
+  (Sync)U7_banc_registres_reg[28][23]/C
+  (Sync)U7_banc_registres_reg[28][24]/C
+  (Sync)U7_banc_registres_reg[28][25]/C
+  (Sync)U7_banc_registres_reg[28][26]/C
+  (Sync)U7_banc_registres_reg[28][27]/C
+  (Sync)U7_banc_registres_reg[28][28]/C
+  (Sync)U7_banc_registres_reg[28][29]/C
+  (Sync)U7_banc_registres_reg[28][2]/C
+  (Sync)U7_banc_registres_reg[28][30]/C
+  (Sync)U7_banc_registres_reg[28][31]/C
+  (Sync)U7_banc_registres_reg[28][3]/C
+  (Sync)U7_banc_registres_reg[28][4]/C
+  (Sync)U7_banc_registres_reg[28][5]/C
+  (Sync)U7_banc_registres_reg[28][6]/C
+  (Sync)U7_banc_registres_reg[28][7]/C
+  (Sync)U7_banc_registres_reg[28][8]/C
+  (Sync)U7_banc_registres_reg[28][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST22/g13(A->Q)
+  (Sync)U7_banc_registres_reg[29][0]/C
+  (Sync)U7_banc_registres_reg[29][10]/C
+  (Sync)U7_banc_registres_reg[29][11]/C
+  (Sync)U7_banc_registres_reg[29][12]/C
+  (Sync)U7_banc_registres_reg[29][13]/C
+  (Sync)U7_banc_registres_reg[29][14]/C
+  (Sync)U7_banc_registres_reg[29][15]/C
+  (Sync)U7_banc_registres_reg[29][16]/C
+  (Sync)U7_banc_registres_reg[29][17]/C
+  (Sync)U7_banc_registres_reg[29][18]/C
+  (Sync)U7_banc_registres_reg[29][19]/C
+  (Sync)U7_banc_registres_reg[29][1]/C
+  (Sync)U7_banc_registres_reg[29][20]/C
+  (Sync)U7_banc_registres_reg[29][21]/C
+  (Sync)U7_banc_registres_reg[29][22]/C
+  (Sync)U7_banc_registres_reg[29][23]/C
+  (Sync)U7_banc_registres_reg[29][24]/C
+  (Sync)U7_banc_registres_reg[29][25]/C
+  (Sync)U7_banc_registres_reg[29][26]/C
+  (Sync)U7_banc_registres_reg[29][27]/C
+  (Sync)U7_banc_registres_reg[29][28]/C
+  (Sync)U7_banc_registres_reg[29][29]/C
+  (Sync)U7_banc_registres_reg[29][2]/C
+  (Sync)U7_banc_registres_reg[29][30]/C
+  (Sync)U7_banc_registres_reg[29][31]/C
+  (Sync)U7_banc_registres_reg[29][3]/C
+  (Sync)U7_banc_registres_reg[29][4]/C
+  (Sync)U7_banc_registres_reg[29][5]/C
+  (Sync)U7_banc_registres_reg[29][6]/C
+  (Sync)U7_banc_registres_reg[29][7]/C
+  (Sync)U7_banc_registres_reg[29][8]/C
+  (Sync)U7_banc_registres_reg[29][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST23/g13(A->Q)
+  (Sync)U7_banc_registres_reg[1][0]/C
+  (Sync)U7_banc_registres_reg[1][10]/C
+  (Sync)U7_banc_registres_reg[1][12]/C
+  (Sync)U7_banc_registres_reg[1][14]/C
+  (Sync)U7_banc_registres_reg[1][19]/C
+  (Sync)U7_banc_registres_reg[1][1]/C
+  (Sync)U7_banc_registres_reg[1][20]/C
+  (Sync)U7_banc_registres_reg[1][21]/C
+  (Sync)U7_banc_registres_reg[1][24]/C
+  (Sync)U7_banc_registres_reg[1][25]/C
+  (Sync)U7_banc_registres_reg[1][26]/C
+  (Sync)U7_banc_registres_reg[1][27]/C
+  (Sync)U7_banc_registres_reg[1][28]/C
+  (Sync)U7_banc_registres_reg[1][29]/C
+  (Sync)U7_banc_registres_reg[1][2]/C
+  (Sync)U7_banc_registres_reg[1][30]/C
+  (Sync)U7_banc_registres_reg[1][31]/C
+  (Sync)U7_banc_registres_reg[1][3]/C
+  (Sync)U7_banc_registres_reg[1][4]/C
+  (Sync)U7_banc_registres_reg[1][7]/C
+  (Sync)U7_banc_registres_reg[1][8]/C
+  (Sync)U7_banc_registres_reg[1][9]/C
+  (Sync)U7_banc_registres_reg[1][15]/C
+  (Sync)U7_banc_registres_reg[1][23]/C
+  (Sync)U7_banc_registres_reg[1][22]/C
+  (Sync)U7_banc_registres_reg[1][11]/C
+  (Sync)U7_banc_registres_reg[1][5]/C
+  (Sync)U7_banc_registres_reg[1][16]/C
+  (Sync)U7_banc_registres_reg[1][13]/C
+  (Sync)U7_banc_registres_reg[1][6]/C
+  (Sync)U7_banc_registres_reg[1][17]/C
+  (Sync)U7_banc_registres_reg[1][18]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST24/g13(A->Q)
+  (Sync)U7_banc_registres_reg[2][0]/C
+  (Sync)U7_banc_registres_reg[2][10]/C
+  (Sync)U7_banc_registres_reg[2][12]/C
+  (Sync)U7_banc_registres_reg[2][13]/C
+  (Sync)U7_banc_registres_reg[2][14]/C
+  (Sync)U7_banc_registres_reg[2][16]/C
+  (Sync)U7_banc_registres_reg[2][17]/C
+  (Sync)U7_banc_registres_reg[2][18]/C
+  (Sync)U7_banc_registres_reg[2][19]/C
+  (Sync)U7_banc_registres_reg[2][1]/C
+  (Sync)U7_banc_registres_reg[2][20]/C
+  (Sync)U7_banc_registres_reg[2][21]/C
+  (Sync)U7_banc_registres_reg[2][22]/C
+  (Sync)U7_banc_registres_reg[2][23]/C
+  (Sync)U7_banc_registres_reg[2][24]/C
+  (Sync)U7_banc_registres_reg[2][25]/C
+  (Sync)U7_banc_registres_reg[2][26]/C
+  (Sync)U7_banc_registres_reg[2][27]/C
+  (Sync)U7_banc_registres_reg[2][28]/C
+  (Sync)U7_banc_registres_reg[2][29]/C
+  (Sync)U7_banc_registres_reg[2][2]/C
+  (Sync)U7_banc_registres_reg[2][30]/C
+  (Sync)U7_banc_registres_reg[2][31]/C
+  (Sync)U7_banc_registres_reg[2][3]/C
+  (Sync)U7_banc_registres_reg[2][4]/C
+  (Sync)U7_banc_registres_reg[2][6]/C
+  (Sync)U7_banc_registres_reg[2][7]/C
+  (Sync)U7_banc_registres_reg[2][8]/C
+  (Sync)U7_banc_registres_reg[2][9]/C
+  (Sync)U7_banc_registres_reg[2][11]/C
+  (Sync)U7_banc_registres_reg[2][15]/C
+  (Sync)U7_banc_registres_reg[2][5]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST25/g13(A->Q)
+  (Sync)U7_banc_registres_reg[30][0]/C
+  (Sync)U7_banc_registres_reg[30][10]/C
+  (Sync)U7_banc_registres_reg[30][11]/C
+  (Sync)U7_banc_registres_reg[30][12]/C
+  (Sync)U7_banc_registres_reg[30][13]/C
+  (Sync)U7_banc_registres_reg[30][14]/C
+  (Sync)U7_banc_registres_reg[30][15]/C
+  (Sync)U7_banc_registres_reg[30][16]/C
+  (Sync)U7_banc_registres_reg[30][17]/C
+  (Sync)U7_banc_registres_reg[30][18]/C
+  (Sync)U7_banc_registres_reg[30][19]/C
+  (Sync)U7_banc_registres_reg[30][1]/C
+  (Sync)U7_banc_registres_reg[30][20]/C
+  (Sync)U7_banc_registres_reg[30][21]/C
+  (Sync)U7_banc_registres_reg[30][22]/C
+  (Sync)U7_banc_registres_reg[30][23]/C
+  (Sync)U7_banc_registres_reg[30][24]/C
+  (Sync)U7_banc_registres_reg[30][25]/C
+  (Sync)U7_banc_registres_reg[30][26]/C
+  (Sync)U7_banc_registres_reg[30][27]/C
+  (Sync)U7_banc_registres_reg[30][28]/C
+  (Sync)U7_banc_registres_reg[30][29]/C
+  (Sync)U7_banc_registres_reg[30][2]/C
+  (Sync)U7_banc_registres_reg[30][30]/C
+  (Sync)U7_banc_registres_reg[30][31]/C
+  (Sync)U7_banc_registres_reg[30][3]/C
+  (Sync)U7_banc_registres_reg[30][4]/C
+  (Sync)U7_banc_registres_reg[30][5]/C
+  (Sync)U7_banc_registres_reg[30][6]/C
+  (Sync)U7_banc_registres_reg[30][7]/C
+  (Sync)U7_banc_registres_reg[30][8]/C
+  (Sync)U7_banc_registres_reg[30][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST26/g13(A->Q)
+  (Sync)U7_banc_registres_reg[12][0]/C
+  (Sync)U7_banc_registres_reg[12][10]/C
+  (Sync)U7_banc_registres_reg[12][11]/C
+  (Sync)U7_banc_registres_reg[12][12]/C
+  (Sync)U7_banc_registres_reg[12][13]/C
+  (Sync)U7_banc_registres_reg[12][14]/C
+  (Sync)U7_banc_registres_reg[12][15]/C
+  (Sync)U7_banc_registres_reg[12][16]/C
+  (Sync)U7_banc_registres_reg[12][17]/C
+  (Sync)U7_banc_registres_reg[12][18]/C
+  (Sync)U7_banc_registres_reg[12][19]/C
+  (Sync)U7_banc_registres_reg[12][1]/C
+  (Sync)U7_banc_registres_reg[12][20]/C
+  (Sync)U7_banc_registres_reg[12][21]/C
+  (Sync)U7_banc_registres_reg[12][22]/C
+  (Sync)U7_banc_registres_reg[12][23]/C
+  (Sync)U7_banc_registres_reg[12][24]/C
+  (Sync)U7_banc_registres_reg[12][25]/C
+  (Sync)U7_banc_registres_reg[12][26]/C
+  (Sync)U7_banc_registres_reg[12][27]/C
+  (Sync)U7_banc_registres_reg[12][28]/C
+  (Sync)U7_banc_registres_reg[12][29]/C
+  (Sync)U7_banc_registres_reg[12][2]/C
+  (Sync)U7_banc_registres_reg[12][30]/C
+  (Sync)U7_banc_registres_reg[12][31]/C
+  (Sync)U7_banc_registres_reg[12][3]/C
+  (Sync)U7_banc_registres_reg[12][4]/C
+  (Sync)U7_banc_registres_reg[12][5]/C
+  (Sync)U7_banc_registres_reg[12][6]/C
+  (Sync)U7_banc_registres_reg[12][7]/C
+  (Sync)U7_banc_registres_reg[12][8]/C
+  (Sync)U7_banc_registres_reg[12][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST27/g13(A->Q)
+  (Sync)U7_banc_registres_reg[15][0]/C
+  (Sync)U7_banc_registres_reg[15][10]/C
+  (Sync)U7_banc_registres_reg[15][11]/C
+  (Sync)U7_banc_registres_reg[15][12]/C
+  (Sync)U7_banc_registres_reg[15][13]/C
+  (Sync)U7_banc_registres_reg[15][14]/C
+  (Sync)U7_banc_registres_reg[15][15]/C
+  (Sync)U7_banc_registres_reg[15][16]/C
+  (Sync)U7_banc_registres_reg[15][17]/C
+  (Sync)U7_banc_registres_reg[15][18]/C
+  (Sync)U7_banc_registres_reg[15][19]/C
+  (Sync)U7_banc_registres_reg[15][1]/C
+  (Sync)U7_banc_registres_reg[15][20]/C
+  (Sync)U7_banc_registres_reg[15][21]/C
+  (Sync)U7_banc_registres_reg[15][22]/C
+  (Sync)U7_banc_registres_reg[15][23]/C
+  (Sync)U7_banc_registres_reg[15][24]/C
+  (Sync)U7_banc_registres_reg[15][25]/C
+  (Sync)U7_banc_registres_reg[15][26]/C
+  (Sync)U7_banc_registres_reg[15][27]/C
+  (Sync)U7_banc_registres_reg[15][28]/C
+  (Sync)U7_banc_registres_reg[15][29]/C
+  (Sync)U7_banc_registres_reg[15][2]/C
+  (Sync)U7_banc_registres_reg[15][30]/C
+  (Sync)U7_banc_registres_reg[15][31]/C
+  (Sync)U7_banc_registres_reg[15][3]/C
+  (Sync)U7_banc_registres_reg[15][4]/C
+  (Sync)U7_banc_registres_reg[15][5]/C
+  (Sync)U7_banc_registres_reg[15][6]/C
+  (Sync)U7_banc_registres_reg[15][7]/C
+  (Sync)U7_banc_registres_reg[15][8]/C
+  (Sync)U7_banc_registres_reg[15][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST28/g13(A->Q)
+  (Sync)U7_banc_registres_reg[20][0]/C
+  (Sync)U7_banc_registres_reg[20][10]/C
+  (Sync)U7_banc_registres_reg[20][11]/C
+  (Sync)U7_banc_registres_reg[20][12]/C
+  (Sync)U7_banc_registres_reg[20][13]/C
+  (Sync)U7_banc_registres_reg[20][14]/C
+  (Sync)U7_banc_registres_reg[20][15]/C
+  (Sync)U7_banc_registres_reg[20][16]/C
+  (Sync)U7_banc_registres_reg[20][17]/C
+  (Sync)U7_banc_registres_reg[20][18]/C
+  (Sync)U7_banc_registres_reg[20][19]/C
+  (Sync)U7_banc_registres_reg[20][1]/C
+  (Sync)U7_banc_registres_reg[20][20]/C
+  (Sync)U7_banc_registres_reg[20][21]/C
+  (Sync)U7_banc_registres_reg[20][22]/C
+  (Sync)U7_banc_registres_reg[20][23]/C
+  (Sync)U7_banc_registres_reg[20][24]/C
+  (Sync)U7_banc_registres_reg[20][25]/C
+  (Sync)U7_banc_registres_reg[20][26]/C
+  (Sync)U7_banc_registres_reg[20][27]/C
+  (Sync)U7_banc_registres_reg[20][28]/C
+  (Sync)U7_banc_registres_reg[20][29]/C
+  (Sync)U7_banc_registres_reg[20][2]/C
+  (Sync)U7_banc_registres_reg[20][30]/C
+  (Sync)U7_banc_registres_reg[20][31]/C
+  (Sync)U7_banc_registres_reg[20][3]/C
+  (Sync)U7_banc_registres_reg[20][4]/C
+  (Sync)U7_banc_registres_reg[20][5]/C
+  (Sync)U7_banc_registres_reg[20][6]/C
+  (Sync)U7_banc_registres_reg[20][7]/C
+  (Sync)U7_banc_registres_reg[20][8]/C
+  (Sync)U7_banc_registres_reg[20][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST29/g13(A->Q)
+  (Sync)U7_banc_registres_reg[31][0]/C
+  (Sync)U7_banc_registres_reg[31][10]/C
+  (Sync)U7_banc_registres_reg[31][11]/C
+  (Sync)U7_banc_registres_reg[31][12]/C
+  (Sync)U7_banc_registres_reg[31][13]/C
+  (Sync)U7_banc_registres_reg[31][14]/C
+  (Sync)U7_banc_registres_reg[31][15]/C
+  (Sync)U7_banc_registres_reg[31][16]/C
+  (Sync)U7_banc_registres_reg[31][17]/C
+  (Sync)U7_banc_registres_reg[31][18]/C
+  (Sync)U7_banc_registres_reg[31][19]/C
+  (Sync)U7_banc_registres_reg[31][1]/C
+  (Sync)U7_banc_registres_reg[31][20]/C
+  (Sync)U7_banc_registres_reg[31][21]/C
+  (Sync)U7_banc_registres_reg[31][22]/C
+  (Sync)U7_banc_registres_reg[31][24]/C
+  (Sync)U7_banc_registres_reg[31][25]/C
+  (Sync)U7_banc_registres_reg[31][26]/C
+  (Sync)U7_banc_registres_reg[31][27]/C
+  (Sync)U7_banc_registres_reg[31][28]/C
+  (Sync)U7_banc_registres_reg[31][29]/C
+  (Sync)U7_banc_registres_reg[31][2]/C
+  (Sync)U7_banc_registres_reg[31][30]/C
+  (Sync)U7_banc_registres_reg[31][31]/C
+  (Sync)U7_banc_registres_reg[31][3]/C
+  (Sync)U7_banc_registres_reg[31][4]/C
+  (Sync)U7_banc_registres_reg[31][5]/C
+  (Sync)U7_banc_registres_reg[31][6]/C
+  (Sync)U7_banc_registres_reg[31][7]/C
+  (Sync)U7_banc_registres_reg[31][8]/C
+  (Sync)U7_banc_registres_reg[31][9]/C
+  (Sync)U7_banc_registres_reg[31][23]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST30/g13(A->Q)
+  (Sync)U7_banc_registres_reg[3][0]/C
+  (Sync)U7_banc_registres_reg[3][10]/C
+  (Sync)U7_banc_registres_reg[3][11]/C
+  (Sync)U7_banc_registres_reg[3][12]/C
+  (Sync)U7_banc_registres_reg[3][13]/C
+  (Sync)U7_banc_registres_reg[3][14]/C
+  (Sync)U7_banc_registres_reg[3][15]/C
+  (Sync)U7_banc_registres_reg[3][16]/C
+  (Sync)U7_banc_registres_reg[3][17]/C
+  (Sync)U7_banc_registres_reg[3][18]/C
+  (Sync)U7_banc_registres_reg[3][19]/C
+  (Sync)U7_banc_registres_reg[3][1]/C
+  (Sync)U7_banc_registres_reg[3][20]/C
+  (Sync)U7_banc_registres_reg[3][21]/C
+  (Sync)U7_banc_registres_reg[3][22]/C
+  (Sync)U7_banc_registres_reg[3][23]/C
+  (Sync)U7_banc_registres_reg[3][24]/C
+  (Sync)U7_banc_registres_reg[3][25]/C
+  (Sync)U7_banc_registres_reg[3][26]/C
+  (Sync)U7_banc_registres_reg[3][27]/C
+  (Sync)U7_banc_registres_reg[3][28]/C
+  (Sync)U7_banc_registres_reg[3][29]/C
+  (Sync)U7_banc_registres_reg[3][2]/C
+  (Sync)U7_banc_registres_reg[3][30]/C
+  (Sync)U7_banc_registres_reg[3][31]/C
+  (Sync)U7_banc_registres_reg[3][3]/C
+  (Sync)U7_banc_registres_reg[3][4]/C
+  (Sync)U7_banc_registres_reg[3][5]/C
+  (Sync)U7_banc_registres_reg[3][6]/C
+  (Sync)U7_banc_registres_reg[3][7]/C
+  (Sync)U7_banc_registres_reg[3][8]/C
+  (Sync)U7_banc_registres_reg[3][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST31/g13(A->Q)
+  (Sync)U7_banc_registres_reg[21][0]/C
+  (Sync)U7_banc_registres_reg[21][10]/C
+  (Sync)U7_banc_registres_reg[21][11]/C
+  (Sync)U7_banc_registres_reg[21][12]/C
+  (Sync)U7_banc_registres_reg[21][13]/C
+  (Sync)U7_banc_registres_reg[21][14]/C
+  (Sync)U7_banc_registres_reg[21][15]/C
+  (Sync)U7_banc_registres_reg[21][16]/C
+  (Sync)U7_banc_registres_reg[21][17]/C
+  (Sync)U7_banc_registres_reg[21][18]/C
+  (Sync)U7_banc_registres_reg[21][19]/C
+  (Sync)U7_banc_registres_reg[21][1]/C
+  (Sync)U7_banc_registres_reg[21][20]/C
+  (Sync)U7_banc_registres_reg[21][21]/C
+  (Sync)U7_banc_registres_reg[21][22]/C
+  (Sync)U7_banc_registres_reg[21][23]/C
+  (Sync)U7_banc_registres_reg[21][24]/C
+  (Sync)U7_banc_registres_reg[21][25]/C
+  (Sync)U7_banc_registres_reg[21][26]/C
+  (Sync)U7_banc_registres_reg[21][27]/C
+  (Sync)U7_banc_registres_reg[21][28]/C
+  (Sync)U7_banc_registres_reg[21][29]/C
+  (Sync)U7_banc_registres_reg[21][2]/C
+  (Sync)U7_banc_registres_reg[21][30]/C
+  (Sync)U7_banc_registres_reg[21][31]/C
+  (Sync)U7_banc_registres_reg[21][3]/C
+  (Sync)U7_banc_registres_reg[21][4]/C
+  (Sync)U7_banc_registres_reg[21][5]/C
+  (Sync)U7_banc_registres_reg[21][6]/C
+  (Sync)U7_banc_registres_reg[21][7]/C
+  (Sync)U7_banc_registres_reg[21][8]/C
+  (Sync)U7_banc_registres_reg[21][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST32/g13(A->Q)
+  (Sync)U7_banc_registres_reg[4][0]/C
+  (Sync)U7_banc_registres_reg[4][10]/C
+  (Sync)U7_banc_registres_reg[4][11]/C
+  (Sync)U7_banc_registres_reg[4][12]/C
+  (Sync)U7_banc_registres_reg[4][13]/C
+  (Sync)U7_banc_registres_reg[4][14]/C
+  (Sync)U7_banc_registres_reg[4][15]/C
+  (Sync)U7_banc_registres_reg[4][16]/C
+  (Sync)U7_banc_registres_reg[4][17]/C
+  (Sync)U7_banc_registres_reg[4][18]/C
+  (Sync)U7_banc_registres_reg[4][19]/C
+  (Sync)U7_banc_registres_reg[4][1]/C
+  (Sync)U7_banc_registres_reg[4][20]/C
+  (Sync)U7_banc_registres_reg[4][21]/C
+  (Sync)U7_banc_registres_reg[4][22]/C
+  (Sync)U7_banc_registres_reg[4][23]/C
+  (Sync)U7_banc_registres_reg[4][24]/C
+  (Sync)U7_banc_registres_reg[4][25]/C
+  (Sync)U7_banc_registres_reg[4][26]/C
+  (Sync)U7_banc_registres_reg[4][27]/C
+  (Sync)U7_banc_registres_reg[4][28]/C
+  (Sync)U7_banc_registres_reg[4][29]/C
+  (Sync)U7_banc_registres_reg[4][2]/C
+  (Sync)U7_banc_registres_reg[4][30]/C
+  (Sync)U7_banc_registres_reg[4][31]/C
+  (Sync)U7_banc_registres_reg[4][3]/C
+  (Sync)U7_banc_registres_reg[4][4]/C
+  (Sync)U7_banc_registres_reg[4][6]/C
+  (Sync)U7_banc_registres_reg[4][7]/C
+  (Sync)U7_banc_registres_reg[4][8]/C
+  (Sync)U7_banc_registres_reg[4][9]/C
+  (Sync)U7_banc_registres_reg[4][5]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST33/g13(A->Q)
+  (Sync)U7_banc_registres_reg[5][0]/C
+  (Sync)U7_banc_registres_reg[5][10]/C
+  (Sync)U7_banc_registres_reg[5][11]/C
+  (Sync)U7_banc_registres_reg[5][12]/C
+  (Sync)U7_banc_registres_reg[5][13]/C
+  (Sync)U7_banc_registres_reg[5][14]/C
+  (Sync)U7_banc_registres_reg[5][15]/C
+  (Sync)U7_banc_registres_reg[5][16]/C
+  (Sync)U7_banc_registres_reg[5][17]/C
+  (Sync)U7_banc_registres_reg[5][18]/C
+  (Sync)U7_banc_registres_reg[5][19]/C
+  (Sync)U7_banc_registres_reg[5][1]/C
+  (Sync)U7_banc_registres_reg[5][20]/C
+  (Sync)U7_banc_registres_reg[5][21]/C
+  (Sync)U7_banc_registres_reg[5][22]/C
+  (Sync)U7_banc_registres_reg[5][23]/C
+  (Sync)U7_banc_registres_reg[5][24]/C
+  (Sync)U7_banc_registres_reg[5][25]/C
+  (Sync)U7_banc_registres_reg[5][26]/C
+  (Sync)U7_banc_registres_reg[5][27]/C
+  (Sync)U7_banc_registres_reg[5][28]/C
+  (Sync)U7_banc_registres_reg[5][29]/C
+  (Sync)U7_banc_registres_reg[5][2]/C
+  (Sync)U7_banc_registres_reg[5][30]/C
+  (Sync)U7_banc_registres_reg[5][31]/C
+  (Sync)U7_banc_registres_reg[5][3]/C
+  (Sync)U7_banc_registres_reg[5][4]/C
+  (Sync)U7_banc_registres_reg[5][5]/C
+  (Sync)U7_banc_registres_reg[5][6]/C
+  (Sync)U7_banc_registres_reg[5][7]/C
+  (Sync)U7_banc_registres_reg[5][8]/C
+  (Sync)U7_banc_registres_reg[5][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST34/g13(A->Q)
+  (Sync)U7_banc_registres_reg[16][0]/C
+  (Sync)U7_banc_registres_reg[16][10]/C
+  (Sync)U7_banc_registres_reg[16][11]/C
+  (Sync)U7_banc_registres_reg[16][12]/C
+  (Sync)U7_banc_registres_reg[16][13]/C
+  (Sync)U7_banc_registres_reg[16][14]/C
+  (Sync)U7_banc_registres_reg[16][15]/C
+  (Sync)U7_banc_registres_reg[16][16]/C
+  (Sync)U7_banc_registres_reg[16][17]/C
+  (Sync)U7_banc_registres_reg[16][18]/C
+  (Sync)U7_banc_registres_reg[16][19]/C
+  (Sync)U7_banc_registres_reg[16][1]/C
+  (Sync)U7_banc_registres_reg[16][20]/C
+  (Sync)U7_banc_registres_reg[16][21]/C
+  (Sync)U7_banc_registres_reg[16][22]/C
+  (Sync)U7_banc_registres_reg[16][23]/C
+  (Sync)U7_banc_registres_reg[16][24]/C
+  (Sync)U7_banc_registres_reg[16][25]/C
+  (Sync)U7_banc_registres_reg[16][26]/C
+  (Sync)U7_banc_registres_reg[16][27]/C
+  (Sync)U7_banc_registres_reg[16][28]/C
+  (Sync)U7_banc_registres_reg[16][29]/C
+  (Sync)U7_banc_registres_reg[16][2]/C
+  (Sync)U7_banc_registres_reg[16][30]/C
+  (Sync)U7_banc_registres_reg[16][31]/C
+  (Sync)U7_banc_registres_reg[16][3]/C
+  (Sync)U7_banc_registres_reg[16][4]/C
+  (Sync)U7_banc_registres_reg[16][5]/C
+  (Sync)U7_banc_registres_reg[16][6]/C
+  (Sync)U7_banc_registres_reg[16][7]/C
+  (Sync)U7_banc_registres_reg[16][8]/C
+  (Sync)U7_banc_registres_reg[16][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST35/g13(A->Q)
+  (Sync)U7_banc_registres_reg[22][0]/C
+  (Sync)U7_banc_registres_reg[22][10]/C
+  (Sync)U7_banc_registres_reg[22][11]/C
+  (Sync)U7_banc_registres_reg[22][12]/C
+  (Sync)U7_banc_registres_reg[22][13]/C
+  (Sync)U7_banc_registres_reg[22][14]/C
+  (Sync)U7_banc_registres_reg[22][15]/C
+  (Sync)U7_banc_registres_reg[22][16]/C
+  (Sync)U7_banc_registres_reg[22][17]/C
+  (Sync)U7_banc_registres_reg[22][18]/C
+  (Sync)U7_banc_registres_reg[22][19]/C
+  (Sync)U7_banc_registres_reg[22][1]/C
+  (Sync)U7_banc_registres_reg[22][20]/C
+  (Sync)U7_banc_registres_reg[22][21]/C
+  (Sync)U7_banc_registres_reg[22][22]/C
+  (Sync)U7_banc_registres_reg[22][23]/C
+  (Sync)U7_banc_registres_reg[22][24]/C
+  (Sync)U7_banc_registres_reg[22][25]/C
+  (Sync)U7_banc_registres_reg[22][26]/C
+  (Sync)U7_banc_registres_reg[22][27]/C
+  (Sync)U7_banc_registres_reg[22][28]/C
+  (Sync)U7_banc_registres_reg[22][29]/C
+  (Sync)U7_banc_registres_reg[22][2]/C
+  (Sync)U7_banc_registres_reg[22][30]/C
+  (Sync)U7_banc_registres_reg[22][31]/C
+  (Sync)U7_banc_registres_reg[22][3]/C
+  (Sync)U7_banc_registres_reg[22][4]/C
+  (Sync)U7_banc_registres_reg[22][5]/C
+  (Sync)U7_banc_registres_reg[22][6]/C
+  (Sync)U7_banc_registres_reg[22][7]/C
+  (Sync)U7_banc_registres_reg[22][8]/C
+  (Sync)U7_banc_registres_reg[22][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST36/g13(A->Q)
+  (Sync)U7_banc_registres_reg[6][0]/C
+  (Sync)U7_banc_registres_reg[6][10]/C
+  (Sync)U7_banc_registres_reg[6][11]/C
+  (Sync)U7_banc_registres_reg[6][12]/C
+  (Sync)U7_banc_registres_reg[6][13]/C
+  (Sync)U7_banc_registres_reg[6][14]/C
+  (Sync)U7_banc_registres_reg[6][15]/C
+  (Sync)U7_banc_registres_reg[6][16]/C
+  (Sync)U7_banc_registres_reg[6][17]/C
+  (Sync)U7_banc_registres_reg[6][18]/C
+  (Sync)U7_banc_registres_reg[6][19]/C
+  (Sync)U7_banc_registres_reg[6][1]/C
+  (Sync)U7_banc_registres_reg[6][20]/C
+  (Sync)U7_banc_registres_reg[6][21]/C
+  (Sync)U7_banc_registres_reg[6][22]/C
+  (Sync)U7_banc_registres_reg[6][23]/C
+  (Sync)U7_banc_registres_reg[6][24]/C
+  (Sync)U7_banc_registres_reg[6][25]/C
+  (Sync)U7_banc_registres_reg[6][26]/C
+  (Sync)U7_banc_registres_reg[6][27]/C
+  (Sync)U7_banc_registres_reg[6][28]/C
+  (Sync)U7_banc_registres_reg[6][29]/C
+  (Sync)U7_banc_registres_reg[6][2]/C
+  (Sync)U7_banc_registres_reg[6][30]/C
+  (Sync)U7_banc_registres_reg[6][31]/C
+  (Sync)U7_banc_registres_reg[6][3]/C
+  (Sync)U7_banc_registres_reg[6][4]/C
+  (Sync)U7_banc_registres_reg[6][5]/C
+  (Sync)U7_banc_registres_reg[6][6]/C
+  (Sync)U7_banc_registres_reg[6][7]/C
+  (Sync)U7_banc_registres_reg[6][8]/C
+  (Sync)U7_banc_registres_reg[6][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST37/g13(A->Q)
+  (Sync)U7_banc_registres_reg[7][0]/C
+  (Sync)U7_banc_registres_reg[7][10]/C
+  (Sync)U7_banc_registres_reg[7][11]/C
+  (Sync)U7_banc_registres_reg[7][12]/C
+  (Sync)U7_banc_registres_reg[7][13]/C
+  (Sync)U7_banc_registres_reg[7][14]/C
+  (Sync)U7_banc_registres_reg[7][15]/C
+  (Sync)U7_banc_registres_reg[7][16]/C
+  (Sync)U7_banc_registres_reg[7][17]/C
+  (Sync)U7_banc_registres_reg[7][18]/C
+  (Sync)U7_banc_registres_reg[7][19]/C
+  (Sync)U7_banc_registres_reg[7][1]/C
+  (Sync)U7_banc_registres_reg[7][20]/C
+  (Sync)U7_banc_registres_reg[7][21]/C
+  (Sync)U7_banc_registres_reg[7][22]/C
+  (Sync)U7_banc_registres_reg[7][23]/C
+  (Sync)U7_banc_registres_reg[7][24]/C
+  (Sync)U7_banc_registres_reg[7][25]/C
+  (Sync)U7_banc_registres_reg[7][26]/C
+  (Sync)U7_banc_registres_reg[7][27]/C
+  (Sync)U7_banc_registres_reg[7][28]/C
+  (Sync)U7_banc_registres_reg[7][29]/C
+  (Sync)U7_banc_registres_reg[7][2]/C
+  (Sync)U7_banc_registres_reg[7][30]/C
+  (Sync)U7_banc_registres_reg[7][31]/C
+  (Sync)U7_banc_registres_reg[7][3]/C
+  (Sync)U7_banc_registres_reg[7][4]/C
+  (Sync)U7_banc_registres_reg[7][5]/C
+  (Sync)U7_banc_registres_reg[7][6]/C
+  (Sync)U7_banc_registres_reg[7][7]/C
+  (Sync)U7_banc_registres_reg[7][8]/C
+  (Sync)U7_banc_registres_reg[7][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST38/g13(A->Q)
+  (Sync)U7_banc_registres_reg[23][0]/C
+  (Sync)U7_banc_registres_reg[23][11]/C
+  (Sync)U7_banc_registres_reg[23][13]/C
+  (Sync)U7_banc_registres_reg[23][14]/C
+  (Sync)U7_banc_registres_reg[23][17]/C
+  (Sync)U7_banc_registres_reg[23][18]/C
+  (Sync)U7_banc_registres_reg[23][1]/C
+  (Sync)U7_banc_registres_reg[23][20]/C
+  (Sync)U7_banc_registres_reg[23][21]/C
+  (Sync)U7_banc_registres_reg[23][22]/C
+  (Sync)U7_banc_registres_reg[23][23]/C
+  (Sync)U7_banc_registres_reg[23][24]/C
+  (Sync)U7_banc_registres_reg[23][25]/C
+  (Sync)U7_banc_registres_reg[23][26]/C
+  (Sync)U7_banc_registres_reg[23][27]/C
+  (Sync)U7_banc_registres_reg[23][28]/C
+  (Sync)U7_banc_registres_reg[23][29]/C
+  (Sync)U7_banc_registres_reg[23][2]/C
+  (Sync)U7_banc_registres_reg[23][30]/C
+  (Sync)U7_banc_registres_reg[23][31]/C
+  (Sync)U7_banc_registres_reg[23][3]/C
+  (Sync)U7_banc_registres_reg[23][4]/C
+  (Sync)U7_banc_registres_reg[23][5]/C
+  (Sync)U7_banc_registres_reg[23][6]/C
+  (Sync)U7_banc_registres_reg[23][7]/C
+  (Sync)U7_banc_registres_reg[23][8]/C
+  (Sync)U7_banc_registres_reg[23][10]/C
+  (Sync)U7_banc_registres_reg[23][12]/C
+  (Sync)U7_banc_registres_reg[23][15]/C
+  (Sync)U7_banc_registres_reg[23][16]/C
+  (Sync)U7_banc_registres_reg[23][19]/C
+  (Sync)U7_banc_registres_reg[23][9]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST39/g13(A->Q)
+  (Sync)U7_banc_registres_reg[8][0]/C
+  (Sync)U7_banc_registres_reg[8][10]/C
+  (Sync)U7_banc_registres_reg[8][12]/C
+  (Sync)U7_banc_registres_reg[8][13]/C
+  (Sync)U7_banc_registres_reg[8][14]/C
+  (Sync)U7_banc_registres_reg[8][15]/C
+  (Sync)U7_banc_registres_reg[8][16]/C
+  (Sync)U7_banc_registres_reg[8][17]/C
+  (Sync)U7_banc_registres_reg[8][18]/C
+  (Sync)U7_banc_registres_reg[8][19]/C
+  (Sync)U7_banc_registres_reg[8][1]/C
+  (Sync)U7_banc_registres_reg[8][20]/C
+  (Sync)U7_banc_registres_reg[8][21]/C
+  (Sync)U7_banc_registres_reg[8][22]/C
+  (Sync)U7_banc_registres_reg[8][23]/C
+  (Sync)U7_banc_registres_reg[8][24]/C
+  (Sync)U7_banc_registres_reg[8][25]/C
+  (Sync)U7_banc_registres_reg[8][26]/C
+  (Sync)U7_banc_registres_reg[8][27]/C
+  (Sync)U7_banc_registres_reg[8][28]/C
+  (Sync)U7_banc_registres_reg[8][29]/C
+  (Sync)U7_banc_registres_reg[8][2]/C
+  (Sync)U7_banc_registres_reg[8][30]/C
+  (Sync)U7_banc_registres_reg[8][31]/C
+  (Sync)U7_banc_registres_reg[8][3]/C
+  (Sync)U7_banc_registres_reg[8][4]/C
+  (Sync)U7_banc_registres_reg[8][5]/C
+  (Sync)U7_banc_registres_reg[8][6]/C
+  (Sync)U7_banc_registres_reg[8][7]/C
+  (Sync)U7_banc_registres_reg[8][8]/C
+  (Sync)U7_banc_registres_reg[8][9]/C
+  (Sync)U7_banc_registres_reg[8][11]/C
+ *DEPTH 1: U7_banc_RC_CG_HIER_INST9/g13(A->Q)
+  (Sync)U7_banc_registres_reg[10][0]/C
+  (Sync)U7_banc_registres_reg[10][10]/C
+  (Sync)U7_banc_registres_reg[10][11]/C
+  (Sync)U7_banc_registres_reg[10][12]/C
+  (Sync)U7_banc_registres_reg[10][13]/C
+  (Sync)U7_banc_registres_reg[10][14]/C
+  (Sync)U7_banc_registres_reg[10][15]/C
+  (Sync)U7_banc_registres_reg[10][16]/C
+  (Sync)U7_banc_registres_reg[10][17]/C
+  (Sync)U7_banc_registres_reg[10][18]/C
+  (Sync)U7_banc_registres_reg[10][19]/C
+  (Sync)U7_banc_registres_reg[10][1]/C
+  (Sync)U7_banc_registres_reg[10][20]/C
+  (Sync)U7_banc_registres_reg[10][21]/C
+  (Sync)U7_banc_registres_reg[10][22]/C
+  (Sync)U7_banc_registres_reg[10][23]/C
+  (Sync)U7_banc_registres_reg[10][24]/C
+  (Sync)U7_banc_registres_reg[10][25]/C
+  (Sync)U7_banc_registres_reg[10][26]/C
+  (Sync)U7_banc_registres_reg[10][27]/C
+  (Sync)U7_banc_registres_reg[10][28]/C
+  (Sync)U7_banc_registres_reg[10][29]/C
+  (Sync)U7_banc_registres_reg[10][2]/C
+  (Sync)U7_banc_registres_reg[10][30]/C
+  (Sync)U7_banc_registres_reg[10][31]/C
+  (Sync)U7_banc_registres_reg[10][3]/C
+  (Sync)U7_banc_registres_reg[10][4]/C
+  (Sync)U7_banc_registres_reg[10][5]/C
+  (Sync)U7_banc_registres_reg[10][6]/C
+  (Sync)U7_banc_registres_reg[10][7]/C
+  (Sync)U7_banc_registres_reg[10][8]/C
+  (Sync)U7_banc_registres_reg[10][9]/C
+ *DEPTH 1: U3_di_RC_CG_HIER_INST4/g12(A->Q)
+  (Sync)U3_di_DI_r_w_reg/C
+  (Sync)U3_di_DI_bra_reg/C
+  (Sync)U3_di_DI_adr_reg[24]/C
+  (Sync)U3_di_DI_adr_reg[2]/C
+  (Sync)U3_di_DI_adr_reg[6]/C
+  (Sync)U3_di_DI_adr_reg[7]/C
+  (Sync)U3_di_DI_code_ual_reg[0]/C
+  (Sync)U3_di_DI_code_ual_reg[14]/C
+  (Sync)U3_di_DI_code_ual_reg[15]/C
+  (Sync)U3_di_DI_code_ual_reg[1]/C
+  (Sync)U3_di_DI_code_ual_reg[21]/C
+  (Sync)U3_di_DI_code_ual_reg[23]/C
+  (Sync)U3_di_DI_exc_cause_reg[2]/C
+  (Sync)U3_di_DI_exc_cause_reg[3]/C
+  (Sync)U3_di_DI_exc_cause_reg[4]/C
+  (Sync)U3_di_DI_it_ok_reg/C
+  (Sync)U3_di_DI_link_reg/C
+  (Sync)U3_di_DI_mode_reg/C
+  (Sync)U3_di_DI_offset_reg[0]/C
+  (Sync)U3_di_DI_offset_reg[10]/C
+  (Sync)U3_di_DI_offset_reg[11]/C
+  (Sync)U3_di_DI_offset_reg[13]/C
+  (Sync)U3_di_DI_offset_reg[15]/C
+  (Sync)U3_di_DI_offset_reg[16]/C
+  (Sync)U3_di_DI_offset_reg[17]/C
+  (Sync)U3_di_DI_offset_reg[18]/C
+  (Sync)U3_di_DI_offset_reg[19]/C
+  (Sync)U3_di_DI_offset_reg[1]/C
+  (Sync)U3_di_DI_offset_reg[20]/C
+  (Sync)U3_di_DI_offset_reg[21]/C
+  (Sync)U3_di_DI_offset_reg[22]/C
+  (Sync)U3_di_DI_offset_reg[23]/C
+  (Sync)U3_di_DI_offset_reg[24]/C
+  (Sync)U3_di_DI_offset_reg[25]/C
+  (Sync)U3_di_DI_offset_reg[26]/C
+  (Sync)U3_di_DI_offset_reg[27]/C
+  (Sync)U3_di_DI_offset_reg[28]/C
+  (Sync)U3_di_DI_offset_reg[29]/C
+  (Sync)U3_di_DI_offset_reg[2]/C
+  (Sync)U3_di_DI_offset_reg[30]/C
+  (Sync)U3_di_DI_offset_reg[31]/C
+  (Sync)U3_di_DI_offset_reg[3]/C
+  (Sync)U3_di_DI_offset_reg[4]/C
+  (Sync)U3_di_DI_offset_reg[5]/C
+  (Sync)U3_di_DI_offset_reg[6]/C
+  (Sync)U3_di_DI_offset_reg[7]/C
+  (Sync)U3_di_DI_offset_reg[8]/C
+  (Sync)U3_di_DI_offset_reg[9]/C
+  (Sync)U3_di_DI_op1_reg[10]/C
+  (Sync)U3_di_DI_op1_reg[11]/C
+  (Sync)U3_di_DI_op1_reg[7]/C
+  (Sync)U3_di_DI_op1_reg[8]/C
+  (Sync)U3_di_DI_op1_reg[9]/C
+  (Sync)U3_di_DI_op_mem_reg/C
+  (Sync)U3_di_DI_op2_reg[4]/C
+  (Sync)U3_di_DI_op2_reg[6]/C
+  (Sync)U3_di_DI_op2_reg[8]/C
+  (Sync)U3_di_DI_adr_reg[0]/C
+  (Sync)U3_di_DI_adr_reg[10]/C
+  (Sync)U3_di_DI_adr_reg[11]/C
+  (Sync)U3_di_DI_adr_reg[12]/C
+  (Sync)U3_di_DI_adr_reg[13]/C
+  (Sync)U3_di_DI_adr_reg[14]/C
+  (Sync)U3_di_DI_adr_reg[15]/C
+  (Sync)U3_di_DI_adr_reg[16]/C
+  (Sync)U3_di_DI_adr_reg[17]/C
+  (Sync)U3_di_DI_adr_reg[18]/C
+  (Sync)U3_di_DI_adr_reg[19]/C
+  (Sync)U3_di_DI_adr_reg[1]/C
+  (Sync)U3_di_DI_adr_reg[20]/C
+  (Sync)U3_di_DI_adr_reg[21]/C
+  (Sync)U3_di_DI_adr_reg[22]/C
+  (Sync)U3_di_DI_adr_reg[23]/C
+  (Sync)U3_di_DI_adr_reg[25]/C
+  (Sync)U3_di_DI_adr_reg[26]/C
+  (Sync)U3_di_DI_adr_reg[27]/C
+  (Sync)U3_di_DI_adr_reg[28]/C
+  (Sync)U3_di_DI_adr_reg[29]/C
+  (Sync)U3_di_DI_adr_reg[30]/C
+  (Sync)U3_di_DI_adr_reg[31]/C
+  (Sync)U3_di_DI_adr_reg[3]/C
+  (Sync)U3_di_DI_adr_reg[4]/C
+  (Sync)U3_di_DI_adr_reg[5]/C
+  (Sync)U3_di_DI_adr_reg[8]/C
+  (Sync)U3_di_DI_adr_reg[9]/C
+  (Sync)U3_di_DI_adr_reg_dest_reg[0]/C
+  (Sync)U3_di_DI_adr_reg_dest_reg[1]/C
+  (Sync)U3_di_DI_adr_reg_dest_reg[2]/C
+  (Sync)U3_di_DI_adr_reg_dest_reg[3]/C
+  (Sync)U3_di_DI_adr_reg_dest_reg[4]/C
+  (Sync)U3_di_DI_adr_reg_dest_reg[5]/C
+  (Sync)U3_di_DI_ecr_reg_reg/C
+  (Sync)U3_di_DI_level_reg[0]/C
+  (Sync)U3_di_DI_level_reg[1]/C
+  (Sync)U3_di_DI_offset_reg[12]/C
+  (Sync)U3_di_DI_offset_reg[14]/C
+  (Sync)U3_di_DI_op1_reg[0]/C
+  (Sync)U3_di_DI_op1_reg[2]/C
+  (Sync)U3_di_DI_op2_reg[0]/C
+  (Sync)U3_di_DI_op2_reg[11]/C
+  (Sync)U3_di_DI_op2_reg[12]/C
+  (Sync)U3_di_DI_op2_reg[13]/C
+  (Sync)U3_di_DI_op2_reg[16]/C
+  (Sync)U3_di_DI_op2_reg[17]/C
+  (Sync)U3_di_DI_op2_reg[18]/C
+  (Sync)U3_di_DI_op2_reg[19]/C
+  (Sync)U3_di_DI_op2_reg[1]/C
+  (Sync)U3_di_DI_op2_reg[23]/C
+  (Sync)U3_di_DI_op2_reg[25]/C
+  (Sync)U3_di_DI_op2_reg[27]/C
+  (Sync)U3_di_DI_op2_reg[29]/C
+  (Sync)U3_di_DI_op2_reg[2]/C
+  (Sync)U3_di_DI_op2_reg[31]/C
+  (Sync)U3_di_DI_op2_reg[3]/C
+  (Sync)U3_di_DI_op2_reg[5]/C
+  (Sync)U3_di_DI_op2_reg[7]/C
+  (Sync)U3_di_DI_op2_reg[9]/C
+  (Sync)U3_di_DI_op2_reg[21]/C
+  (Sync)U3_di_DI_code_ual_reg[8]/C
+  (Sync)U3_di_DI_code_ual_reg[11]/C
+  (Sync)U3_di_DI_code_ual_reg[7]/C
+  (Sync)U3_di_DI_code_ual_reg[3]/C
+  (Sync)U3_di_DI_code_ual_reg[19]/C
+  (Sync)U3_di_DI_code_ual_reg[16]/C
+  (Sync)U3_di_DI_code_ual_reg[17]/C
+  (Sync)U3_di_DI_op1_reg[21]/C
+  (Sync)U3_di_DI_op2_reg[20]/C
+  (Sync)U3_di_DI_op1_reg[20]/C
+  (Sync)U3_di_DI_op1_reg[18]/C
+  (Sync)U3_di_DI_op1_reg[17]/C
+  (Sync)U3_di_DI_op1_reg[19]/C
+  (Sync)U3_di_DI_op1_reg[16]/C
+  (Sync)U3_di_DI_op2_reg[15]/C
+  (Sync)U3_di_DI_op1_reg[15]/C
+  (Sync)U3_di_DI_op2_reg[14]/C
+  (Sync)U3_di_DI_op1_reg[14]/C
+  (Sync)U3_di_DI_op1_reg[13]/C
+  (Sync)U3_di_DI_op1_reg[12]/C
+  (Sync)U3_di_DI_op2_reg[10]/C
+  (Sync)U3_di_DI_op1_reg[6]/C
+  (Sync)U3_di_DI_op1_reg[5]/C
+  (Sync)U3_di_DI_op1_reg[4]/C
+  (Sync)U3_di_DI_op1_reg[3]/C
+  (Sync)U3_di_DI_op2_reg[22]/C
+  (Sync)U3_di_DI_op1_reg[22]/C
+  (Sync)U3_di_DI_op1_reg[23]/C
+  (Sync)U3_di_DI_op2_reg[26]/C
+  (Sync)U3_di_DI_op1_reg[26]/C
+  (Sync)U3_di_DI_op1_reg[25]/C
+  (Sync)U3_di_DI_op1_reg[27]/C
+  (Sync)U3_di_DI_op2_reg[24]/C
+  (Sync)U3_di_DI_op1_reg[24]/C
+  (Sync)U3_di_DI_op1_reg[29]/C
+  (Sync)U3_di_DI_op2_reg[28]/C
+  (Sync)U3_di_DI_op1_reg[28]/C
+  (Sync)U3_di_DI_op1_reg[30]/C
+  (Sync)U3_di_DI_op1_reg[31]/C
+  (Sync)U3_di_DI_code_ual_reg[9]/C
+  (Sync)U3_di_DI_code_ual_reg[10]/C
+  (Sync)U3_di_DI_code_ual_reg[5]/C
+  (Sync)U3_di_DI_code_ual_reg[6]/C
+  (Sync)U3_di_DI_code_ual_reg[4]/C
+  (Sync)U3_di_DI_code_ual_reg[2]/C
+  (Sync)U3_di_DI_code_ual_reg[25]/C
+  (Sync)U3_di_DI_code_ual_reg[26]/C
+  (Sync)U3_di_DI_code_ual_reg[24]/C
+  (Sync)U3_di_DI_code_ual_reg[27]/C
+  (Sync)U3_di_DI_code_ual_reg[20]/C
+  (Sync)U3_di_DI_code_ual_reg[22]/C
+  (Sync)U3_di_DI_code_ual_reg[12]/C
+  (Sync)U3_di_DI_code_ual_reg[13]/C
+  (Sync)U3_di_DI_code_ual_reg[18]/C
+  (Sync)U3_di_DI_op1_reg[1]/C
+  (Sync)U3_di_DI_op2_reg[30]/C
+ *DEPTH 1: U8_syscop_RC_CG_HIER_INST40/g12(A->Q)
+  (Sync)U8_syscop_scp_reg_reg[15][0]/C
+  (Sync)U8_syscop_scp_reg_reg[15][10]/C
+  (Sync)U8_syscop_scp_reg_reg[15][11]/C
+  (Sync)U8_syscop_scp_reg_reg[15][12]/C
+  (Sync)U8_syscop_scp_reg_reg[15][13]/C
+  (Sync)U8_syscop_scp_reg_reg[15][14]/C
+  (Sync)U8_syscop_scp_reg_reg[15][15]/C
+  (Sync)U8_syscop_scp_reg_reg[15][16]/C
+  (Sync)U8_syscop_scp_reg_reg[15][17]/C
+  (Sync)U8_syscop_scp_reg_reg[15][18]/C
+  (Sync)U8_syscop_scp_reg_reg[15][19]/C
+  (Sync)U8_syscop_scp_reg_reg[15][1]/C
+  (Sync)U8_syscop_scp_reg_reg[15][20]/C
+  (Sync)U8_syscop_scp_reg_reg[15][21]/C
+  (Sync)U8_syscop_scp_reg_reg[15][22]/C
+  (Sync)U8_syscop_scp_reg_reg[15][23]/C
+  (Sync)U8_syscop_scp_reg_reg[15][24]/C
+  (Sync)U8_syscop_scp_reg_reg[15][25]/C
+  (Sync)U8_syscop_scp_reg_reg[15][26]/C
+  (Sync)U8_syscop_scp_reg_reg[15][27]/C
+  (Sync)U8_syscop_scp_reg_reg[15][28]/C
+  (Sync)U8_syscop_scp_reg_reg[15][29]/C
+  (Sync)U8_syscop_scp_reg_reg[15][2]/C
+  (Sync)U8_syscop_scp_reg_reg[15][30]/C
+  (Sync)U8_syscop_scp_reg_reg[15][31]/C
+  (Sync)U8_syscop_scp_reg_reg[15][3]/C
+  (Sync)U8_syscop_scp_reg_reg[15][4]/C
+  (Sync)U8_syscop_scp_reg_reg[15][5]/C
+  (Sync)U8_syscop_scp_reg_reg[15][6]/C
+  (Sync)U8_syscop_scp_reg_reg[15][7]/C
+  (Sync)U8_syscop_scp_reg_reg[15][8]/C
+  (Sync)U8_syscop_scp_reg_reg[15][9]/C
+ *DEPTH 1: U8_syscop_RC_CG_HIER_INST41/g12(A->Q)
+  (Sync)U8_syscop_scp_reg_reg[12][10]/C
+  (Sync)U8_syscop_scp_reg_reg[12][11]/C
+  (Sync)U8_syscop_scp_reg_reg[12][12]/C
+  (Sync)U8_syscop_scp_reg_reg[12][13]/C
+  (Sync)U8_syscop_scp_reg_reg[12][14]/C
+  (Sync)U8_syscop_scp_reg_reg[12][15]/C
+  (Sync)U8_syscop_scp_reg_reg[12][16]/C
+  (Sync)U8_syscop_scp_reg_reg[12][17]/C
+  (Sync)U8_syscop_scp_reg_reg[12][18]/C
+  (Sync)U8_syscop_scp_reg_reg[12][19]/C
+  (Sync)U8_syscop_scp_reg_reg[12][1]/C
+  (Sync)U8_syscop_scp_reg_reg[12][20]/C
+  (Sync)U8_syscop_scp_reg_reg[12][21]/C
+  (Sync)U8_syscop_scp_reg_reg[12][22]/C
+  (Sync)U8_syscop_scp_reg_reg[12][23]/C
+  (Sync)U8_syscop_scp_reg_reg[12][24]/C
+  (Sync)U8_syscop_scp_reg_reg[12][25]/C
+  (Sync)U8_syscop_scp_reg_reg[12][26]/C
+  (Sync)U8_syscop_scp_reg_reg[12][27]/C
+  (Sync)U8_syscop_scp_reg_reg[12][28]/C
+  (Sync)U8_syscop_scp_reg_reg[12][29]/C
+  (Sync)U8_syscop_scp_reg_reg[12][2]/C
+  (Sync)U8_syscop_scp_reg_reg[12][30]/C
+  (Sync)U8_syscop_scp_reg_reg[12][31]/C
+  (Sync)U8_syscop_scp_reg_reg[12][3]/C
+  (Sync)U8_syscop_scp_reg_reg[12][4]/C
+  (Sync)U8_syscop_scp_reg_reg[12][5]/C
+  (Sync)U8_syscop_scp_reg_reg[12][6]/C
+  (Sync)U8_syscop_scp_reg_reg[12][7]/C
+  (Sync)U8_syscop_scp_reg_reg[12][8]/C
+  (Sync)U8_syscop_scp_reg_reg[12][9]/C
+ *DEPTH 1: RC_CG_DECLONE_HIER_INST/g12(A->Q)
+  (Sync)U5_mem_MEM_exc_cause_reg[1]/C
+  (Sync)U4_ex_EX_ecr_reg_reg/C
+  (Sync)U4_ex_EX_data_ual_reg[6]/C
+  (Sync)U4_ex_EX_data_ual_reg[2]/C
+  (Sync)U4_ex_EX_data_ual_reg[3]/C
+  (Sync)U4_ex_EX_data_ual_reg[4]/C
+  (Sync)U4_ex_EX_data_ual_reg[9]/C
+  (Sync)U4_ex_EX_data_ual_reg[23]/C
+  (Sync)U4_ex_EX_data_ual_reg[25]/C
+  (Sync)U4_ex_EX_data_ual_reg[26]/C
+  (Sync)U4_ex_EX_data_ual_reg[27]/C
+  (Sync)U4_ex_EX_data_ual_reg[28]/C
+  (Sync)U4_ex_EX_data_ual_reg[29]/C
+  (Sync)U4_ex_EX_data_ual_reg[30]/C
+  (Sync)U4_ex_EX_data_ual_reg[31]/C
+  (Sync)U4_ex_EX_data_ual_reg[5]/C
+  (Sync)U4_ex_EX_data_ual_reg[1]/C
+  (Sync)U4_ex_EX_data_ual_reg[24]/C
+  (Sync)U4_ex_EX_data_ual_reg[8]/C
+  (Sync)U4_ex_EX_data_ual_reg[22]/C
+  (Sync)U4_ex_EX_data_ual_reg[21]/C
+  (Sync)U4_ex_EX_data_ual_reg[20]/C
+  (Sync)U4_ex_EX_data_ual_reg[14]/C
+  (Sync)U4_ex_EX_data_ual_reg[12]/C
+  (Sync)U4_ex_EX_data_ual_reg[11]/C
+  (Sync)U4_ex_EX_data_ual_reg[10]/C
+  (Sync)U4_ex_EX_data_ual_reg[13]/C
+  (Sync)U4_ex_EX_data_ual_reg[19]/C
+  (Sync)U4_ex_EX_data_ual_reg[18]/C
+  (Sync)U4_ex_EX_data_ual_reg[17]/C
+  (Sync)U4_ex_EX_data_ual_reg[16]/C
+  (Sync)U4_ex_EX_data_ual_reg[15]/C
+  (Sync)U4_ex_EX_data_ual_reg[7]/C
+  (Sync)U4_ex_EX_exc_cause_reg[1]/C
+  (Sync)U4_ex_EX_bra_confirm_reg/C
+  (Sync)U4_ex_EX_adresse_reg[0]/C
+  (Sync)U4_ex_EX_adresse_reg[24]/C
+  (Sync)U4_ex_EX_adresse_reg[15]/C
+  (Sync)U4_ex_EX_adresse_reg[28]/C
+  (Sync)U4_ex_EX_adresse_reg[26]/C
+  (Sync)U4_ex_EX_adresse_reg[27]/C
+  (Sync)U4_ex_EX_adresse_reg[25]/C
+  (Sync)U4_ex_EX_adresse_reg[29]/C
+  (Sync)U4_ex_EX_adresse_reg[23]/C
+  (Sync)U4_ex_EX_adresse_reg[22]/C
+  (Sync)U4_ex_EX_adresse_reg[21]/C
+  (Sync)U4_ex_EX_adresse_reg[20]/C
+  (Sync)U4_ex_EX_adresse_reg[19]/C
+  (Sync)U4_ex_EX_adresse_reg[17]/C
+  (Sync)U4_ex_EX_adresse_reg[16]/C
+  (Sync)U4_ex_EX_adresse_reg[1]/C
+  (Sync)U4_ex_EX_adresse_reg[31]/C
+  (Sync)U4_ex_EX_adresse_reg[14]/C
+  (Sync)U4_ex_EX_adresse_reg[13]/C
+  (Sync)U4_ex_EX_adresse_reg[12]/C
+  (Sync)U4_ex_EX_adresse_reg[11]/C
+  (Sync)U4_ex_EX_adresse_reg[10]/C
+  (Sync)U4_ex_EX_adresse_reg[9]/C
+  (Sync)U4_ex_EX_adresse_reg[8]/C
+  (Sync)U4_ex_EX_adresse_reg[7]/C
+  (Sync)U4_ex_EX_adresse_reg[6]/C
+  (Sync)U4_ex_EX_adresse_reg[5]/C
+  (Sync)U4_ex_EX_adresse_reg[4]/C
+  (Sync)U4_ex_EX_adresse_reg[3]/C
+  (Sync)U4_ex_EX_adresse_reg[2]/C
+  (Sync)U4_ex_EX_adresse_reg[18]/C
+  (Sync)U5_mem_MEM_exc_cause_reg[4]/C
+  (Sync)U5_mem_MEM_it_ok_reg/C
+  (Sync)U5_mem_MEM_exc_cause_reg[2]/C
+  (Sync)U5_mem_MEM_exc_cause_reg[3]/C
+  (Sync)U5_mem_MEM_adr_reg[7]/C
+  (Sync)U5_mem_MEM_adr_reg[6]/C
+  (Sync)U5_mem_MEM_adr_reg[2]/C
+  (Sync)U5_mem_MEM_adr_reg[24]/C
+  (Sync)U4_ex_EX_it_ok_reg/C
+  (Sync)U4_ex_EX_exc_cause_reg[4]/C
+  (Sync)U4_ex_EX_exc_cause_reg[2]/C
+  (Sync)U4_ex_EX_exc_cause_reg[3]/C
+  (Sync)U4_ex_EX_adr_reg[6]/C
+  (Sync)U4_ex_EX_adr_reg[2]/C
+  (Sync)U4_ex_EX_adr_reg[24]/C
+  (Sync)U4_ex_EX_adr_reg[7]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[8]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[9]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[15]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[12]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[10]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[14]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[7]/C
+  (Sync)U4_ex_EX_r_w_reg/C
+  (Sync)U5_mem_MEM_level_reg[0]/C
+  (Sync)U4_ex_EX_level_reg[0]/C
+  (Sync)U5_mem_MEM_level_reg[1]/C
+  (Sync)U4_ex_EX_level_reg[1]/C
+  (Sync)U5_mem_MEM_adr_reg_dest_reg[4]/C
+  (Sync)U5_mem_MEM_adr_reg_dest_reg[1]/C
+  (Sync)U5_mem_MEM_ecr_reg_reg/C
+  (Sync)U5_mem_MEM_adr_reg_dest_reg[3]/C
+  (Sync)U5_mem_MEM_adr_reg_dest_reg[0]/C
+  (Sync)U5_mem_MEM_adr_reg_dest_reg[5]/C
+  (Sync)U4_ex_EX_adr_reg_dest_reg[5]/C
+  (Sync)U4_ex_EX_adr_reg_dest_reg[3]/C
+  (Sync)U4_ex_EX_adr_reg_dest_reg[1]/C
+  (Sync)U4_ex_EX_adr_reg_dest_reg[4]/C
+  (Sync)U4_ex_EX_adr_reg_dest_reg[2]/C
+  (Sync)U4_ex_EX_adr_reg_dest_reg[0]/C
+  (Sync)U5_mem_MEM_adr_reg[8]/C
+  (Sync)U5_mem_MEM_adr_reg[5]/C
+  (Sync)U5_mem_MEM_adr_reg[27]/C
+  (Sync)U5_mem_MEM_adr_reg[4]/C
+  (Sync)U5_mem_MEM_adr_reg[29]/C
+  (Sync)U5_mem_MEM_adr_reg[21]/C
+  (Sync)U5_mem_MEM_adr_reg[26]/C
+  (Sync)U5_mem_MEM_adr_reg[16]/C
+  (Sync)U5_mem_MEM_adr_reg[10]/C
+  (Sync)U5_mem_MEM_adr_reg[0]/C
+  (Sync)U5_mem_MEM_adr_reg[31]/C
+  (Sync)U5_mem_MEM_adr_reg[11]/C
+  (Sync)U5_mem_MEM_adr_reg[13]/C
+  (Sync)U5_mem_MEM_adr_reg[14]/C
+  (Sync)U5_mem_MEM_adr_reg[3]/C
+  (Sync)U5_mem_MEM_adr_reg[30]/C
+  (Sync)U5_mem_MEM_adr_reg[28]/C
+  (Sync)U5_mem_MEM_adr_reg[18]/C
+  (Sync)U5_mem_MEM_adr_reg[9]/C
+  (Sync)U5_mem_MEM_adr_reg[17]/C
+  (Sync)U5_mem_MEM_adr_reg[15]/C
+  (Sync)U5_mem_MEM_adr_reg[19]/C
+  (Sync)U5_mem_MEM_adr_reg[22]/C
+  (Sync)U5_mem_MEM_adr_reg[20]/C
+  (Sync)U5_mem_MEM_adr_reg[25]/C
+  (Sync)U5_mem_MEM_adr_reg[1]/C
+  (Sync)U5_mem_MEM_adr_reg[23]/C
+  (Sync)U5_mem_MEM_adr_reg[12]/C
+  (Sync)U4_ex_EX_adr_reg[17]/C
+  (Sync)U4_ex_EX_adr_reg[16]/C
+  (Sync)U4_ex_EX_adr_reg[15]/C
+  (Sync)U4_ex_EX_adr_reg[5]/C
+  (Sync)U4_ex_EX_adr_reg[13]/C
+  (Sync)U4_ex_EX_adr_reg[0]/C
+  (Sync)U4_ex_EX_adr_reg[4]/C
+  (Sync)U4_ex_EX_adr_reg[31]/C
+  (Sync)U4_ex_EX_adr_reg[26]/C
+  (Sync)U4_ex_EX_adr_reg[23]/C
+  (Sync)U4_ex_EX_adr_reg[8]/C
+  (Sync)U4_ex_EX_adr_reg[14]/C
+  (Sync)U4_ex_EX_adr_reg[21]/C
+  (Sync)U4_ex_EX_adr_reg[29]/C
+  (Sync)U4_ex_EX_adr_reg[19]/C
+  (Sync)U4_ex_EX_adr_reg[28]/C
+  (Sync)U4_ex_EX_adr_reg[27]/C
+  (Sync)U4_ex_EX_adr_reg[10]/C
+  (Sync)U4_ex_EX_adr_reg[12]/C
+  (Sync)U4_ex_EX_adr_reg[22]/C
+  (Sync)U4_ex_EX_adr_reg[20]/C
+  (Sync)U4_ex_EX_adr_reg[9]/C
+  (Sync)U4_ex_EX_adr_reg[3]/C
+  (Sync)U4_ex_EX_adr_reg[25]/C
+  (Sync)U4_ex_EX_adr_reg[1]/C
+  (Sync)U4_ex_EX_adr_reg[18]/C
+  (Sync)U4_ex_EX_adr_reg[11]/C
+  (Sync)U4_ex_EX_adr_reg[30]/C
+  (Sync)U4_ex_EX_adresse_reg[30]/C
+  (Sync)U4_ex_EX_data_ual_reg[0]/C
+  (Sync)U5_mem_MEM_adr_reg_dest_reg[2]/C
+  (Sync)U4_ex_EX_op_mem_reg/C
+  (Sync)U5_mem_MEM_data_ecr_reg[4]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[3]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[2]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[1]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[0]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[31]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[30]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[6]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[29]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[5]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[24]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[13]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[26]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[27]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[23]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[28]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[11]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[18]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[19]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[21]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[22]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[20]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[16]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[25]/C
+  (Sync)U5_mem_MEM_data_ecr_reg[17]/C

@@ -1,0 +1,33 @@
+irun(64): 15.20-s022: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s022: Started on Mar 09, 2023 at 11:57:25 EST
+irun
+	-f file_list.f
+		-smartorder
+		-work work
+		-V93
+		-top sim_minimips
+		-notimingchecks
+		-gui
+		-access +rw
+		../../rtl/alu.vhd
+		../../rtl/banc.vhd
+		../../rtl/bus_ctrl.vhd
+		../../rtl/minimips.vhd
+		../../rtl/pack_mips.vhd
+		../../rtl/pps_di.vhd
+		../../rtl/pps_ei.vhd
+		../../rtl/pps_ex.vhd
+		../../rtl/pps_mem.vhd
+		../../rtl/pps_pf.vhd
+		../../rtl/renvoi.vhd
+		../../rtl/syscop.vhd
+		../tb/bench_minimips.vhd
+		../tb/ram.vhd
+		../tb/rom.vhd
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> ^C
+ncsim> exit
+TOOL:	irun(64)	15.20-s022: Exiting on Mar 09, 2023 at 11:57:54 EST  (total: 00:00:29)

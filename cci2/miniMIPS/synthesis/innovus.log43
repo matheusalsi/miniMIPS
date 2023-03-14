@@ -1,0 +1,42 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v15.20-p005_1, built Wed Nov 11 11:16:39 PST 2015
+Options:	-common_ui 
+Date:		Thu Feb 16 13:29:58 2023
+Host:		pgmicro04 (x86_64 w/Linux 3.10.0-1160.81.1.el7.x86_64) (10cores*20cpus*Intel(R) Xeon(R) CPU E5-2650L v2 @ 1.70GHz 25600KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		invs	Innovus Implementation System	15.2	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Create and set the environment variable TMPDIR to /tmp/innovus_temp_57399_pgmicro04_matheus.almeida_rAakUn.
+
+
+**INFO:  MMMC transition support version v31-84 
+
+Loading fill procedures ...
+[DEV]innovus 1> Suppress "**WARN ..." messages.
+eval_legacy { report_message -start_cmd }
+exclude_path_collection 0
+eval_legacy { report_message -start_cmd }
+source minimips_floor01.dat/minimips.dbglobals
+source minimips_floor01.dat/root.init
+source minimips_floor01.dat/minimips.globals
+get_multi_cpu_usage -local_cpu
+Loading view definition file from minimips_floor01.dat/viewDefinition.tcl
+*** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.37min, fe_real=0.68min, fe_mem=554.0M) ***
+set_current_design {}
+*** Netlist is unique.
+Loading preference file minimips_floor01.dat/gui.pref.tcl ...
+minimips
+default_emulate_view
+minimips
+Delete all existing relative floorplan constraints.
+default_emulate_view
+default_emulate_view
+default_emulate_view
+source minimips_floor01.dat/minimips_power_constraints.tcl
+**ERROR: (IMPSE-101):	report_messages: Must specify a '-start_cmd' before '-end_cmd' option. Ignore.
+gui_set_draw_view fplan

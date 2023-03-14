@@ -1,0 +1,50 @@
+[02/16 13:29:58     0s] 
+[02/16 13:29:58     0s] Cadence Innovus(TM) Implementation System.
+[02/16 13:29:58     0s] Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+[02/16 13:29:58     0s] 
+[02/16 13:29:58     0s] Version:	v15.20-p005_1, built Wed Nov 11 11:16:39 PST 2015
+[02/16 13:29:58     0s] Options:	-common_ui 
+[02/16 13:29:58     0s] Date:		Thu Feb 16 13:29:58 2023
+[02/16 13:29:58     0s] Host:		pgmicro04 (x86_64 w/Linux 3.10.0-1160.81.1.el7.x86_64) (10cores*20cpus*Intel(R) Xeon(R) CPU E5-2650L v2 @ 1.70GHz 25600KB)
+[02/16 13:29:58     0s] OS:		CentOS Linux release 7.9.2009 (Core)
+[02/16 13:29:58     0s] 
+[02/16 13:29:58     0s] License:
+[02/16 13:29:58     0s] 		invs	Innovus Implementation System	15.2	checkout succeeded
+[02/16 13:29:58     0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[02/16 13:30:10    11s] @(#)CDS: Innovus v15.20-p005_1 (64bit) 11/11/2015 11:16 (Linux 2.6.18-194.el5)
+[02/16 13:30:10    11s] @(#)CDS: NanoRoute 15.20-p005_1 NR151028-1715/15_20-UB (database version 2.30, 298.6.1) {superthreading v1.26}
+[02/16 13:30:10    11s] @(#)CDS: AAE 15.20-p002 (64bit) 11/11/2015 (Linux 2.6.18-194.el5)
+[02/16 13:30:10    11s] @(#)CDS: CTE 15.20-p001_1 () Oct 29 2015 01:50:39 ( )
+[02/16 13:30:10    11s] @(#)CDS: SYNTECH 15.20-b002_1 () Oct 20 2015 02:35:29 ( )
+[02/16 13:30:10    11s] @(#)CDS: CPE v15.20-p002
+[02/16 13:30:10    11s] @(#)CDS: IQRC/TQRC 15.1.2-s269 (64bit) Mon Aug 24 18:22:18 PDT 2015 (Linux 2.6.18-194.el5)
+[02/16 13:30:10    11s] @(#)CDS: OA 22.50-p028 Thu Jul 23 14:59:57 2015
+[02/16 13:30:10    11s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[02/16 13:30:10    11s] @(#)CDS: RCDB 11.6
+[02/16 13:30:10    11s] --- Running on pgmicro04 (x86_64 w/Linux 3.10.0-1160.81.1.el7.x86_64) (10cores*20cpus*Intel(R) Xeon(R) CPU E5-2650L v2 @ 1.70GHz 25600KB) ---
+[02/16 13:30:10    11s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_57399_pgmicro04_matheus.almeida_rAakUn.
+
+[02/16 13:30:10    11s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_57399_pgmicro04_matheus.almeida_rAakUn.
+[02/16 13:30:10    11s] 
+[02/16 13:30:11    12s] 
+[02/16 13:30:11    12s] **INFO:  MMMC transition support version v31-84 
+[02/16 13:30:11    12s] 
+[02/16 13:30:12    12s] Loading fill procedures ...
+[02/16 13:30:19    14s] [DEV]innovus 1> Suppress "**WARN ..." messages.
+[02/16 13:30:33    17s] eval_legacy { report_message -start_cmd }
+[02/16 13:30:33    17s] exclude_path_collection 0
+[02/16 13:30:33    17s] eval_legacy { report_message -start_cmd }
+[02/16 13:30:33    17s] source minimips_floor01.dat/minimips.dbglobals
+[02/16 13:30:33    17s] source minimips_floor01.dat/root.init
+[02/16 13:30:33    17s] source minimips_floor01.dat/minimips.globals
+[02/16 13:30:39    22s] get_multi_cpu_usage -local_cpu
+[02/16 13:30:39    22s] Loading view definition file from minimips_floor01.dat/viewDefinition.tcl
+[02/16 13:30:39    22s] *** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.37min, fe_real=0.68min, fe_mem=554.0M) ***
+[02/16 13:30:39    23s] set_current_design {}
+[02/16 13:30:40    24s] *** Netlist is unique.
+[02/16 13:30:40    24s] Loading preference file minimips_floor01.dat/gui.pref.tcl ...
+[02/16 13:30:41    24s] minimips
+[02/16 13:30:42    25s] Delete all existing relative floorplan constraints.
+[02/16 13:30:42    25s] source minimips_floor01.dat/minimips_power_constraints.tcl
+[02/16 13:30:42    25s] **ERROR: (IMPSE-101):	report_messages: Must specify a '-start_cmd' before '-end_cmd' option. Ignore.
+[02/16 13:30:42    25s] gui_set_draw_view fplan
