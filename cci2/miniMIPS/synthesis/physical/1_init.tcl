@@ -15,8 +15,8 @@ set_db init_power_nets {VDD vdd vdd!}
 set_db init_ground_nets {VSS GND gnd gnd!}
 source innovus/minimips.invs_setup.tcl
 
-##Generating square floorplan (1) with 80% of density (0.8) with 3um margins (3 3 3 3)                       
-create_floorplan -site core -core_density_size 1 0.6 3 3 3 3
+##Generating square floorplan (1) with 70% of density (0.8) with 3um margins (3 3 3 3)                       
+create_floorplan -site core -core_density_size 1 0.70 3 3 3 3
 
 ##fit screen
 gui_fit

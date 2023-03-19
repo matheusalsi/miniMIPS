@@ -22,18 +22,18 @@ edit_pin -side Bottom -layer 4 -spread_type center -spacing 15 -pin {{ram_data[0
 edit_pin -side Right -layer 3 -spread_type center -spacing 15 -pin {{ram_data[18]} {ram_data[19]} {ram_data[20]} {ram_data[21]} {ram_data[22]} {ram_data[23]} {ram_data[24]} {ram_data[25]} {ram_data[26]} {ram_data[27]} {ram_data[28]} {ram_data[29]} {ram_data[30]} {ram_data[31]} it_mat reset}
 
 
-#ccopt_design 
+ccopt_design 
 
 # PRE-CTS opt
-opt_design -pre_cts
+#opt_design -pre_cts
 
 #CTS
-eval_legacy {setCTSMode -engine ck}
-eval_legacy {clockDesign -specfile Clock.ctstch -outDir clk_report}
+#eval_legacy {setCTSMode -engine ck}
+#eval_legacy {clockDesign -specfile Clock.ctstch -outDir clk_report}
 #create_clock_tree_spec
 #clock_design
 
 #Post-CTS opt
-opt_design -post_cts -drv
+#opt_design -post_cts -drv
 
 report_timing

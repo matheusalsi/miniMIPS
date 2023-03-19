@@ -18,15 +18,14 @@ Nr. Unsync Pins                : 0
 CELL (PORT)                            Nr.
 -----------------------------------------------
 DFRRX1 (C)                              1
-DFRQX4 (C)                              9
+DFRQX4 (C)                              13
 DLLQX1 (GN)                             41
-DFRX1 (C)                               328
-DFRQX1 (C)                              1307
-DFRSQX1 (C)                             4
 SDFRQX1 (C)                             1
-DFRX0 (C)                               1
-DFRQX2 (C)                              29
-DFRQX0 (C)                              2
+DFRX1 (C)                               329
+DFRQX1 (C)                              1293
+DFRSQX1 (C)                             4
+DFRQX2 (C)                              40
+DFRQX0 (C)                              1
 -----------------------------------------------
 
 
