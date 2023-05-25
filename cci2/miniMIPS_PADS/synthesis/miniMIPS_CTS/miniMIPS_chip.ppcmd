@@ -1,0 +1,80 @@
+# PPCMD 1 
+# addStripe -skip_via_on_wire_shape Noshape -block_ring_top_layer_limit MET5 -max_same_layer_jog_length 0.88 -padcore_ring_bottom_layer_limit MET3 -set_to_set_distance 100 -skip_via_on_pin Standardcell -stacked_via_top_layer METTP -padcore_ring_top_layer_limit MET5 -spacing 0.46 -merge_stripes_value 0.315 -layer MET4 -block_ring_bottom_layer_limit MET3 -width 0.44 -nets {VDD GND} -stacked_via_bottom_layer MET1
+# 4 
+# 2 
+# 1 
+# 0 
+# 0 
+# 2 
+# BOX_LIST 
+# 274420 274770 1378830 1377830 0 
+# 275200 275550 1378050 1377050 0 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# GND 440 4 0 278100 1376840 100000 0 0 
+# VDD 440 4 0 277200 1376840 100000 0 0 
+# END_NET_INFO_LIST 
+# END_PPCMD 1 
+
+# PPCMD 2 
+# addStripe -skip_via_on_wire_shape Noshape -block_ring_top_layer_limit MET4 -max_same_layer_jog_length 0.88 -padcore_ring_bottom_layer_limit MET2 -set_to_set_distance 100 -skip_via_on_pin Standardcell -stacked_via_top_layer METTP -padcore_ring_top_layer_limit MET4 -spacing 0.46 -merge_stripes_value 0.315 -direction horizontal -layer MET3 -block_ring_bottom_layer_limit MET2 -width 0.44 -nets {VDD GND} -stacked_via_bottom_layer MET1
+# 3 
+# 2 
+# 1 
+# 0 
+# 0 
+# 2 
+# BOX_LIST 
+# 274420 275270 1378830 1378330 0 
+# 275200 276050 1378050 1377550 0 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# GND 440 3 0 278450 1375550 100000 0 0 
+# VDD 440 3 0 277550 1375550 100000 0 0 
+# END_NET_INFO_LIST 
+# END_PPCMD 2 
+
+# PPCMD 3 
+# sroute -connect {blockPin corePin padPin padRing floatingStripe} -layerChangeRange {M1 METTP} -blockPinTarget nearestTarget -padPinPortConnect {allPort oneGeom} -blockPin useLef -allowJogging 1 -crossoverViaLayerRange {M1 METTP} -allowLayerChange 1 -targetViaLayerRange {M1 METTP} -nets {GND VDD}
+# 2 
+# 16 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 3 
+
+# PPCMD 4 
+# addRing -spacing 0.28 -width 0.5 -layer {top M3 bottom M3 left M4 right M4} -jog_distance 2.5 -offset 1.5 -nets {GND VDD} -threshold 2.5 -spacing_top {0.28} -spacing_bottom {0.28} -spacing_left {0.28} -spacing_right {0.28} -width_top {0.5} -width_bottom {0.5} -width_left {0.5} -width_right {0.5} -layer_top M3 -layer_bottom M3 -layer_left M4 -layer_right M4 -offset_top {1.5} -offset_bottom {1.5} -offset_left {1.5} -offset_right {1.5} -stacked_via_top_layer topLayer -stacked_via_bottom_layer bottomLayer
+# 1 
+# 32 
+# 1 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# VDD 500 3 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 826875 275020 826875 1378080 
+# END_RING_PT_INFO_LIST 
+# VDD 500 4 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 274670 826550 1379080 826550 
+# END_RING_PT_INFO_LIST 
+# GND 500 3 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 826875 275800 826875 1377300 
+# END_RING_PT_INFO_LIST 
+# GND 500 4 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 275450 826550 1378300 826550 
+# END_RING_PT_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 4 
+

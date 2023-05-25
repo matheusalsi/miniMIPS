@@ -1,0 +1,30 @@
+irun(64): 15.20-s022: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s022: Started on Jan 23, 2023 at 20:51:59 -03
+irun
+	-f file_list.f
+		-smartorder
+		-work work
+		-V93
+		-top sim_minimips
+		-gui
+		-access +rw
+		/soft64/design-kits/stm/65nm-cmos065_536/CORE65GPSVT_5.1/behaviour/verilog/CORE65GPSVT.v
+		/soft64/design-kits/stm/65nm-cmos065_536/CLOCK65GPSVT_3.1/behaviour/verilog/CLOCK65GPSVT.v
+		../../rtl/alu.vhd
+		../../rtl/banc.vhd
+		../../rtl/bus_ctrl.vhd
+		../../rtl/minimips.vhd
+		../../rtl/pack_mips.vhd
+		../../rtl/pps_di.vhd
+		../../rtl/pps_ei.vhd
+		../../rtl/pps_ex.vhd
+		../../rtl/pps_mem.vhd
+		../../rtl/pps_pf.vhd
+		../../rtl/renvoi.vhd
+		../../rtl/syscop.vhd
+		../tb/bench_minimips.vhd
+		../tb/ram.vhd
+		../tb/rom.vhd
+irun: *E,FILEMIS: Cannot find the provided file /soft64/design-kits/stm/65nm-cmos065_536/CORE65GPSVT_5.1/behaviour/verilog/CORE65GPSVT.v.
+irun: *E,FILEMIS: Cannot find the provided file /soft64/design-kits/stm/65nm-cmos065_536/CLOCK65GPSVT_3.1/behaviour/verilog/CLOCK65GPSVT.v.
+TOOL:	irun(64)	15.20-s022: Exiting on Jan 23, 2023 at 20:51:59 -03  (total: 00:00:00)

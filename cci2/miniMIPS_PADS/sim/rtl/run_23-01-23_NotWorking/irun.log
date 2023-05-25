@@ -1,0 +1,131 @@
+irun(64): 15.20-s022: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s022: Started on Jan 23, 2023 at 16:50:18 -03
+irun
+	-f ../file_list.f
+		-smartorder
+		-work work
+		-V93
+		-top sim_minimips
+		-notimingchecks
+		-gui
+		-access +rw
+		../../../rtl/alu.vhd
+		../../../rtl/banc.vhd
+		../../../rtl/bus_ctrl.vhd
+		../../../rtl/minimips.vhd
+		../../../rtl/pack_mips.vhd
+		../../../rtl/pps_di.vhd
+		../../../rtl/pps_ei.vhd
+		../../../rtl/pps_ex.vhd
+		../../../rtl/pps_mem.vhd
+		../../../rtl/pps_pf.vhd
+		../../../rtl/renvoi.vhd
+		../../../rtl/syscop.vhd
+		../../tb/bench_minimips.vhd
+		../../tb/ram.vhd
+		../../tb/rom.vhd
+../../../rtl/pack_mips.vhd:
+	errors: 0, warnings: 0
+../../tb/rom.vhd:
+	errors: 0, warnings: 0
+../../tb/ram.vhd:
+	errors: 0, warnings: 0
+../../tb/bench_minimips.vhd:
+	errors: 0, warnings: 0
+../../../rtl/syscop.vhd:
+	errors: 0, warnings: 0
+../../../rtl/renvoi.vhd:
+	errors: 0, warnings: 0
+../../../rtl/pps_pf.vhd:
+	errors: 0, warnings: 0
+../../../rtl/pps_mem.vhd:
+	errors: 0, warnings: 0
+../../../rtl/alu.vhd:
+	errors: 0, warnings: 0
+../../../rtl/pps_ex.vhd:
+	errors: 0, warnings: 0
+../../../rtl/pps_ei.vhd:
+	errors: 0, warnings: 0
+../../../rtl/pps_di.vhd:
+	errors: 0, warnings: 0
+../../../rtl/minimips.vhd:
+	errors: 0, warnings: 0
+../../../rtl/bus_ctrl.vhd:
+	errors: 0, warnings: 0
+../../../rtl/banc.vhd:
+	errors: 0, warnings: 0
+WORK.PACK_MIPS (package):
+	streams: 1, words: 9274
+WORK.ROM (entity):
+	streams: 8, words: 922
+WORK.ROM:BENCH (architecture):
+	streams: 1, words: 2224
+WORK.RAM (entity):
+	streams: 8, words: 854
+WORK.RAM:BENCH (architecture):
+	streams: 1, words: 1492
+WORK.SIM_MINIMIPS (entity):
+	streams: 1, words: 63
+WORK.SIM_MINIMIPS:BENCH (architecture):
+	streams: 1, words: 3625
+WORK.SYSCOP (entity):
+	streams: 16, words: 2772
+WORK.SYSCOP:RTL (architecture):
+	streams: 1, words: 807
+WORK.RENVOI (entity):
+	streams: 31, words: 6184
+WORK.RENVOI:RTL (architecture):
+	streams: 1, words: 1519
+WORK.PPS_PF (entity):
+	streams: 10, words: 1035
+WORK.PPS_PF:RTL (architecture):
+	streams: 1, words: 699
+WORK.PPS_MEM (entity):
+	streams: 27, words: 4323
+WORK.PPS_MEM:RTL (architecture):
+	streams: 1, words: 440
+WORK.ALU (entity):
+	streams: 8, words: 1311
+WORK.ALU:RTL (architecture):
+	streams: 1, words: 2866
+WORK.PPS_EX (entity):
+	streams: 31, words: 4350
+WORK.PPS_EX:RTL (architecture):
+	streams: 1, words: 2432
+WORK.PPS_EI (entity):
+	streams: 13, words: 1659
+WORK.PPS_EI:RTL (architecture):
+	streams: 1, words: 175
+WORK.PPS_DI (entity):
+	streams: 31, words: 4359
+WORK.PPS_DI:RTL (architecture):
+	streams: 1, words: 2649
+WORK.MINIMIPS (entity):
+	streams: 9, words: 727
+WORK.MINIMIPS:RTL (architecture):
+	streams: 1, words: 34283
+WORK.BUS_CTRL (entity):
+	streams: 17, words: 2294
+WORK.BUS_CTRL:RTL (architecture):
+	streams: 1, words: 705
+WORK.BANC (entity):
+	streams: 10, words: 1815
+WORK.BANC:RTL (architecture):
+	streams: 1, words: 574
+ncelab: *W,ARCMRA: Elaborating the WORK.SIM_MINIMIPS:BENCH, MRA (most recently analyzed) architecture.
+	Elaborating the design hierarchy:
+	Top level design units:
+		:sim_minimips(bench):
+	Building instance specific data structures.
+	Design hierarchy summary:
+		             Instances  Unique
+		Components:         15      14
+		Default bindings:   13       -
+		Processes:          93      93
+		Signals:           152     152
+	Writing initial simulation snapshot: WORK.SIM_MINIMIPS:BENCH
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> TOOL:	irun(64)	15.20-s022: Exiting on Jan 23, 2023 at 16:52:42 -03  (total: 00:02:24)

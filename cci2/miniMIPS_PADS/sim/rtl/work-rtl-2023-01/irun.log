@@ -1,0 +1,42 @@
+irun(64): 15.20-s022: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s022: Started on Mar 01, 2023 at 21:17:13 EST
+irun
+	-f ../file_list.f
+		-smartorder
+		-work work
+		-V93
+		-top sim_minimips
+		-notimingchecks
+		-gui
+		-access +rw
+		../../rtl/alu.vhd
+		../../rtl/banc.vhd
+		../../rtl/bus_ctrl.vhd
+		../../rtl/minimips.vhd
+		../../rtl/pack_mips.vhd
+		../../rtl/pps_di.vhd
+		../../rtl/pps_ei.vhd
+		../../rtl/pps_ex.vhd
+		../../rtl/pps_mem.vhd
+		../../rtl/pps_pf.vhd
+		../../rtl/renvoi.vhd
+		../../rtl/syscop.vhd
+		../tb/bench_minimips.vhd
+		../tb/ram.vhd
+		../tb/rom.vhd
+irun: *E,FILEMIS: Cannot find the provided file ../../rtl/alu.vhd.
+irun: *E,FILEMIS: Cannot find the provided file ../../rtl/banc.vhd.
+irun: *E,FILEMIS: Cannot find the provided file ../../rtl/bus_ctrl.vhd.
+irun: *E,FILEMIS: Cannot find the provided file ../../rtl/minimips.vhd.
+irun: *E,FILEMIS: Cannot find the provided file ../../rtl/pack_mips.vhd.
+irun: *E,FILEMIS: Cannot find the provided file ../../rtl/pps_di.vhd.
+irun: *E,FILEMIS: Cannot find the provided file ../../rtl/pps_ei.vhd.
+irun: *E,FILEMIS: Cannot find the provided file ../../rtl/pps_ex.vhd.
+irun: *E,FILEMIS: Cannot find the provided file ../../rtl/pps_mem.vhd.
+irun: *E,FILEMIS: Cannot find the provided file ../../rtl/pps_pf.vhd.
+irun: *E,FILEMIS: Cannot find the provided file ../../rtl/renvoi.vhd.
+irun: *E,FILEMIS: Cannot find the provided file ../../rtl/syscop.vhd.
+irun: *E,FILEMIS: Cannot find the provided file ../tb/bench_minimips.vhd.
+irun: *E,FILEMIS: Cannot find the provided file ../tb/ram.vhd.
+irun: *E,FILEMIS: Cannot find the provided file ../tb/rom.vhd.
+TOOL:	irun(64)	15.20-s022: Exiting on Mar 01, 2023 at 21:17:13 EST  (total: 00:00:00)

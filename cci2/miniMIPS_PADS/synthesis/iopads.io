@@ -1,0 +1,90 @@
+#---WEST------------
+Pad: IOPADS_INST/PAD_ram_adr_O_0 W BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_1 W BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_2 W BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_3 W BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_4 W BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_5 W BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_6 W BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_7 W BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_8 W BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_9 W BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_10 W BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_11 W BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_12 W BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_13 W BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_14 W BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_15 W BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_16 W BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_17 W BD8P
+Pad: IOPADS_INST/PAD_vss_W W GNDORPADP          #GNDO
+
+#---NORTH------------
+
+Pad: IOPADS_INST/PAD_ram_data_IO_0 N ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_1 N ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_2 N ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_3 N ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_4 N ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_5 N ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_6 N ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_7 N ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_8 N ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_9 N ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_10 N ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_11 N ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_12 N ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_13 N ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_14 N ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_15 N ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_16 N ICP
+Pad: IOPADS_INST/PAD_vdd_core_N N VDDPADP       #VDD
+Pad: IOPADS_INST/PAD_vss_core_N N GNDORPADP     #GNDO
+
+#---EAST------------
+Pad: IOPADS_INST/PAD_ram_adr_O_18 E BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_19 E BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_20 E BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_21 E BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_22 E BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_23 E BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_24 E BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_25 E BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_26 E BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_27 E BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_28 E BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_29 E BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_30 E BD8P
+Pad: IOPADS_INST/PAD_ram_adr_O_31 E BD8P
+Pad: IOPADS_INST/PAD_ram_req_O E BD8P             
+Pad: IOPADS_INST/PAD_ram_r_w_O E BD8P
+Pad: IOPADS_INST/PAD_ram_ack_I E ICP    
+Pad: IOPADS_INST/PAD_vdd_E E VDDORPADP          #VDDO
+Pad: IOPADS_INST/PAD_vdd_core_E E VDDPADP       #VDD
+
+#---SOUTH------------
+Pad: IOPADS_INST/PAD_ram_data_IO_17 S ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_18 S ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_19 S ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_20 S ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_21 S ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_22 S ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_23 S ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_24 S ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_25 S ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_26 S ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_27 S ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_28 S ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_29 S ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_30 S ICP
+Pad: IOPADS_INST/PAD_ram_data_IO_31 S ICP
+Pad: IOPADS_INST/PAD_clock_I S ICP        
+Pad: IOPADS_INST/PAD_reset_I S ICP        
+Pad: IOPADS_INST/PAD_it_mat_I S ICP        
+Pad: IOPADS_INST/PAD_vss_S S GNDORPADP          #GNDO
+
+#-----CORNERS --------------------
+Pad: IOPADS_INST/PAD_corner_ll SW CORNERP
+Pad: IOPADS_INST/PAD_corner_lr SE CORNERP
+Pad: IOPADS_INST/PAD_corner_ul NW CORNERP
+Pad: IOPADS_INST/PAD_corner_ur NE CORNERP

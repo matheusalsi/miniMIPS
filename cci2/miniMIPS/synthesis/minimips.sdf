@@ -1,7 +1,7 @@
 (DELAYFILE
   (SDFVERSION "3.0")
   (DESIGN "minimips")
-  (DATE "Sun Mar 19 11:16:45 2023")
+  (DATE "Tue Mar 21 10:08:04 2023")
   (VENDOR "Cadence Design Systems, Inc.")
   (PROGRAM "Innovus")
   (VERSION "v15.20-p005_1 ((64bit) 11/11/2015 11:16 (Linux 2.6.18-194.el5))")
@@ -503,48 +503,6 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U4_ex_EX_data_ual_reg\[22\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U4_ex_EX_data_ual_reg\[21\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U4_ex_EX_data_ual_reg\[20\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U4_ex_EX_data_ual_reg\[14\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U4_ex_EX_data_ual_reg\[12\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U4_ex_EX_data_ual_reg\[11\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
     (INSTANCE  U4_ex_EX_data_ual_reg\[10\])
       (TIMINGCHECK
       )
@@ -600,6 +558,20 @@
   )
 
   (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U4_ex_EX_data_ual_reg\[22\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U4_ex_EX_data_ual_reg\[21\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
     (CELLTYPE  "DFRX1")
     (INSTANCE  U4_ex_EX_exc_cause_reg\[1\])
       (TIMINGCHECK
@@ -609,6 +581,34 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U4_ex_EX_bra_confirm_reg)
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U4_ex_EX_data_ual_reg\[20\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U4_ex_EX_data_ual_reg\[14\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U4_ex_EX_data_ual_reg\[12\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U4_ex_EX_data_ual_reg\[11\])
       (TIMINGCHECK
       )
   )
@@ -2106,27 +2106,6 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U2_ei_EI_adr_reg\[25\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U2_ei_EI_adr_reg\[3\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U2_ei_EI_adr_reg\[1\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
     (INSTANCE  U2_ei_EI_adr_reg\[18\])
       (TIMINGCHECK
       )
@@ -2161,6 +2140,13 @@
   )
 
   (CELL
+    (CELLTYPE  "DFRX1")
+    (INSTANCE  U4_ex_EX_adr_reg\[30\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U2_ei_EI_adr_reg\[14\])
       (TIMINGCHECK
@@ -2189,13 +2175,6 @@
   )
 
   (CELL
-    (CELLTYPE  "DFRX1")
-    (INSTANCE  U4_ex_EX_adr_reg\[30\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U2_ei_EI_adr_reg\[29\])
       (TIMINGCHECK
@@ -2218,7 +2197,14 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U2_ei_EI_adr_reg\[30\])
+    (INSTANCE  U2_ei_EI_adr_reg\[19\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U2_ei_EI_adr_reg\[25\])
       (TIMINGCHECK
       )
   )
@@ -2240,13 +2226,6 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U2_ei_EI_adr_reg\[4\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U2_ei_EI_adr_reg\[19\])
       (TIMINGCHECK
       )
   )
@@ -2324,6 +2303,27 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U2_ei_EI_adr_reg\[13\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U2_ei_EI_adr_reg\[3\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U2_ei_EI_adr_reg\[1\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U2_ei_EI_adr_reg\[30\])
       (TIMINGCHECK
       )
   )
@@ -2645,6 +2645,20 @@
 
   (CELL
     (CELLTYPE  "DFRX1")
+    (INSTANCE  U4_ex_U1_alu_hilo_reg\[51\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U4_ex_U1_alu_hilo_reg\[52\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRX1")
     (INSTANCE  U4_ex_U1_alu_hilo_reg\[53\])
       (TIMINGCHECK
       )
@@ -2687,13 +2701,6 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U4_ex_U1_alu_hilo_reg\[49\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
     (INSTANCE  U4_ex_U1_alu_hilo_reg\[59\])
       (TIMINGCHECK
       )
@@ -2702,6 +2709,13 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U4_ex_U1_alu_hilo_reg\[5\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U4_ex_U1_alu_hilo_reg\[49\])
       (TIMINGCHECK
       )
   )
@@ -2763,13 +2777,6 @@
   )
 
   (CELL
-    (CELLTYPE  "DFRX1")
-    (INSTANCE  U4_ex_U1_alu_hilo_reg\[50\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U4_ex_U1_alu_hilo_reg\[4\])
       (TIMINGCHECK
@@ -2778,14 +2785,7 @@
 
   (CELL
     (CELLTYPE  "DFRX1")
-    (INSTANCE  U4_ex_U1_alu_hilo_reg\[51\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U4_ex_U1_alu_hilo_reg\[52\])
+    (INSTANCE  U4_ex_U1_alu_hilo_reg\[50\])
       (TIMINGCHECK
       )
   )
@@ -3156,6 +3156,27 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[11\]\[28\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[11\]\[29\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRX1")
+    (INSTANCE  U7_banc_registres_reg\[11\]\[2\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[11\]\[30\])
       (TIMINGCHECK
       )
@@ -3169,8 +3190,8 @@
   )
 
   (CELL
-    (CELLTYPE  "DFRX1")
-    (INSTANCE  U7_banc_registres_reg\[11\]\[2\])
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[11\]\[3\])
       (TIMINGCHECK
       )
   )
@@ -3254,7 +3275,7 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[11\]\[28\])
+    (INSTANCE  U7_banc_registres_reg\[12\]\[14\])
       (TIMINGCHECK
       )
   )
@@ -3268,7 +3289,7 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[11\]\[29\])
+    (INSTANCE  U7_banc_registres_reg\[12\]\[16\])
       (TIMINGCHECK
       )
   )
@@ -3276,20 +3297,6 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[12\]\[17\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[12\]\[14\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[11\]\[3\])
       (TIMINGCHECK
       )
   )
@@ -3346,13 +3353,6 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[12\]\[24\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[12\]\[16\])
       (TIMINGCHECK
       )
   )
@@ -3660,6 +3660,13 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[13\]\[8\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[13\]\[6\])
       (TIMINGCHECK
       )
@@ -3668,13 +3675,6 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[13\]\[7\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[13\]\[8\])
       (TIMINGCHECK
       )
   )
@@ -4157,13 +4157,6 @@
 
   (CELL
     (CELLTYPE  "DFRX1")
-    (INSTANCE  U7_banc_registres_reg\[16\]\[13\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRX1")
     (INSTANCE  U7_banc_registres_reg\[16\]\[14\])
       (TIMINGCHECK
       )
@@ -4179,6 +4172,20 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[16\]\[16\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[16\]\[12\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRX1")
+    (INSTANCE  U7_banc_registres_reg\[16\]\[13\])
       (TIMINGCHECK
       )
   )
@@ -4221,13 +4228,6 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[16\]\[21\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[16\]\[12\])
       (TIMINGCHECK
       )
   )
@@ -4682,6 +4682,27 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[18\]\[1\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[18\]\[20\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[18\]\[21\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[18\]\[26\])
       (TIMINGCHECK
       )
@@ -4808,7 +4829,7 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[18\]\[1\])
+    (INSTANCE  U7_banc_registres_reg\[19\]\[13\])
       (TIMINGCHECK
       )
   )
@@ -4879,27 +4900,6 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[19\]\[22\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[18\]\[20\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[18\]\[21\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[19\]\[13\])
       (TIMINGCHECK
       )
   )
@@ -5158,6 +5158,20 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[20\]\[0\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[20\]\[10\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[1\]\[7\])
       (TIMINGCHECK
       )
@@ -5173,20 +5187,6 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[1\]\[9\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[20\]\[0\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[20\]\[10\])
       (TIMINGCHECK
       )
   )
@@ -5662,27 +5662,6 @@
 
   (CELL
     (CELLTYPE  "DFRX1")
-    (INSTANCE  U7_banc_registres_reg\[22\]\[14\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRX1")
-    (INSTANCE  U7_banc_registres_reg\[22\]\[15\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRX1")
-    (INSTANCE  U7_banc_registres_reg\[22\]\[16\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRX1")
     (INSTANCE  U7_banc_registres_reg\[22\]\[17\])
       (TIMINGCHECK
       )
@@ -5705,6 +5684,27 @@
   (CELL
     (CELLTYPE  "DFRX1")
     (INSTANCE  U7_banc_registres_reg\[22\]\[1\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRX1")
+    (INSTANCE  U7_banc_registres_reg\[22\]\[14\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRX1")
+    (INSTANCE  U7_banc_registres_reg\[22\]\[15\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRX1")
+    (INSTANCE  U7_banc_registres_reg\[22\]\[16\])
       (TIMINGCHECK
       )
   )
@@ -6159,7 +6159,21 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[24\]\[3\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[24\]\[2\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[24\]\[4\])
       (TIMINGCHECK
       )
   )
@@ -6174,20 +6188,6 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[24\]\[31\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[24\]\[3\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[24\]\[4\])
       (TIMINGCHECK
       )
   )
@@ -6739,13 +6739,6 @@
   )
 
   (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[27\]\[10\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
     (CELLTYPE  "DFRX1")
     (INSTANCE  U7_banc_registres_reg\[27\]\[22\])
       (TIMINGCHECK
@@ -6797,6 +6790,13 @@
   (CELL
     (CELLTYPE  "DFRX1")
     (INSTANCE  U7_banc_registres_reg\[27\]\[29\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[27\]\[10\])
       (TIMINGCHECK
       )
   )
@@ -7167,6 +7167,13 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[29\]\[20\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[29\]\[21\])
       (TIMINGCHECK
       )
@@ -7237,13 +7244,6 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[29\]\[19\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[29\]\[30\])
       (TIMINGCHECK
       )
@@ -7258,7 +7258,21 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[29\]\[19\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[29\]\[3\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[29\]\[5\])
       (TIMINGCHECK
       )
   )
@@ -7272,7 +7286,7 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[29\]\[5\])
+    (INSTANCE  U7_banc_registres_reg\[29\]\[1\])
       (TIMINGCHECK
       )
   )
@@ -7315,20 +7329,6 @@
   (CELL
     (CELLTYPE  "DFRX1")
     (INSTANCE  U7_banc_registres_reg\[2\]\[10\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[29\]\[20\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[29\]\[1\])
       (TIMINGCHECK
       )
   )
@@ -7671,20 +7671,6 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[30\]\[29\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[30\]\[2\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[30\]\[30\])
       (TIMINGCHECK
       )
@@ -7776,6 +7762,13 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[30\]\[29\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[31\]\[13\])
       (TIMINGCHECK
       )
@@ -7798,6 +7791,13 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[31\]\[16\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[30\]\[2\])
       (TIMINGCHECK
       )
   )
@@ -8175,20 +8175,6 @@
 
   (CELL
     (CELLTYPE  "DFRX1")
-    (INSTANCE  U7_banc_registres_reg\[4\]\[0\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRX1")
-    (INSTANCE  U7_banc_registres_reg\[4\]\[10\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRX1")
     (INSTANCE  U7_banc_registres_reg\[4\]\[11\])
       (TIMINGCHECK
       )
@@ -8225,20 +8211,6 @@
   (CELL
     (CELLTYPE  "DFRX1")
     (INSTANCE  U7_banc_registres_reg\[4\]\[16\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[3\]\[8\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[3\]\[9\])
       (TIMINGCHECK
       )
   )
@@ -8329,7 +8301,7 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[4\]\[28\])
+    (INSTANCE  U7_banc_registres_reg\[3\]\[8\])
       (TIMINGCHECK
       )
   )
@@ -8377,8 +8349,8 @@
   )
 
   (CELL
-    (CELLTYPE  "DFRX1")
-    (INSTANCE  U7_banc_registres_reg\[4\]\[6\])
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[4\]\[28\])
       (TIMINGCHECK
       )
   )
@@ -8412,8 +8384,8 @@
   )
 
   (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[5\]\[10\])
+    (CELLTYPE  "DFRX1")
+    (INSTANCE  U7_banc_registres_reg\[4\]\[6\])
       (TIMINGCHECK
       )
   )
@@ -8428,6 +8400,13 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[5\]\[12\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[5\]\[10\])
       (TIMINGCHECK
       )
   )
@@ -8455,14 +8434,21 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[5\]\[16\])
+    (INSTANCE  U7_banc_registres_reg\[3\]\[9\])
       (TIMINGCHECK
       )
   )
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[5\]\[17\])
+    (INSTANCE  U7_banc_registres_reg\[5\]\[16\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRX1")
+    (INSTANCE  U7_banc_registres_reg\[4\]\[0\])
       (TIMINGCHECK
       )
   )
@@ -8475,15 +8461,15 @@
   )
 
   (CELL
-    (CELLTYPE  "DFRX1")
-    (INSTANCE  U7_banc_registres_reg\[5\]\[19\])
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[5\]\[17\])
       (TIMINGCHECK
       )
   )
 
   (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[5\]\[1\])
+    (CELLTYPE  "DFRX1")
+    (INSTANCE  U7_banc_registres_reg\[4\]\[10\])
       (TIMINGCHECK
       )
   )
@@ -8491,6 +8477,13 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[5\]\[20\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[5\]\[1\])
       (TIMINGCHECK
       )
   )
@@ -8519,6 +8512,13 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[5\]\[24\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRX1")
+    (INSTANCE  U7_banc_registres_reg\[5\]\[19\])
       (TIMINGCHECK
       )
   )
@@ -8679,6 +8679,41 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[6\]\[17\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[6\]\[18\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRX1")
+    (INSTANCE  U7_banc_registres_reg\[6\]\[19\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[6\]\[1\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[6\]\[20\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[6\]\[21\])
       (TIMINGCHECK
       )
@@ -8687,6 +8722,13 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[6\]\[22\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[6\]\[16\])
       (TIMINGCHECK
       )
   )
@@ -8763,13 +8805,6 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[6\]\[16\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[6\]\[3\])
       (TIMINGCHECK
       )
@@ -8806,41 +8841,6 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[6\]\[8\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[6\]\[18\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[6\]\[17\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRX1")
-    (INSTANCE  U7_banc_registres_reg\[6\]\[19\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[6\]\[1\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[6\]\[20\])
       (TIMINGCHECK
       )
   )
@@ -9183,13 +9183,6 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[8\]\[28\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[8\]\[29\])
       (TIMINGCHECK
       )
@@ -9252,13 +9245,6 @@
   )
 
   (CELL
-    (CELLTYPE  "DFRX1")
-    (INSTANCE  U7_banc_registres_reg\[8\]\[24\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[8\]\[8\])
       (TIMINGCHECK
@@ -9268,6 +9254,13 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[8\]\[9\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRX1")
+    (INSTANCE  U7_banc_registres_reg\[8\]\[24\])
       (TIMINGCHECK
       )
   )
@@ -9316,6 +9309,13 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[8\]\[25\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[9\]\[15\])
       (TIMINGCHECK
       )
@@ -9330,14 +9330,14 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[8\]\[25\])
+    (INSTANCE  U7_banc_registres_reg\[9\]\[17\])
       (TIMINGCHECK
       )
   )
 
   (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[9\]\[17\])
+    (CELLTYPE  "DFRX1")
+    (INSTANCE  U7_banc_registres_reg\[9\]\[18\])
       (TIMINGCHECK
       )
   )
@@ -9357,8 +9357,8 @@
   )
 
   (CELL
-    (CELLTYPE  "DFRX1")
-    (INSTANCE  U7_banc_registres_reg\[9\]\[18\])
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[9\]\[1\])
       (TIMINGCHECK
       )
   )
@@ -9400,6 +9400,13 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
+    (INSTANCE  U7_banc_registres_reg\[9\]\[25\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
     (INSTANCE  U7_banc_registres_reg\[8\]\[27\])
       (TIMINGCHECK
       )
@@ -9428,14 +9435,14 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[9\]\[25\])
+    (INSTANCE  U7_banc_registres_reg\[9\]\[29\])
       (TIMINGCHECK
       )
   )
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[9\]\[29\])
+    (INSTANCE  U7_banc_registres_reg\[8\]\[28\])
       (TIMINGCHECK
       )
   )
@@ -9443,13 +9450,6 @@
   (CELL
     (CELLTYPE  "DFRX1")
     (INSTANCE  U7_banc_registres_reg\[9\]\[2\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U7_banc_registres_reg\[9\]\[1\])
       (TIMINGCHECK
       )
   )
@@ -10233,6 +10233,55 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
+    (INSTANCE  U3_di_DI_adr_reg\[3\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U3_di_DI_adr_reg\[4\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U3_di_DI_adr_reg\[5\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U3_di_DI_adr_reg\[8\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U3_di_DI_adr_reg\[9\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U3_di_DI_adr_reg_dest_reg\[0\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U3_di_DI_adr_reg_dest_reg\[1\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
     (INSTANCE  U3_di_DI_adr_reg_dest_reg\[2\])
       (TIMINGCHECK
       )
@@ -10295,13 +10344,6 @@
   )
 
   (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U3_di_DI_adr_reg\[3\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
     (CELLTYPE  "DFRQX2")
     (INSTANCE  U3_di_DI_op1_reg\[0\])
       (TIMINGCHECK
@@ -10358,15 +10400,8 @@
   )
 
   (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U3_di_DI_adr_reg\[4\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U3_di_DI_adr_reg\[5\])
+    (CELLTYPE  "DFRQX2")
+    (INSTANCE  U3_di_DI_op2_reg\[18\])
       (TIMINGCHECK
       )
   )
@@ -10414,13 +10449,6 @@
   )
 
   (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U3_di_DI_adr_reg\[9\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
     (CELLTYPE  "DFRQX2")
     (INSTANCE  U3_di_DI_op2_reg\[2\])
       (TIMINGCHECK
@@ -10458,34 +10486,6 @@
   (CELL
     (CELLTYPE  "DFRQX2")
     (INSTANCE  U3_di_DI_op2_reg\[9\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U3_di_DI_adr_reg_dest_reg\[0\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U3_di_DI_adr_reg_dest_reg\[1\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U3_di_DI_adr_reg\[8\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX2")
-    (INSTANCE  U3_di_DI_op2_reg\[18\])
       (TIMINGCHECK
       )
   )
@@ -10758,6 +10758,41 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
+    (INSTANCE  U8_syscop_scp_reg_reg\[15\]\[18\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U8_syscop_scp_reg_reg\[15\]\[19\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U8_syscop_scp_reg_reg\[15\]\[16\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U8_syscop_scp_reg_reg\[15\]\[17\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U8_syscop_scp_reg_reg\[15\]\[1\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
     (INSTANCE  U8_syscop_scp_reg_reg\[15\]\[20\])
       (TIMINGCHECK
       )
@@ -10800,28 +10835,7 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U8_syscop_scp_reg_reg\[15\]\[16\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
     (INSTANCE  U8_syscop_scp_reg_reg\[15\]\[26\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U8_syscop_scp_reg_reg\[15\]\[17\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U8_syscop_scp_reg_reg\[15\]\[18\])
       (TIMINGCHECK
       )
   )
@@ -10842,21 +10856,7 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U8_syscop_scp_reg_reg\[15\]\[19\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
     (INSTANCE  U8_syscop_scp_reg_reg\[15\]\[29\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U8_syscop_scp_reg_reg\[15\]\[1\])
       (TIMINGCHECK
       )
   )
@@ -11283,20 +11283,6 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U5_mem_MEM_data_ecr_reg\[31\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U5_mem_MEM_data_ecr_reg\[30\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
     (INSTANCE  U5_mem_MEM_data_ecr_reg\[6\])
       (TIMINGCHECK
       )
@@ -11333,6 +11319,20 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U5_mem_MEM_data_ecr_reg\[26\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U5_mem_MEM_data_ecr_reg\[31\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U5_mem_MEM_data_ecr_reg\[30\])
       (TIMINGCHECK
       )
   )
@@ -11787,7 +11787,28 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
+    (INSTANCE  U8_syscop_scp_reg_reg\[13\]\[10\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U8_syscop_scp_reg_reg\[13\]\[11\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
     (INSTANCE  U8_syscop_scp_reg_reg\[13\]\[13\])
+      (TIMINGCHECK
+      )
+  )
+
+  (CELL
+    (CELLTYPE  "DFRQX1")
+    (INSTANCE  U8_syscop_scp_reg_reg\[13\]\[12\])
       (TIMINGCHECK
       )
   )
@@ -11808,21 +11829,7 @@
 
   (CELL
     (CELLTYPE  "DFRQX1")
-    (INSTANCE  U8_syscop_scp_reg_reg\[13\]\[10\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
     (INSTANCE  U8_syscop_scp_reg_reg\[13\]\[16\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U8_syscop_scp_reg_reg\[13\]\[11\])
       (TIMINGCHECK
       )
   )
@@ -11844,13 +11851,6 @@
   (CELL
     (CELLTYPE  "DFRQX1")
     (INSTANCE  U8_syscop_scp_reg_reg\[13\]\[19\])
-      (TIMINGCHECK
-      )
-  )
-
-  (CELL
-    (CELLTYPE  "DFRQX1")
-    (INSTANCE  U8_syscop_scp_reg_reg\[13\]\[12\])
       (TIMINGCHECK
       )
   )

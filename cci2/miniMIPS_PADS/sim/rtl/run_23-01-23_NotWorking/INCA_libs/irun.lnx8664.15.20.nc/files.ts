@@ -1,0 +1,15 @@
+1086270342 /home/inf01185/felipe.bertoglio/CCI2/miniMIPS/rtl/alu.vhd
+1086270348 /home/inf01185/felipe.bertoglio/CCI2/miniMIPS/rtl/banc.vhd
+1086289296 /home/inf01185/felipe.bertoglio/CCI2/miniMIPS/rtl/bus_ctrl.vhd
+1086287564 /home/inf01185/felipe.bertoglio/CCI2/miniMIPS/rtl/minimips.vhd
+1086287194 /home/inf01185/felipe.bertoglio/CCI2/miniMIPS/rtl/pack_mips.vhd
+1086270380 /home/inf01185/felipe.bertoglio/CCI2/miniMIPS/rtl/pps_di.vhd
+1086270334 /home/inf01185/felipe.bertoglio/CCI2/miniMIPS/rtl/pps_ei.vhd
+1086270374 /home/inf01185/felipe.bertoglio/CCI2/miniMIPS/rtl/pps_ex.vhd
+1086270368 /home/inf01185/felipe.bertoglio/CCI2/miniMIPS/rtl/pps_mem.vhd
+1086270362 /home/inf01185/felipe.bertoglio/CCI2/miniMIPS/rtl/pps_pf.vhd
+1086270402 /home/inf01185/felipe.bertoglio/CCI2/miniMIPS/rtl/renvoi.vhd
+1086270394 /home/inf01185/felipe.bertoglio/CCI2/miniMIPS/rtl/syscop.vhd
+1086551120 /home/inf01185/felipe.bertoglio/CCI2/miniMIPS/sim/tb/bench_minimips.vhd
+1086287588 /home/inf01185/felipe.bertoglio/CCI2/miniMIPS/sim/tb/ram.vhd
+1086284772 /home/inf01185/felipe.bertoglio/CCI2/miniMIPS/sim/tb/rom.vhd

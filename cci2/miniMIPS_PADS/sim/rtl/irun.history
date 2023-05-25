@@ -1,0 +1,7 @@
+s1(24Jan2023:01:18:53):  irun -s +gui +linedebug +access+rwc -f /home/inf01185/felipe.bertoglio/CCI2/miniMIPS/sim/rtl/file_list.f -q 
+s2(01Mar2023:21:25:05):  irun -f file_list.f 
+s3(01Mar2023:22:24:50):  irun -f file_list.f 
+s4(01Mar2023:22:45:01):  irun -f file_list.f 
+s5(02Mar2023:11:38:29):  irun -f file_list.f 
+s6(09Mar2023:11:56:08):  irun -f file_list.f 
+s7(09Mar2023:11:57:25):  irun -f file_list.f 

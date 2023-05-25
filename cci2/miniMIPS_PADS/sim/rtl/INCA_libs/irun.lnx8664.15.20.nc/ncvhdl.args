@@ -1,0 +1,32 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-XLMODE
+./INCA_libs/irun.lnx8664.15.20.nc
+-RUNMODE
+-SMARTORDER
+-WORK
+work
+-V93
+../../rtl/alu.vhd
+../../rtl/banc.vhd
+../../rtl/bus_ctrl.vhd
+../../rtl/minimips.vhd
+../../rtl/pack_mips.vhd
+../../rtl/pps_di.vhd
+../../rtl/pps_ei.vhd
+../../rtl/pps_ex.vhd
+../../rtl/pps_mem.vhd
+../../rtl/pps_pf.vhd
+../../rtl/renvoi.vhd
+../../rtl/syscop.vhd
+../tb/bench_minimips.vhd
+../tb/ram.vhd
+../tb/rom.vhd
+-CDSLIB
+./INCA_libs/irun.lnx8664.15.20.nc/cdsrun.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.15.20.nc/hdlrun.var
+-MESSAGES
+-UPDATE
