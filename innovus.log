@@ -1,0 +1,15 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v23.32-s091_1, built Tue Jul 30 17:21:26 PDT 2024
+Options:	
+Date:		Sun Sep 14 18:33:43 2025
+Host:		cadmicro-el8-07.inf.ufrgs.br (x86_64 w/Linux 4.18.0-553.58.1.el8_10.x86_64) (32cores*64cpus*QEMU Virtual CPU version 2.5+ 16384KB)
+OS:		Rocky Linux 8.10 (Green Obsidian)
+
+License:
+		[18:33:43.297905] Configured Lic search path (23.02-s005): 5280@pgmicro01.ufrgs.br
+
+		invs	Innovus Implementation System	23.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
